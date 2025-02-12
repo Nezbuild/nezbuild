@@ -1,6 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 // FFBF00
 const GlobalStyle = createGlobalStyle`
+  img {
+    pointer-events: none; /* Prevent interaction */
+    user-drag: none; /* Disable dragging */
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none; /* Disable long-press save */
+    -webkit-user-select: none; /* Disable selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+    
   body {
     margin: 0;
     padding: 0;

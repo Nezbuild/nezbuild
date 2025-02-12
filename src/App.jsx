@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './Components/Navbar'; // Navbar Component
 import MainPage from './Pages/MainPage'; // Main Page
 import GuideCreationPage from './Pages/GuideCreationPage'; // Guide Creation Page
@@ -14,6 +15,35 @@ import PrivateRoute from './Components/PrivateRoute'; // Private Route Component
 import Guides from './Pages/Guides';
 
 function App() {
+  useEffect(() => {
+    // Disable right-click
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+    // Disable common DevTools shortcuts
+    document.addEventListener('keydown', (event) => {
+      if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+        (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+        (event.ctrlKey && event.key === 'U')
+      ) {
+        event.preventDefault();
+      }
+    });
+
+    // Detect DevTools opening
+    const detectDevTools = () => {
+      const threshold = 160;
+      const start = performance.now();
+      debugger;
+      const end = performance.now();
+      if (end - start > threshold) {
+        alert('DevTools is open!');
+      }
+    };
+    setInterval(detectDevTools, 1000);
+  }, []);
+
   return (
     <Router>
       {/* Navbar is displayed on all pages */}

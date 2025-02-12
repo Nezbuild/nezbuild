@@ -23,7 +23,7 @@ function App() {
     document.addEventListener('keydown', (event) => {
       if (
         event.key === 'F12' ||
-        (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+        // (event.ctrlKey && event.shiftKey && event.key === 'I') ||
         (event.ctrlKey && event.shiftKey && event.key === 'J') ||
         (event.ctrlKey && event.key === 'U')
       ) {
@@ -35,7 +35,7 @@ function App() {
     const detectDevTools = () => {
       const threshold = 160;
       const start = performance.now();
-      debugger;
+      // debugger;
       const end = performance.now();
       if (end - start > threshold) {
         alert('DevTools is open!');

@@ -9,6 +9,8 @@ import weaponsData from '../assets/Weapons.json';
 import mergeWeapons from '../assets/merged_weapons_shields.json';
 import accessoriesData from '../assets/Accessories.json';
 import skillsData from '../assets/SkillsAndPerks.json';
+import ClassGearStatsTable from '../Components/ClassGearStatsTable';
+
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
 
 const getGearImage = (name, slot) => {
@@ -141,8 +143,7 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
             updatedGear[primarySlot] = selectedGearItem;
           } else {
             updatedGear[secondarySlot] = selectedGearItem;
-            console.log('Loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooook', updatedGear[primarySlot].Slot);
-            if (updatedGear[primarySlot].Slot.includes('Two Handed') ){
+            if (updatedGear[primarySlot] && updatedGear[primarySlot].Slot.includes('Two Handed') ){
               handleRemoveGear(primarySlot);
             }
           }
@@ -256,7 +257,23 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
         onSelect={handleSelectRarity}
         onClose={() => setRarityPromptVisible(false)}
       />
+          {/* Right Side: ClassGearStatsTable */}
+      <div style={{
+        flex: '0.5',
+        maxWidth: '300px',
+        padding: '10px',
+        backgroundColor: '#222',
+        border: '1px solid #FFD700',
+        borderRadius: '10px',
+        color: '#fff'
+      }}>
+        <ClassGearStatsTable 
+          selectedClass={data.class}
+          equippedGear={selectedGear}
+        />
+      </div>
     </div>
+    
   );
 };
 

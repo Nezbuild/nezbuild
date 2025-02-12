@@ -9,7 +9,9 @@ import Step4 from '../Steps/Step4';
 import Step5 from '../Steps/Step5';
 import GearLayout from '../Styles/GearLayout'; // ✅ Import GearLayout
 import { truncateName } from '../Steps/Utils/gearHelpers';
+import ClassGearStatsTable from '../Components/ClassGearStatsTable';
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
+
 
 const getGearImage = (name, slot) => {
   const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(slot);

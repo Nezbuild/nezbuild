@@ -7,7 +7,20 @@ import Step2 from '../Steps/Step2';
 import Step3 from '../Steps/Step3';
 import Step4 from '../Steps/Step4';
 import Step5 from '../Steps/Step5';
+import GearLayout from '../Styles/GearLayout'; // ✅ Import GearLayout
+import { truncateName } from '../Steps/Utils/gearHelpers';
+const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
 
+const getGearImage = (name, slot) => {
+  const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(slot);
+  const processedName = shouldTruncate ? truncateName(name) : name.replace(/\s+/g, '');
+
+  const matchedImage = Object.entries(gearImages).find(([path]) => 
+    path.toLowerCase().endsWith(`/${processedName.toLowerCase()}.png`)
+  );
+
+  return matchedImage ? matchedImage[1].default : '';
+};
 const GuideCreationPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [guideData, setGuideData] = useState({
@@ -16,26 +29,34 @@ const GuideCreationPage = () => {
     class: '',
     category: '',
     tags: [],
-    gearSelections: '',
+    gearSelections: {},  // Changed from string to object
+    perks: [],
+    skills: [],
     strategyDescription: '',
     synergies: [],
     threats: [],
     synergyText: '',
     threatText: ''
   });
+  
 
   const [isStep1And3Completed, setStep1And3Completed] = useState(false);
   const [isStep4And5Completed, setStep4And5Completed] = useState(false);
 
   useEffect(() => {
-    const savedGuide = localStorage.getItem('savedGuide');
-    if (savedGuide) {
-      const confirmRestore = window.confirm('Would you like to restore your saved guide?');
-      if (confirmRestore) {
-        setGuideData(JSON.parse(savedGuide));
+    try {
+      const savedGuide = localStorage.getItem('savedGuide');
+      if (savedGuide) {
+        const confirmRestore = window.confirm('Would you like to restore your saved guide?');
+        if (confirmRestore) {
+          setGuideData(JSON.parse(savedGuide));
+        }
       }
+    } catch (error) {
+      console.warn('localStorage is not accessible:', error);
     }
   }, []);
+  
 
   useEffect(() => {
     const saveInterval = setInterval(() => {
@@ -64,7 +85,21 @@ const GuideCreationPage = () => {
   const handlePrevious = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
-
+  const handleGearSelection = (updatedGear) => {
+    console.log(`🔹 handleGearSelection received updatedGear:`, updatedGear);
+  
+    setGuideData(prevState => {
+      console.log("✅ Updating Guide Data with Full Gear State");
+  
+      return {
+        ...prevState,
+        gearSelections: updatedGear // ✅ Store the entire `updatedGear`
+      };
+    });
+  };
+  
+   
+  
   const updateData = (key, value) => {
     setGuideData(prevState => {
       let updatedState = { ...prevState, [key]: value };
@@ -74,7 +109,6 @@ const GuideCreationPage = () => {
         updatedState.synergies = value.synergies || [];
         updatedState.threats = value.threats || [];
       }
-
       console.log("Updated Guide Data:", updatedState); // Debugging
       return updatedState;
     });
@@ -101,7 +135,7 @@ const GuideCreationPage = () => {
       class: '',
       category: '',
       tags: [],
-      gearSelections: '',
+      gearSelections: {},
       strategyDescription: '',
       synergies: [],
       threats: [],
@@ -142,7 +176,13 @@ const GuideCreationPage = () => {
 
         {currentStep === 3 && (
           <>
-            <Step4 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
+            <Step4 
+              data={guideData} 
+              updateData={updateData} 
+              isStepCompleted={isStep4And5Completed} 
+              gearSelections={guideData.gearSelections}
+              handleGearSelection={handleGearSelection} // ✅ Pass function here
+            />
             <Step5 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
           </>
         )}
@@ -219,6 +259,37 @@ const GuideCreationPage = () => {
             ) : (
               <p style={{ color: 'gray' }}>No threats added yet.</p>
             )}
+            <h3>Gear Selections</h3>
+            {console.log("🟢 gearSelections Preview Rendering:", guideData.gearSelections)}
+
+          <div style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}>
+            <GearLayout>
+              {[
+                'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
+                'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
+                'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
+              ].map((slot) => {
+                const gear = guideData.gearSelections[slot]; // Get gear item
+                const imageSrc = gear ? getGearImage(gear.Name, slot) : null; // ✅ Use the same logic as Step4
+
+                return (
+                  <div key={slot} className={`gear-slot ${slot}`}>
+                    {gear ? (
+                      <img
+                        src={imageSrc}
+                        onError={(e) => (e.target.src = '/src/assets/images/fallback.png')} 
+                        alt={gear.Name}
+                        style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                      />
+                    ) : (
+                      `${slot}`
+                    )}
+                  </div>
+                );
+              })}
+            </GearLayout>
+          </div>
+            
           </div>
         )}
       </div>

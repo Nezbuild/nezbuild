@@ -39,7 +39,7 @@ const getGearDataBySlot = (slot) => {
   return [];
 };
 
-const Step4 = ({ data, updateData }) => {
+const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
   const [popupVisible, setPopupVisible] = useState(null);
   const [rarityPromptVisible, setRarityPromptVisible] = useState(false);
   const [selectedGearName, setSelectedGearName] = useState(null);
@@ -48,13 +48,26 @@ const Step4 = ({ data, updateData }) => {
   const [lockedSlots, setLockedSlots] = useState([]);
 
   useEffect(() => {
+    if (gearSelections && Object.keys(gearSelections).length > 0) {
+      console.log("♻️ Reloading saved gear selections into updatedGear:", gearSelections);
+      setSelectedGear(gearSelections); // ✅ Restore saved selections
+    }
     console.log("Loaded Gear Data:", { gearData, shieldsData, weaponsData, accessoriesData });
   }, []);
-
+  const handleRemoveGear = (slot) => {
+    setSelectedGear((prev) => {
+      const { [slot]: _, ...updatedGear } = prev; // ✅ Create a new object without the slot
+      console.log(`🗑 Removed gear from slot: ${slot}`, updatedGear);
+      handleGearSelection(updatedGear);
+      return updatedGear;
+    });
+  };
+  
   const lockAndRemoveSlots = (primarySlot, secondarySlot) => {
     setSelectedGear((prev) => {
       const updatedGear = { ...prev };
-      delete updatedGear[secondarySlot]; // Only remove the secondary slot
+      handleRemoveGear(secondarySlot);
+      // delete updatedGear[secondarySlot]; // Only remove the secondary slot
       return updatedGear;
     });
   
@@ -128,6 +141,10 @@ const Step4 = ({ data, updateData }) => {
             updatedGear[primarySlot] = selectedGearItem;
           } else {
             updatedGear[secondarySlot] = selectedGearItem;
+            console.log('Loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooook', updatedGear[primarySlot].Slot);
+            if (updatedGear[primarySlot].Slot.includes('Two Handed') ){
+              handleRemoveGear(primarySlot);
+            }
           }
         }
       } else {
@@ -135,7 +152,10 @@ const Step4 = ({ data, updateData }) => {
       }
   
       console.log("🔄 Updated Gear State:", updatedGear);
+      handleGearSelection(updatedGear);
+      console.log('Looooooooooo', updatedGear);
       return updatedGear;
+      
     });
   
     // Update the data with the correct slot assignment
@@ -143,7 +163,7 @@ const Step4 = ({ data, updateData }) => {
       ...data.gearSelections,
       [primarySlot]: selectedGearItem
     });
-  
+    
     setRarityPromptVisible(false);
     setSelectedSlot(null);
   };

@@ -5,12 +5,14 @@ const GearLayout = styled.div`
   grid-template-columns: repeat(1000, 1fr);
   grid-template-rows: repeat(1000, 1fr);
   gap: 0.25rem;
-  justify-items: center;
+  justify-items: start;
   align-items: center;
+  text-align: left;
   margin: 0 auto;
   width: 100%;
   max-width: 50rem;
   max-height: 50rem;
+  margin-left: 0; /* ✅ Ensure it starts from the left */
   .gear-slot {
     display: flex;
     justify-content: center;

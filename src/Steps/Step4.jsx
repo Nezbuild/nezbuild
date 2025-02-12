@@ -181,28 +181,66 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
           const gearImage = gear ? getGearImage(gear.Name, slot) : null;
 
           return (
-            <div
-              key={slot}
-              className={`gear-slot ${slot} ${lockedSlots.includes(slot) ? 'locked' : ''}`}
-              onClick={() => handleGearClick(slot)}
+            <div key={slot} className={`gear-slot ${slot} ${lockedSlots.includes(slot) ? 'locked' : ''}`} 
               style={{
-                opacity: lockedSlots.includes(slot) ? 0.5 : 1,
-                pointerEvents: lockedSlots.includes(slot) ? 'none' : 'auto',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative', // Ensures button is positioned correctly
               }}
             >
-              {gear ? (
-                <img
-                  src={gearImage}
-                  alt={gear.Name}
-                  style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                />
-              ) : (
-                `${slot}`
+              {/* Gear Slot */}
+              <div
+                onClick={() => handleGearClick(slot)}
+                style={{
+                  opacity: lockedSlots.includes(slot) ? 0.5 : 1,
+                  pointerEvents: lockedSlots.includes(slot) ? 'none' : 'auto',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%', 
+                  height: '100%'
+                }}
+              >
+                {gear ? (
+                  <img
+                    src={gearImage}
+                    alt={gear.Name}
+                    style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                  />
+                ) : (
+                  `${slot}`
+                )}
+              </div>
+
+              {/* ❌ Remove Button (Positioned BELOW the slot, Not Inside) */}
+              {gear && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevents triggering slot selection
+                    handleRemoveGear(slot); // Calls remove function
+                  }}
+                  style={{
+                    position: 'absolute',
+                    bottom: '-20px', // Moves button below the slot
+                    backgroundColor: 'transparent',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '5px',
+                    padding: '4px 8px',
+                    cursor: 'pointer',
+                    fontSize: '6px',
+                  }}
+                >
+                  ❌
+                </button>
               )}
             </div>
           );
         })}
       </GearLayout>
+
 
       <GearPopup
         visible={popupVisible}

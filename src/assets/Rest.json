@@ -1,0 +1,6022 @@
+[
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-3,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-3,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"21 Armor Rating",
+        "Attributes":"None",
+        "Other":"6 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"None",
+        "Other":"7 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-3,
+        "Armor\/magical Rating":"23 Armor Rating",
+        "Attributes":"None",
+        "Other":"8 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Adventurer Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-3,
+        "Armor\/magical Rating":"25~26 Armor Rating",
+        "Attributes":"None",
+        "Other":"9 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"36 Armor Rating",
+        "Attributes":"2 Agility, 1 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"38~39 Armor Rating",
+        "Attributes":"2 Agility, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"40~43 Armor Rating",
+        "Attributes":"2 Agility, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"44~45 Armor Rating",
+        "Attributes":"3 Agility, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"46~47 Armor Rating",
+        "Attributes":"3 Agility, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"48 Armor Rating",
+        "Attributes":"4 Agility, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Arcane Garb ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"53~56 Armor Rating",
+        "Attributes":"4 Agility, 4 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"37 Armor Rating",
+        "Attributes":"2 Will, 1 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"38~39 Armor Rating",
+        "Attributes":"2 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"40~43 Armor Rating",
+        "Attributes":"2 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"44~45 Armor Rating",
+        "Attributes":"3 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"46~47 Armor Rating",
+        "Attributes":"3 Will, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"48 Armor Rating",
+        "Attributes":"4 Will, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bloodwoven Robe ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"52~56 Armor Rating",
+        "Attributes":"4 Will, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Poor",
+        "MS":-12,
+        "Armor\/magical Rating":"63 Armor Rating, 15 Magical Resistance",
+        "Attributes":"1 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Common",
+        "MS":-12,
+        "Armor\/magical Rating":"65~67 Armor Rating, 15 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Uncommon",
+        "MS":-12,
+        "Armor\/magical Rating":"68~72 Armor Rating, 15 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Rare",
+        "MS":-12,
+        "Armor\/magical Rating":"73~75 Armor Rating, 15 Magical Resistance",
+        "Attributes":"2 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Epic",
+        "MS":-12,
+        "Armor\/magical Rating":"76~77 Armor Rating, 15 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Legendary",
+        "MS":-12,
+        "Armor\/magical Rating":"78~80 Armor Rating, 15 Magical Resistance",
+        "Attributes":"3 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Champion Armor",
+        "Class Requirements":"Cleric, Warlock",
+        "Rarity":"Unique",
+        "MS":-12,
+        "Armor\/magical Rating":"84~89 Armor Rating, 15 Magical Resistance",
+        "Attributes":"4 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Poor",
+        "MS":-13,
+        "Armor\/magical Rating":"66~68 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Common",
+        "MS":-13,
+        "Armor\/magical Rating":"69~71 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Uncommon",
+        "MS":-13,
+        "Armor\/magical Rating":"72~74 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Rare",
+        "MS":-13,
+        "Armor\/magical Rating":"75~77 Armor Rating, 25 Magical Resistance",
+        "Attributes":"4 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Epic",
+        "MS":-13,
+        "Armor\/magical Rating":"78~80 Armor Rating, 25 Magical Resistance",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Legendary",
+        "MS":-13,
+        "Armor\/magical Rating":"81~83 Armor Rating, 25 Magical Resistance",
+        "Attributes":"6 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Crusader Armor",
+        "Class Requirements":"Cleric",
+        "Rarity":"Unique",
+        "MS":-13,
+        "Armor\/magical Rating":"86~92 Armor Rating, 25 Magical Resistance",
+        "Attributes":"7 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Poor",
+        "MS":-14,
+        "Armor\/magical Rating":"80 Armor Rating, 30 Magical Resistance",
+        "Attributes":"1 Strength, 1 Will, 2 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Common",
+        "MS":-14,
+        "Armor\/magical Rating":"81~83 Armor Rating, 30 Magical Resistance",
+        "Attributes":"1 Strength, 2 Will, 2 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Uncommon",
+        "MS":-14,
+        "Armor\/magical Rating":"84~86 Armor Rating, 30 Magical Resistance",
+        "Attributes":"1 Strength, 2 Will, 2 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Rare",
+        "MS":-14,
+        "Armor\/magical Rating":"87~89 Armor Rating, 30 Magical Resistance",
+        "Attributes":"2 Strength, 2 Will, 2 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Epic",
+        "MS":-14,
+        "Armor\/magical Rating":"90~92 Armor Rating, 30 Magical Resistance",
+        "Attributes":"2 Strength, 2 Will, 3 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Legendary",
+        "MS":-14,
+        "Armor\/magical Rating":"93~95 Armor Rating, 30 Magical Resistance",
+        "Attributes":"2 Strength, 3 Will, 3 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Cuirass ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Unique",
+        "MS":-14,
+        "Armor\/magical Rating":"100~105 Armor Rating, 30 Magical Resistance",
+        "Attributes":"3 Strength, 3 Will, 3 Resourcefulness",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Poor",
+        "MS":-15,
+        "Armor\/magical Rating":"46 Magical Resistance, 69 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Common",
+        "MS":-15,
+        "Armor\/magical Rating":"49 Magical Resistance, 73~77 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Uncommon",
+        "MS":-15,
+        "Armor\/magical Rating":"49 Magical Resistance, 78~81 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Rare",
+        "MS":-15,
+        "Armor\/magical Rating":"52 Magical Resistance, 82~86 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Epic",
+        "MS":-15,
+        "Armor\/magical Rating":"55 Magical Resistance, 87~91 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Legendary",
+        "MS":-15,
+        "Armor\/magical Rating":"58 Magical Resistance, 92~96 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Dark Plate Armor ",
+        "Class Requirements":"Fighter",
+        "Rarity":"Unique",
+        "MS":-15,
+        "Armor\/magical Rating":"61 Magical Resistance, 100~105 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"36 Armor Rating",
+        "Attributes":"2 Strength, 1 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"38~39 Armor Rating",
+        "Attributes":"2 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"40~43 Armor Rating",
+        "Attributes":"2 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"44~45 Armor Rating",
+        "Attributes":"3 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"46~47 Armor Rating",
+        "Attributes":"3 Strength, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"48 Armor Rating",
+        "Attributes":"4 Strength, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Darkgrove Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"53~56 Armor Rating",
+        "Attributes":"4 Strength, 4 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Poor",
+        "MS":-5,
+        "Armor\/magical Rating":"25 Armor Rating",
+        "Attributes":"2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Common",
+        "MS":-5,
+        "Armor\/magical Rating":"26~27 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Uncommon",
+        "MS":-5,
+        "Armor\/magical Rating":"28~32 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Rare",
+        "MS":-5,
+        "Armor\/magical Rating":"33~34 Armor Rating",
+        "Attributes":"4 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"35 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Legendary",
+        "MS":-5,
+        "Armor\/magical Rating":"36 Armor Rating",
+        "Attributes":"6 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Doublet ",
+        "Class Requirements":"Rogue, Ranger, Fighter",
+        "Rarity":"Unique",
+        "MS":-5,
+        "Armor\/magical Rating":"40~42 Armor Rating",
+        "Attributes":"7 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Poor",
+        "MS":-18,
+        "Armor\/magical Rating":"86 Armor Rating, -5 Magical Resistance",
+        "Attributes":"1 Strength, 2 Vigor",
+        "Other":"3.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Common",
+        "MS":-18,
+        "Armor\/magical Rating":"88~92 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"4% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Uncommon",
+        "MS":-18,
+        "Armor\/magical Rating":"93~97 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"4.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Rare",
+        "MS":-18,
+        "Armor\/magical Rating":"98~102 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Strength, 3 Vigor",
+        "Other":"5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Epic",
+        "MS":-18,
+        "Armor\/magical Rating":"103~107 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"5.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Legendary",
+        "MS":-18,
+        "Armor\/magical Rating":"108~112 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"6% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Fine Cuirass",
+        "Class Requirements":"Fighter",
+        "Rarity":"Unique",
+        "MS":-18,
+        "Armor\/magical Rating":"120~125 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Strength, 4 Vigor",
+        "Other":"6% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"26 Armor Rating, 25 Magical Resistance",
+        "Attributes":"1 Agility, 2 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"28 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Agility, 2 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"29~34 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Agility, 2 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"35~36 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Agility, 3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"37~38 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Agility, 3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"39 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Agility, 4 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frock ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"42~45 Armor Rating, 25 Magical Resistance",
+        "Attributes":"4 Agility, 4 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Poor",
+        "MS":-12,
+        "Armor\/magical Rating":"52 Armor Rating",
+        "Attributes":"1 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Common",
+        "MS":-12,
+        "Armor\/magical Rating":"54~56 Armor Rating",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Uncommon",
+        "MS":-12,
+        "Armor\/magical Rating":"57~60 Armor Rating",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Rare",
+        "MS":-12,
+        "Armor\/magical Rating":"61~62 Armor Rating",
+        "Attributes":"2 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Epic",
+        "MS":-12,
+        "Armor\/magical Rating":"63~65 Armor Rating",
+        "Attributes":"3 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Legendary",
+        "MS":-12,
+        "Armor\/magical Rating":"66~67 Armor Rating",
+        "Attributes":"3 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Grand Brigandine ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue, Barbarian",
+        "Rarity":"Unique",
+        "MS":-12,
+        "Armor\/magical Rating":"73~75 Armor Rating",
+        "Attributes":"4 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Poor",
+        "MS":-11,
+        "Armor\/magical Rating":"49 Armor Rating",
+        "Attributes":"1 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Common",
+        "MS":-11,
+        "Armor\/magical Rating":"53~55 Armor Rating",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Uncommon",
+        "MS":-11,
+        "Armor\/magical Rating":"56~59 Armor Rating",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Rare",
+        "MS":-11,
+        "Armor\/magical Rating":"60~62 Armor Rating",
+        "Attributes":"2 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Epic",
+        "MS":-11,
+        "Armor\/magical Rating":"63~64 Armor Rating",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Legendary",
+        "MS":-11,
+        "Armor\/magical Rating":"65~66 Armor Rating",
+        "Attributes":"3 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Heavy Gambeson",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock",
+        "Rarity":"Unique",
+        "MS":-11,
+        "Armor\/magical Rating":"69~73 Armor Rating",
+        "Attributes":"4 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"33~34 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"35~36 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"37~40 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"41 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"6 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"42 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"7 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"43 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"8 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Light Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"46~49 Armor Rating, 15 Magical Resistance",
+        "Attributes":"None",
+        "Other":"9 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"40 Armor Rating",
+        "Attributes":"2 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"42~44 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"45~49 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"50~52 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"53~55 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"56~58 Armor Rating",
+        "Attributes":"6 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Marauder Outfit ",
+        "Class Requirements":"Rogue, Warlock",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"63~67 Armor Rating",
+        "Attributes":"7 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Poor",
+        "MS":-3,
+        "Armor\/magical Rating":"30 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Common",
+        "MS":-3,
+        "Armor\/magical Rating":"32~33 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"34~36 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"37~38 Armor Rating, 25 Magical Resistance",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"39  Armor Rating, 25 Magical Resistance",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Legendary",
+        "MS":-3,
+        "Armor\/magical Rating":"40  Armor Rating, 25 Magical Resistance",
+        "Attributes":"6 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Mystic Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Unique",
+        "MS":-3,
+        "Armor\/magical Rating":"44~46 Armor Rating, 25 Magical Resistance",
+        "Attributes":"7 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Poor",
+        "MS":-14,
+        "Armor\/magical Rating":"65 Armor Rating, 10 Magical Resistance",
+        "Attributes":"1 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Common",
+        "MS":-14,
+        "Armor\/magical Rating":"66~69 Armor Rating, 10 Magical Resistance",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Uncommon",
+        "MS":-14,
+        "Armor\/magical Rating":"70~73 Armor Rating, 10 Magical Resistance",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Rare",
+        "MS":-14,
+        "Armor\/magical Rating":"74~77 Armor Rating, 10 Magical Resistance",
+        "Attributes":"2 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Epic",
+        "MS":-14,
+        "Armor\/magical Rating":"78~81 Armor Rating, 10 Magical Resistance",
+        "Attributes":"3 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Legendary",
+        "MS":-14,
+        "Armor\/magical Rating":"82~85 Armor Rating, 10 Magical Resistance",
+        "Attributes":"3 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Northern Full Tunic ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Unique",
+        "MS":-14,
+        "Armor\/magical Rating":"86~89 Armor Rating, 10 Magical Resistance",
+        "Attributes":"4 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"29 Armor Rating, 50 Magical Resistance",
+        "Attributes":"2 Vigor, 1 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"30~32 Armor Rating, 50 Magical Resistance",
+        "Attributes":"2 Vigor, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"33~35 Armor Rating, 50 Magical Resistance",
+        "Attributes":"2 Vigor, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"36~37 Armor Rating, 50 Magical Resistance",
+        "Attributes":"3 Vigor, 2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"38~39 Armor Rating, 50 Magical Resistance",
+        "Attributes":"3 Vigor, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"40 Armor Rating, 50 Magical Resistance",
+        "Attributes":"4 Vigor, 3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Robe",
+        "Class Requirements":"Warlock",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"44~47 Armor Rating, 50 Magical Resistance",
+        "Attributes":"4 Vigor, 4 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Poor",
+        "MS":-5,
+        "Armor\/magical Rating":"46 Armor Rating",
+        "Attributes":"1 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Common",
+        "MS":-5,
+        "Armor\/magical Rating":"47~49 Armor Rating",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Uncommon",
+        "MS":-5,
+        "Armor\/magical Rating":"50~54 Armor Rating",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Rare",
+        "MS":-5,
+        "Armor\/magical Rating":"55~56 Armor Rating",
+        "Attributes":"2 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"57~59 Armor Rating",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Legendary",
+        "MS":-5,
+        "Armor\/magical Rating":"60 Armor Rating",
+        "Attributes":"3 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Occultist Tunic ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Unique",
+        "MS":-5,
+        "Armor\/magical Rating":"65~69 Armor Rating",
+        "Attributes":"4 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"30 Armor Rating, 25 Magical Resistance",
+        "Attributes":"2 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"31~32 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"33~36 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"37~39 Armor Rating, 25 Magical Resistance",
+        "Attributes":"4 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"40 Armor Rating, 25 Magical Resistance",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"41 Armor Rating, 25 Magical Resistance",
+        "Attributes":"6 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Oracle Robe ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"44~48 Armor Rating, 25 Magical Resistance",
+        "Attributes":"7 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Poor",
+        "MS":-8,
+        "Armor\/magical Rating":"32 Magical Resistance, 38  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Common",
+        "MS":-8,
+        "Armor\/magical Rating":"35 Magical Resistance, 40~41  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Uncommon",
+        "MS":-8,
+        "Armor\/magical Rating":"35 Magical Resistance, 42~44  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Rare",
+        "MS":-8,
+        "Armor\/magical Rating":"38 Magical Resistance, 45~46  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Epic",
+        "MS":-8,
+        "Armor\/magical Rating":"42 Magical Resistance, 47~48  Armor Rating ",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Legendary",
+        "MS":-8,
+        "Armor\/magical Rating":"46 Magical Resistance, 49~50  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ornate Jazerant ",
+        "Class Requirements":"Fighter, Ranger, Bard, Warlock, Rogue",
+        "Rarity":"Unique",
+        "MS":-8,
+        "Armor\/magical Rating":"50 Magical Resistance, 54~58  Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-7,
+        "Armor\/magical Rating":"34 Armor Rating",
+        "Attributes":"2 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-7,
+        "Armor\/magical Rating":"35~36 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-7,
+        "Armor\/magical Rating":"37~39 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-7,
+        "Armor\/magical Rating":"40~41 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-7,
+        "Armor\/magical Rating":"42 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-7,
+        "Armor\/magical Rating":"43 Armor Rating",
+        "Attributes":"6 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Padded Tunic",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-7,
+        "Armor\/magical Rating":"46~50 Armor Rating",
+        "Attributes":"7 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"38 Armor Rating",
+        "Attributes":"1 Will, 1 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"39~40 Armor Rating",
+        "Attributes":"2 Will, 1 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"41~42 Armor Rating",
+        "Attributes":"2 Will, 1 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"43~45 Armor Rating",
+        "Attributes":"2 Will, 2 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"46~47 Armor Rating",
+        "Attributes":"2 Will, 2 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"48 Armor Rating",
+        "Attributes":"3 Will, 2 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Pourpoint ",
+        "Class Requirements":"Fighter, Ranger, Bard, Rogue",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"52~56 Armor Rating",
+        "Attributes":"3 Will, 3 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-10,
+        "Armor\/magical Rating":"43 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-10,
+        "Armor\/magical Rating":"44~45 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-10,
+        "Armor\/magical Rating":"46~48 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-10,
+        "Armor\/magical Rating":"49~50 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-10,
+        "Armor\/magical Rating":"51~52 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-10,
+        "Armor\/magical Rating":"53~54 Armor Rating",
+        "Attributes":"6 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Regal Gambeson",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-10,
+        "Armor\/magical Rating":"58~62 Armor Rating",
+        "Attributes":"7 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"37 Armor Rating",
+        "Attributes":"2 Agility, 1 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"38~39 Armor Rating",
+        "Attributes":"2 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"40~43 Armor Rating",
+        "Attributes":"2 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"44~45 Armor Rating",
+        "Attributes":"3 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"46~47 Armor Rating",
+        "Attributes":"3 Agility, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"48 Armor Rating",
+        "Attributes":"4 Agility, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Ritual Robe ",
+        "Class Requirements":"Druid",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"52~56 Armor Rating",
+        "Attributes":"4 Agility, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Poor",
+        "MS":-12,
+        "Armor\/magical Rating":"41~43 Armor Rating 10 Magical Resistance",
+        "Attributes":"2 Strength, 1 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Common",
+        "MS":-12,
+        "Armor\/magical Rating":"44~46 Armor Rating 10 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Uncommon",
+        "MS":-12,
+        "Armor\/magical Rating":"47~51 Armor Rating 10 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Rare",
+        "MS":-12,
+        "Armor\/magical Rating":"52~53 Armor Rating 10 Magical Resistance",
+        "Attributes":"3 Strength, 2 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Epic",
+        "MS":-12,
+        "Armor\/magical Rating":"54~56 Armor Rating 10 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Legendary",
+        "MS":-12,
+        "Armor\/magical Rating":"57~58 Armor Rating 10 Magical Resistance",
+        "Attributes":"4 Strength, 3 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Leather ",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Unique",
+        "MS":-12,
+        "Armor\/magical Rating":"62~65 Armor Rating 10 Magical Resistance",
+        "Attributes":"4 Strength, 4 Vigor",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Poor",
+        "MS":-11,
+        "Armor\/magical Rating":"60 Armor Rating 20 Magical Resistance",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Common",
+        "MS":-11,
+        "Armor\/magical Rating":"62~64 Armor Rating 20 Magical Resistance",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-11,
+        "Armor\/magical Rating":"65~68 Armor Rating 20 Magical Resistance",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":-11,
+        "Armor\/magical Rating":"69~71 Armor Rating 20 Magical Resistance",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-11,
+        "Armor\/magical Rating":"72~74 Armor Rating 20 Magical Resistance",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Legendary",
+        "MS":-11,
+        "Armor\/magical Rating":"75~77 Armor Rating 20 Magical Resistance",
+        "Attributes":"6 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Templar Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Unique",
+        "MS":-11,
+        "Armor\/magical Rating":"82~87 Armor Rating 20 Magical Resistance",
+        "Attributes":"7 Will",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Poor",
+        "MS":-5,
+        "Armor\/magical Rating":"32 Armor Rating",
+        "Attributes":"2 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Common",
+        "MS":-5,
+        "Armor\/magical Rating":"33~36 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Uncommon",
+        "MS":-5,
+        "Armor\/magical Rating":"37~42 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Rare",
+        "MS":-5,
+        "Armor\/magical Rating":"43~46 Armor Rating",
+        "Attributes":"4 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"47~49 Armor Rating",
+        "Attributes":"5 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Legendary",
+        "MS":-5,
+        "Armor\/magical Rating":"50~52 Armor Rating",
+        "Attributes":"6 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Troubadour Outfit",
+        "Class Requirements":"Bard",
+        "Rarity":"Unique",
+        "MS":-5,
+        "Armor\/magical Rating":"56~60 Armor Rating",
+        "Attributes":"7 Resourcefulness",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Poor",
+        "MS":-4,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"2 Dexterity, 1 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Common",
+        "MS":-4,
+        "Armor\/magical Rating":"23~24 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Uncommon",
+        "MS":-4,
+        "Armor\/magical Rating":"25~28 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Rare",
+        "MS":-4,
+        "Armor\/magical Rating":"29~30 Armor Rating",
+        "Attributes":"3 Dexterity, 2 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Epic",
+        "MS":-4,
+        "Armor\/magical Rating":"31~33 Armor Rating",
+        "Attributes":"3 Dexterity, 3 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Legendary",
+        "MS":-4,
+        "Armor\/magical Rating":"34 Armor Rating",
+        "Attributes":"4 Dexterity, 3 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Wanderer Attire ",
+        "Class Requirements":"Bard, Ranger, Rogue",
+        "Rarity":"Unique",
+        "MS":-4,
+        "Armor\/magical Rating":"37~40 Armor Rating",
+        "Attributes":"4 Dexterity, 4 Strength",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Poor",
+        "MS":-6,
+        "Armor\/magical Rating":"45 Armor Rating",
+        "Attributes":"2 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Common",
+        "MS":-6,
+        "Armor\/magical Rating":"46~49 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Uncommon",
+        "MS":-6,
+        "Armor\/magical Rating":"50~54 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"55~57 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"58~59 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Legendary",
+        "MS":-6,
+        "Armor\/magical Rating":"60 Armor Rating",
+        "Attributes":"6 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock",
+        "Rarity":"Unique",
+        "MS":-6,
+        "Armor\/magical Rating":"64~68 Armor Rating",
+        "Attributes":"7 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Cobalt Frock ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-6,
+        "Armor\/magical Rating":"35~36 Armor Rating, 25 Magical Resistance",
+        "Attributes":"4 Dexterity",
+        "Other":"1.5% Magical Penetration, 3.5% Armor Penetration",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Cobalt Regal Gambeson ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-10,
+        "Armor\/magical Rating":"49~50 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"3.5% Armor Penetration",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Cobalt Templar Armor ",
+        "Class Requirements":"Fighter, Cleric, Warlock",
+        "Rarity":"Rare",
+        "MS":-11,
+        "Armor\/magical Rating":"69~71 Armor Rating, 20 Magical Resistance",
+        "Attributes":"4 Will",
+        "Other":"3.5% Armor Penetration,1.5% Magical Penetration",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Copperlight Attire ",
+        "Class Requirements":"Ranger, Bard, Rogue",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"25~28 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Copperlight Outfit ",
+        "Class Requirements":"Wizard, Warlock, Druid, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-5,
+        "Armor\/magical Rating":"50~54 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Copperlight Sanctum Plate Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-15,
+        "Armor\/magical Rating":"45 Magical Resistance, 78~81 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Projectile Damage Reduction, 0.5% Move Speed Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Copperlight Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Max Health, 0.5% Move Speed Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Dark Matter Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"4 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Frostlight Abyss Plate Armor ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-17,
+        "Armor\/magical Rating":"103~107 Armor Rating, -10 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"5.5% Projectile Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frostlight Aketon ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"42 Armor Rating, 15 Magical Resistance",
+        "Attributes":null,
+        "Other":"7 Max Health",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Frostlight Oracle Robe",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"40 Armor Rating, 25 Magical Resistance",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Frostlight Warden Outfit ",
+        "Class Requirements":"Ranger, Warlock, Rogue, Druid",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"58~59 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Golden Padded Tunic ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"40~41 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"10 Luck, 1.5% Magical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Golden Plate",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-18,
+        "Armor\/magical Rating":"98~102 Armor Rating",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"5% Projectile Damage Reduction, 10 Luck, 1.5% Magical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Golden Robe",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"25 Magical Resistance, 35 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"10 Luck, 1.5% Magical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Robe of Darkness ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-5,
+        "Armor\/magical Rating":"37~39 Armor Rating",
+        "Attributes":"4 Knowledge",
+        "Other":"2~3 Magical Power",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Plate Rubysilver Cuirass ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-18,
+        "Armor\/magical Rating":"103~107 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"5.5% Projectile Damage Reduction, 1% Physical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Rubysilver Doublet ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-5,
+        "Armor\/magical Rating":"35 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"0.01 Physical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Rubysilver Vestments ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"39 Armor Rating, 25 Magical Resistance",
+        "Attributes":"5 Will",
+        "Other":"1% Physical Damage Reduction",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Studded Wyvern Leather",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Epic",
+        "MS":-12,
+        "Armor\/magical Rating":"54~56 Armor Rating, 25 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"1.5% Action Speed",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Tri-Pelt Doublet ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-5,
+        "Armor\/magical Rating":"33~34 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"3~5% Max Health Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Leather Tri-Pelt Northern Full Tunic",
+        "Class Requirements":"Barbarian",
+        "Rarity":"Rare",
+        "MS":-14,
+        "Armor\/magical Rating":"10 Magical Resistance, 74~77 Armor Rating",
+        "Attributes":"2 Agility, 3 Dexterity",
+        "Other":"3~5% Max Health Bonus",
+        "Type":"Chest"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Poor",
+        "MS":-2,
+        "Armor\/magical Rating":"17~18 Armor Rating",
+        "Attributes":"2 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Common",
+        "MS":-2,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Uncommon",
+        "MS":-2,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Rare",
+        "MS":-2,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"4 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Epic",
+        "MS":-2,
+        "Armor\/magical Rating":"21~22 Armor Rating",
+        "Attributes":"5 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Legendary",
+        "MS":-2,
+        "Armor\/magical Rating":"22~23 Armor Rating",
+        "Attributes":"6 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Bardic Pants ",
+        "Class Requirements":"Bard",
+        "Rarity":"Unique",
+        "MS":-2,
+        "Armor\/magical Rating":"25~26 Armor Rating",
+        "Attributes":"7 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-1,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"2 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-1,
+        "Armor\/magical Rating":"10 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-1,
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-1,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"4 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-1,
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"5 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-1,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"6 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Buttoned Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-1,
+        "Armor\/magical Rating":"17~18 Armor Rating",
+        "Attributes":"7 Resourcefulness",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-3,
+        "Armor\/magical Rating":"15~16 Armor Rating",
+        "Attributes":"2 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-3,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"17~18 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"4 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-3,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"6 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cloth Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-3,
+        "Armor\/magical Rating":"23~24 Armor Rating",
+        "Attributes":"7 Dexterity",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Copperlight Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-4,
+        "Armor\/magical Rating":"24~26 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-7,
+        "Armor\/magical Rating":"23 Armor Rating, 18 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-7,
+        "Armor\/magical Rating":"25~26 Armor Rating, 21 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-7,
+        "Armor\/magical Rating":"27~31 Armor Rating, 21 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-7,
+        "Armor\/magical Rating":"32~33 Armor Rating, 24 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-7,
+        "Armor\/magical Rating":"34~35 Armor Rating, 27 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-7,
+        "Armor\/magical Rating":"36~37 Armor Rating, 30 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Dark Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-7,
+        "Armor\/magical Rating":"39~41 Armor Rating, 33 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-8,
+        "Armor\/magical Rating":"24~26 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-8,
+        "Armor\/magical Rating":"27~29 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-8,
+        "Armor\/magical Rating":"30~32 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-8,
+        "Armor\/magical Rating":"33~35 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-8,
+        "Armor\/magical Rating":"36~38 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-8,
+        "Armor\/magical Rating":"39~41 Armor Rating",
+        "Attributes":"6 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Heavy Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-8,
+        "Armor\/magical Rating":"43~45 Armor Rating",
+        "Attributes":"7 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-3,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"2 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-3,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"21~24 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"25~26 Armor Rating",
+        "Attributes":"4 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"27 Armor Rating",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-3,
+        "Armor\/magical Rating":"28 Armor Rating",
+        "Attributes":"6 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-3,
+        "Armor\/magical Rating":"30~31 Armor Rating",
+        "Attributes":"7 Knowledge",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-4,
+        "Armor\/magical Rating":"20 Armor Rating",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-4,
+        "Armor\/magical Rating":"21~23 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-4,
+        "Armor\/magical Rating":"24~26 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-4,
+        "Armor\/magical Rating":"27~28 Armor Rating",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-4,
+        "Armor\/magical Rating":"29 Armor Rating",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-4,
+        "Armor\/magical Rating":"30 Armor Rating",
+        "Attributes":"6 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-4,
+        "Armor\/magical Rating":"32~33 Armor Rating",
+        "Attributes":"7 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-2,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"2 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-2,
+        "Armor\/magical Rating":"10 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-2,
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-2,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-2,
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-2,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"6 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Loose Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-2,
+        "Armor\/magical Rating":"17~18 Armor Rating",
+        "Attributes":"7 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Poor",
+        "MS":-4,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"2 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Common",
+        "MS":-4,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Uncommon",
+        "MS":-4,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Rare",
+        "MS":-4,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Epic",
+        "MS":-4,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Legendary",
+        "MS":-4,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"6 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Occultist Pants ",
+        "Class Requirements":"Warlock",
+        "Rarity":"Unique",
+        "MS":-4,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"7 Strength",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-4,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-4,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-4,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-4,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-4,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-4,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"6 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Padded Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-4,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"7 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Poor",
+        "MS":-9,
+        "Armor\/magical Rating":"32 Armor Rating, -5 Magical Resistance",
+        "Attributes":"1 Vigor, 2 Strength",
+        "Other":"0.025 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Common",
+        "MS":-9,
+        "Armor\/magical Rating":"33~35 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Vigor, 2 Strength",
+        "Other":"0.028 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Uncommon",
+        "MS":-9,
+        "Armor\/magical Rating":"36~38 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Vigor, 2 Strength",
+        "Other":"0.03 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Rare",
+        "MS":-9,
+        "Armor\/magical Rating":"39~41 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Vigor, 3 Strength",
+        "Other":"0.033 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Epic",
+        "MS":-9,
+        "Armor\/magical Rating":"42~44 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Vigor, 3 Strength",
+        "Other":"0.04 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Legendary",
+        "MS":-9,
+        "Armor\/magical Rating":"45~46 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Vigor, 4 Strength",
+        "Other":"0.043 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Unique",
+        "MS":-9,
+        "Armor\/magical Rating":"48~50 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Vigor, 4 Strength",
+        "Other":"0.043 Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":-3,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":-3,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":-3,
+        "Armor\/magical Rating":"21~24 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"25~26 Armor Rating",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"27 Armor Rating",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":-3,
+        "Armor\/magical Rating":"28 Armor Rating",
+        "Attributes":"6 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Sleek Hide Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":-3,
+        "Armor\/magical Rating":"30~31 Armor Rating",
+        "Attributes":"7 Will",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Tanglethread Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-8,
+        "Armor\/magical Rating":"36~38 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Brave Hunter's Pants ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"4 Dexterity, 4 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Cobalt Plate Pants ",
+        "Class Requirements":"Cleric, Fighter",
+        "Rarity":"Rare",
+        "MS":-9,
+        "Armor\/magical Rating":"39~41 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Vigor, 3 Strength",
+        "Other":"3.3% Projectile Damage Reduction, 3.5% Armor Penetration",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Cobalt Trousers",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-2,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"3.5% Armor Penetration",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Copperlight Pants ",
+        "Class Requirements":"Wizard, Cleric, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":-3,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Copperlight Plate Pants ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-9,
+        "Armor\/magical Rating":"36~38 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Strength, 2 Vigor",
+        "Other":"0.5% Move Speed Bonus, 3% Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Demonclad Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-8,
+        "Armor\/magical Rating":"33~35 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"2~3 Magical Healing",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Frostlight Leather Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-6,
+        "Armor\/magical Rating":"34~35 Armor Rating, 27 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Frostlight Plate Pants ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-8,
+        "Armor\/magical Rating":"42~44 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"4% Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Frostlight Trousers ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-1,
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Golden Chausses ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-3,
+        "Armor\/magical Rating":"25~26 Armor Rating",
+        "Attributes":"5 Knowledge",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Golden Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-7,
+        "Armor\/magical Rating":"33~35 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Golden Plate Pants ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-9,
+        "Armor\/magical Rating":"39~41 Armor Rating",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck, 3.3% Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Rubysilver Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":-4,
+        "Armor\/magical Rating":"29 Armor Rating",
+        "Attributes":"5 Will",
+        "Other":"1% Physical Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Plate Rubysilver Plate Pants ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-9,
+        "Armor\/magical Rating":"42~44 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength, 3 Vigor",
+        "Other":"1% Physical Damage Reduction, 4% Projectile Damage Reduction",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Leather Wolf Hunter Leggings ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":-8,
+        "Armor\/magical Rating":"33~35 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"6 Max Health",
+        "Type":"Pants"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"2 Will, 1 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"7~8 Armor Rating",
+        "Attributes":"2 Will, 2 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Will, 2 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"9~10 Armor Rating",
+        "Attributes":"3 Will, 2 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Will, 3 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"4 Will, 3 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Arcane Gloves ",
+        "Class Requirements":"Wizard, Cleric, Sorcerer",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"4 Will, 4 Agility",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"7~8 Armor Rating",
+        "Attributes":"1 Resourcefulness, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"9~10 Armor Rating",
+        "Attributes":"2 Resourcefulness, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Resourcefulness, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"2 Resourcefulness, 3 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Resourcefulness, 3 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"13~14 Armor Rating",
+        "Attributes":"3 Resourcefulness, 4 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Bloodwoven Gloves ",
+        "Class Requirements":"Bard, Warlock, Druid, Sorcerer",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"4 Resourcefulness, 4 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"1 Dexterity, 2 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"7~8 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"9~10 Armor Rating",
+        "Attributes":"2 Dexterity, 3 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Dexterity, 3 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"3 Dexterity, 4 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Elkwood Gloves",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"4 Dexterity, 4 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"None",
+        "Other":"11~12% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"None",
+        "Other":"12~13% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"None",
+        "Other":"13~14% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"None",
+        "Other":"14~15% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"None",
+        "Other":"15~16% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"None",
+        "Other":"16~18% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gloves of Utility ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"19 Armor Rating",
+        "Attributes":"None",
+        "Other":"18~20% Regular Interaction Speed",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Poor",
+        "MS":-1,
+        "Armor\/magical Rating":"17 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Dexterity, 1 Vigor",
+        "Other":"1.5% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Common",
+        "MS":-1,
+        "Armor\/magical Rating":"19~20 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Dexterity, 2 Vigor",
+        "Other":"1.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-1,
+        "Armor\/magical Rating":"20~22 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Dexterity, 2 Vigor",
+        "Other":"2%  Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":-1,
+        "Armor\/magical Rating":"23~25 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Dexterity, 2 Vigor",
+        "Other":"2.2% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-1,
+        "Armor\/magical Rating":"26~28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Dexterity, 3 Vigor",
+        "Other":"2.5% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Legendary",
+        "MS":-1,
+        "Armor\/magical Rating":"29~30 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Dexterity, 3 Vigor",
+        "Other":"2.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Heavy Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Unique",
+        "MS":-1,
+        "Armor\/magical Rating":"32 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Dexterity, 4 Vigor",
+        "Other":"2.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"2 Dexterity, 1 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Dexterity, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Dexterity, 2 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Dexterity, 3 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"4 Dexterity, 3 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"19 Armor Rating",
+        "Attributes":"4 Dexterity, 4 Will",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating, -5 Magical Resistance",
+        "Attributes":"1 Agility, 2 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Agility, 2 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"17~18 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Agility, 2 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"18~19 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Agility, 3 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"19~20 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Agility, 3 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"20~21 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Agility, 4 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Light Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"23 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Agility, 4 Strength",
+        "Other":"0.7% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"None",
+        "Other":"1 Magical Healing, 1 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"7~8 Armor Rating",
+        "Attributes":"None",
+        "Other":"2 Magical Healing, 2 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"None",
+        "Other":"2 Magical Healing, 2 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"9~10 Armor Rating",
+        "Attributes":"None",
+        "Other":"2 Magical Healing, 3 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Magical Healing, 3 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"11~12 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Magical Healing, 4 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Mystic Gloves",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"None",
+        "Other":"4 Magical Healing, 4 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"2 Knowledge, 1 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"4 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"19 Armor Rating",
+        "Attributes":"4 Knowledge, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"6 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Reinforced Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"23 Armor Rating",
+        "Attributes":"7 Vigor",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"6 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"23 Armor Rating",
+        "Attributes":"7 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Poor",
+        "MS":"None",
+        "Armor\/magical Rating":"16 Magical Resistance, 7~8 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Common",
+        "MS":"None",
+        "Armor\/magical Rating":"19 Magical Resistance, 9~10 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"19 Magical Resistance, 10~11 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"22 Magical Resistance, 11~12 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"25 Magical Resistance, 12~13 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"28 Magical Resistance, 13~14 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Runestone Gloves ",
+        "Class Requirements":"Druid, Ranger, Barbarian",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"31 Magical Resistance, 16 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Cobalt Heavy Gauntlet ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":-1,
+        "Armor\/magical Rating":"23~25 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Dexterity, 2 Vigor",
+        "Other":"3.5% Armor Penetration, 2.2% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Cobalt Leather Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Dexterity, 3 Will",
+        "Other":"3.5% Armor Penetration",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Copperlight Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":-1,
+        "Armor\/magical Rating":"20~22 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Dexterity, 2 Vigor",
+        "Other":"0.5% Move Speed Bonus, 2% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Copperlight Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Demon Grip Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"2~3 Magical Healing",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Frostlight Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":null,
+        "Armor\/magical Rating":"26~28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Dexterity, 3 Vigor",
+        "Other":"2.5% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Cloth Frostlight Mystic Gloves ",
+        "Class Requirements":"Cleric, Wizard, Warlcok",
+        "Rarity":"Epic",
+        "MS":1,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Magical Healing, 3 Magical Power",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Frostlight Riveted Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":1,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Frostlight Runestone Gloves ",
+        "Class Requirements":"Ranger, Druid, Barbarian",
+        "Rarity":"Epic",
+        "MS":1,
+        "Armor\/magical Rating":"12~13 Armor Rating, 25 Magical Resistance",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Golden Gauntlets",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-1,
+        "Armor\/magical Rating":"23~25 Armor Rating",
+        "Attributes":"3 Dexterity, 3 Vigor",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck, 2.2% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Golden Gloves ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Gravewolf Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Agility, 3 Will",
+        "Other":"4 Max Health",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Plate Rubysilver Gauntlets ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":-1,
+        "Armor\/magical Rating":"26~28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Dexterity, 3 Vigor",
+        "Other":"1% Physical Damage Reduction 2.5% Projectile Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Rubysilver Rawhide Gloves",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":null,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Will, 4 Knowledge",
+        "Other":"1% Physical Damage Reduction",
+        "Type":"Gloves"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"2 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"4 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"6 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Adventurer Boots",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"24~25 Armor Rating",
+        "Attributes":"7 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"18~20 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"21 Armor Rating",
+        "Attributes":"None",
+        "Other":"4 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"23 Armor Rating",
+        "Attributes":"None",
+        "Other":"6 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buckled Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"24~25 Armor Rating",
+        "Attributes":"None",
+        "Other":"7 Max Health",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"1 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"2 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"2 Will, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"2 Will, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"3 Will, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"22 Armor Rating",
+        "Attributes":"3 Will, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Buttoned Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"24~25 Armor Rating",
+        "Attributes":"4 Will, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"1 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Knowledge, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Knowledge, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Knowledge, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cuffed Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"4 Knowledge, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"2 Strength, 1 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"2 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"13~14 Armor Rating",
+        "Attributes":"2 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"3 Strength, 2 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"3 Strength, 3 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"4 Strength, 3 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Darkleaf Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"4 Strength, 4 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"16 Magical Resistance, 15 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"19 Magical Resistance, 16~17 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"19 Magical Resistance, 18~20 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"22 Magical Resistance, 21 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"25 Magical Resistance, 22 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"28 Magical Resistance, 23 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Dashing Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"31 Magical Resistance, 24~25 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"2 Agility, 1 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"2 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"2 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"3 Agility, 2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"3 Agility, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"18 Armor Rating",
+        "Attributes":"4 Agility, 3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Forest Boots ",
+        "Class Requirements":"Druid, Ranger",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"4 Agility, 4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":4,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"2 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":4,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":4,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":4,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":4,
+        "Armor\/magical Rating":"22~23 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":4,
+        "Armor\/magical Rating":"24 Armor Rating",
+        "Attributes":"6 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Heavy Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":4,
+        "Armor\/magical Rating":"26~27 Armor Rating",
+        "Attributes":"7 Strength",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":6,
+        "Armor\/magical Rating":"6~7 Armor Rating",
+        "Attributes":"2 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":6,
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":6,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":6,
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":6,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"6 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Laced Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":6,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"7 Agility",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":10,
+        "Armor\/magical Rating":"3 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":10,
+        "Armor\/magical Rating":"4 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":11,
+        "Armor\/magical Rating":"5 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":12,
+        "Armor\/magical Rating":"6 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":13,
+        "Armor\/magical Rating":"7 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":14,
+        "Armor\/magical Rating":"8 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":null,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":5,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"2 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":5,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":5,
+        "Armor\/magical Rating":"13~14 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":5,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"4 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":5,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":5,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"6 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Low Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":5,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"7 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Poor",
+        "MS":3,
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Will, 1 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Common",
+        "MS":3,
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"2 Will, 2 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Uncommon",
+        "MS":3,
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"2 Will, 2 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Rare",
+        "MS":3,
+        "Armor\/magical Rating":"16~17 Armor Rating",
+        "Attributes":"3 Will, 2 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Epic",
+        "MS":3,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"3 Will, 3 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Legendary",
+        "MS":3,
+        "Armor\/magical Rating":"20 Armor Rating",
+        "Attributes":"4 Will, 3 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Occultist Boots ",
+        "Class Requirements":"Warlock, Wizard",
+        "Rarity":"Unique",
+        "MS":3,
+        "Armor\/magical Rating":"21 Armor Rating",
+        "Attributes":"4 Will, 4 Knowledge",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":7,
+        "Armor\/magical Rating":"8 Armor Rating",
+        "Attributes":"2 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":7,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":7,
+        "Armor\/magical Rating":"10 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":7,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"4 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":7,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"5 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":7,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"6 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Old Shoes ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":7,
+        "Armor\/magical Rating":"15~16 Armor Rating",
+        "Attributes":"7 Resourcefulness",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Poor",
+        "MS":2,
+        "Armor\/magical Rating":"19 Armor Rating, -5 Magical Resistance",
+        "Attributes":"2 Strength",
+        "Other":"1.8% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Common",
+        "MS":2,
+        "Armor\/magical Rating":"20 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength",
+        "Other":"2% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":2,
+        "Armor\/magical Rating":"21~24 Armor Rating, -5 Magical Resistance",
+        "Attributes":"3 Strength",
+        "Other":"2.3% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":2,
+        "Armor\/magical Rating":"25~27 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Strength",
+        "Other":"2.5% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":2,
+        "Armor\/magical Rating":"28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"5 Strength",
+        "Other":"2.8% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Legendary",
+        "MS":2,
+        "Armor\/magical Rating":"30~32 Armor Rating, -5 Magical Resistance",
+        "Attributes":"6 Strength",
+        "Other":"3% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Plate Boots",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Unique",
+        "MS":2,
+        "Armor\/magical Rating":"34~35 Armor Rating, -5 Magical Resistance",
+        "Attributes":"7 Strength",
+        "Other":"3% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":5,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":5,
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":5,
+        "Armor\/magical Rating":"14~16 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":5,
+        "Armor\/magical Rating":"17~18 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":5,
+        "Armor\/magical Rating":"19 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":5,
+        "Armor\/magical Rating":"20 Armor Rating",
+        "Attributes":"6 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":5,
+        "Armor\/magical Rating":"22~23 Armor Rating",
+        "Attributes":"7 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stillmend Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":5,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":5,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":5,
+        "Armor\/magical Rating":"13~14 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":5,
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":5,
+        "Armor\/magical Rating":"16 Armor Rating",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":5,
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"6 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Stitched Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":5,
+        "Armor\/magical Rating":"19~20 Armor Rating",
+        "Attributes":"7 Will",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Poor",
+        "MS":4,
+        "Armor\/magical Rating":"7 Armor Rating",
+        "Attributes":"1 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Common",
+        "MS":4,
+        "Armor\/magical Rating":"8 Armor Rating",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":4,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"2 Agility, 2 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":4,
+        "Armor\/magical Rating":"10 Armor Rating",
+        "Attributes":"2 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":4,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"3 Agility, 3 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":4,
+        "Armor\/magical Rating":"12 Armor Rating",
+        "Attributes":"3 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Turnshoe ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":4,
+        "Armor\/magical Rating":"14 Armor Rating",
+        "Attributes":"4 Agility, 4 Dexterity",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Poor",
+        "MS":5,
+        "Armor\/magical Rating":"6 Armor Rating",
+        "Attributes":"None",
+        "Other":"2 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Common",
+        "MS":5,
+        "Armor\/magical Rating":"7 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Uncommon",
+        "MS":5,
+        "Armor\/magical Rating":"8 Armor Rating",
+        "Attributes":"None",
+        "Other":"3 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Rare",
+        "MS":5,
+        "Armor\/magical Rating":"9 Armor Rating",
+        "Attributes":"None",
+        "Other":"4 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Epic",
+        "MS":5,
+        "Armor\/magical Rating":"10 Armor Rating",
+        "Attributes":"None",
+        "Other":"5 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Legendary",
+        "MS":5,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"None",
+        "Other":"6 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Wizard Shoes ",
+        "Class Requirements":"Wizard, Warlock, Druid, Sorcerer",
+        "Rarity":"Unique",
+        "MS":5,
+        "Armor\/magical Rating":"13 Armor Rating",
+        "Attributes":"None",
+        "Other":"7 Magical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Cobalt Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":11,
+        "Armor\/magical Rating":"6 Armor Rating",
+        "Attributes":"None",
+        "Other":"3.5% Armor Penetration",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Cobalt Plate Boots ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Rare",
+        "MS":2,
+        "Armor\/magical Rating":"25~27 Armor Rating, -5 Magical Resistance",
+        "Attributes":"4 Strength",
+        "Other":"3.5% Armor Penetration, 2.5% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Copperlight Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Uncommon",
+        "MS":9,
+        "Armor\/magical Rating":"5 Armor Rating",
+        "Attributes":"None",
+        "Other":"0.5% Move Speed Bonus",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Copperlight Plate Boots ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Uncommon",
+        "MS":2,
+        "Armor\/magical Rating":"21~24 Armor Rating, -5 Magical Resistance",
+        "Attributes":"5 Strength",
+        "Other":"0.5% Move Speed Bonus, 2.3% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Foul Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":5,
+        "Armor\/magical Rating":"18~19 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"1~3 Physical Power",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Frostlight Lightfoot Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":13,
+        "Armor\/magical Rating":"7 Armor Rating",
+        "Attributes":"None",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Frostlight Plate Boots ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":3,
+        "Armor\/magical Rating":"28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"5 Strength",
+        "Other":"2.8% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Frostlight Rugged Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"19 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Golden Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":4,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Golden Plate Boots ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":2,
+        "Armor\/magical Rating":"25~27 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"1.5% Magical Damage Reduction, 10 Luck, 2.5% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Leather Rubysilver Adventurer Boots ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":6,
+        "Armor\/magical Rating":"20~21 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"1% Physical Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Plate Rubysilver Plate Boots ",
+        "Class Requirements":"Fighter, Cleric",
+        "Rarity":"Epic",
+        "MS":2,
+        "Armor\/magical Rating":"28 Armor Rating, -5 Magical Resistance",
+        "Attributes":"5 Strength",
+        "Other":"1% Physical Damage Reduction, 2.8% Projectile Damage Reduction",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Shoes of Darkness ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":10,
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"None",
+        "Other":"1.5~3% Magical Power Bonus",
+        "Type":"Boots"
+    },
+    {
+        "Name":"Cloth Adventurer Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Agility",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Adventurer Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Adventurer Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"4 Agility",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Adventurer Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"5 Agility",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Mercurial Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Dexterity",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Mercurial Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Dexterity",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Mercurial Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"4 Dexterity",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Mercurial Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"5 Dexterity",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Radiant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Knowledge",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Radiant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Knowledge",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Radiant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"4 Knowledge",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Radiant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"5 Knowledge",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Splendid Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"2 Will",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Splendid Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"3 Will",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Splendid Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"14~15 Armor Rating",
+        "Attributes":"4 Will",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Splendid Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"17 Armor Rating",
+        "Attributes":"5 Will",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Tattered Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Strength",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Tattered Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Strength",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Tattered Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"4 Strength",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Tattered Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"5 Strength",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Vigilant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"8~9 Armor Rating",
+        "Attributes":"2 Vigor",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Vigilant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Vigor",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Vigilant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"12~13 Armor Rating",
+        "Attributes":"4 Vigor",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Vigilant Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"5 Vigor",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Watchman Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"13~15 Armor Rating",
+        "Attributes":"2 Resourcefulness",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Watchman Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"16~18 Armor Rating",
+        "Attributes":"3 Resourcefulness",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Watchman Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Legendary",
+        "MS":"None",
+        "Armor\/magical Rating":"19~21 Armor Rating",
+        "Attributes":"4 Resourcefulness",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":null,
+        "Class Requirements":"None",
+        "Rarity":"Unique",
+        "MS":"None",
+        "Armor\/magical Rating":"23 Armor Rating",
+        "Attributes":"5 Resourcefulness",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Cloak of Darkness ",
+        "Class Requirements":"None",
+        "Rarity":"Rare",
+        "MS":"None",
+        "Armor\/magical Rating":"11 Armor Rating",
+        "Attributes":"2 Will",
+        "Other":"0.5~1.5% Move Speed Bonus",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Frostlight Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"10~11 Armor Rating",
+        "Attributes":"3 Agility",
+        "Other":"None",
+        "Type":"Cape"
+    },
+    {
+        "Name":"Cloth Golden Cloak ",
+        "Class Requirements":"None",
+        "Rarity":"Epic",
+        "MS":"None",
+        "Armor\/magical Rating":"15 Armor Rating",
+        "Attributes":"1 Dexterity, 1 Vigor, 1 Will, 1 Resourcefulness",
+        "Other":"2.5% Magical Damage Reduction, 40 Luck",
+        "Type":"Cape"
+    }
+]

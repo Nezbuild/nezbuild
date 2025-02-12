@@ -1,0 +1,364 @@
+{
+    "Sheet1": [
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Poor",
+            "Armor Rating": "17~18 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Common",
+            "Armor Rating": "19~20 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Uncommon",
+            "Armor Rating": "21~22 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Rare",
+            "Armor Rating": "23~24 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Epic",
+            "Armor Rating": "25~26 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Legendary",
+            "Armor Rating": "27~28 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Buckler",
+            "Class": "Fighter, Cleric, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Unique",
+            "Armor Rating": "29~30 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Poor",
+            "Armor Rating": "20~21 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Common",
+            "Armor Rating": "22~23 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Uncommon",
+            "Armor Rating": "24~26 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Rare",
+            "Armor Rating": "27~29 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Epic",
+            "Armor Rating": "30~32 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Legendary",
+            "Armor Rating": "33~35 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Heater Shield",
+            "Class": "Fighter, Cleric, Warlock",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -15,
+            "Rarity": "Unique",
+            "Armor Rating": "36~38 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Poor",
+            "Armor Rating": "17~18 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Common",
+            "Armor Rating": "19~20 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Uncommon",
+            "Armor Rating": "21~22 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Rare",
+            "Armor Rating": "23~24 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Epic",
+            "Armor Rating": "25~26 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Legendary",
+            "Armor Rating": "27~28 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -10,
+            "Rarity": "Unique",
+            "Armor Rating": "29~30 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Poor",
+            "Armor Rating": "30~33 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Common",
+            "Armor Rating": "34~37 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Uncommon",
+            "Armor Rating": "38~41 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Rare",
+            "Armor Rating": "42~45 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Epic",
+            "Armor Rating": "46~49 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Legendary",
+            "Armor Rating": "50~53 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Pavise",
+            "Class": "Fighter, Ranger",
+            "Slot": "Two Handed, Primary Weapon",
+            "MS": -25,
+            "Rarity": "Unique",
+            "Armor Rating": "54~57 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Poor",
+            "Armor Rating": "18~19 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Common",
+            "Armor Rating": "20~21 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Uncommon",
+            "Armor Rating": "22~24 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Rare",
+            "Armor Rating": "25~27 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Epic",
+            "Armor Rating": "28~30 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Legendary",
+            "Armor Rating": "31~33 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Round Shield",
+            "Class": "Fighter, Cleric, Barbarian",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -12,
+            "Rarity": "Unique",
+            "Armor Rating": "34~36 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        },
+        {
+            "Name": "Frostlight Lantern Shield",
+            "Class": "Fighter, Bard",
+            "Slot": "One Handed, Secondary Weapon",
+            "MS": -7,
+            "Rarity": "Epic",
+            "Armor Rating": "25~26 Armor Rating",
+            "Type": "Weapon",
+            "Weapon Type": "Shield"
+        }
+    ]
+}

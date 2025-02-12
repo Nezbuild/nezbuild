@@ -1,0 +1,584 @@
+[
+    {
+        "Name": "Badger Pendant",
+        "Attributes": "1 Will",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Badger Pendant",
+        "Attributes": "2 Will",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Badger Pendant",
+        "Attributes": "3 Will",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Badger Pendant",
+        "Attributes": "4 Will",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Badger Pendant",
+        "Attributes": "5 Will",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Bear Pendant",
+        "Attributes": "1 Vigor",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Bear Pendant",
+        "Attributes": "2 Vigor",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Bear Pendant",
+        "Attributes": "3 Vigor",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Bear Pendant",
+        "Attributes": "4 Vigor",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Bear Pendant",
+        "Attributes": "5 Vigor",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fangs of Death Necklace",
+        "Attributes": "32~35 Magical Resistance, 18~25 Luck",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fox Pendant",
+        "Attributes": "1 Agility",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fox Pendant",
+        "Attributes": "2 Agility",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fox Pendant",
+        "Attributes": "3 Agility",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fox Pendant",
+        "Attributes": "4 Agility",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Fox Pendant",
+        "Attributes": "5 Agility",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Frost Amulet",
+        "Attributes": "1 True Physical Damage",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Frost Amulet",
+        "Attributes": "2 True Physical Damage",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Frost Amulet",
+        "Attributes": "3 True Physical Damage",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Frost Amulet",
+        "Attributes": "4 True Physical Damage",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Frost Amulet",
+        "Attributes": "5 True Physical Damage",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Monkey Pendant",
+        "Attributes": "1 Dexterity",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Monkey Pendant",
+        "Attributes": "2 Dexterity",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Monkey Pendant",
+        "Attributes": "3 Dexterity",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Monkey Pendant",
+        "Attributes": "4 Dexterity",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Monkey Pendant",
+        "Attributes": "5 Dexterity",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Necklace of Peace",
+        "Attributes": "5 Max Health Add",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Necklace of Peace",
+        "Attributes": "7 Max Health Add",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Necklace of Peace",
+        "Attributes": "9 Max Health Add",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Necklace of Peace",
+        "Attributes": "11 Max Health Add",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Necklace of Peace",
+        "Attributes": "13 Max Health Add",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Owl Pendant",
+        "Attributes": "1 Knowledge",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Owl Pendant",
+        "Attributes": "2 Knowledge",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Owl Pendant",
+        "Attributes": "3 Knowledge",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Owl Pendant",
+        "Attributes": "4 Knowledge",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Owl Pendant",
+        "Attributes": "5 Knowledge",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Ox Pendant",
+        "Attributes": "1 Strength",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Ox Pendant",
+        "Attributes": "2 Strength",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Ox Pendant",
+        "Attributes": "3 Strength",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Ox Pendant",
+        "Attributes": "4 Strength",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Ox Pendant",
+        "Attributes": "5 Strength",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Phoenix Choker",
+        "Attributes": "1 True Magical Damage",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Phoenix Choker",
+        "Attributes": "2 True Magical Damage",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Phoenix Choker",
+        "Attributes": "3 True Magical Damage",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Phoenix Choker",
+        "Attributes": "4 True Magical Damage",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Phoenix Choker",
+        "Attributes": "5 True Magical Damage",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Rat Pendant",
+        "Attributes": "1 Resourcefulness",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Rat Pendant",
+        "Attributes": "2 Resourcefulness",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Rat Pendant",
+        "Attributes": "3 Resourcefulness",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Rat Pendant",
+        "Attributes": "4 Resourcefulness",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Rat Pendant",
+        "Attributes": "5 Resourcefulness",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Torq of Soul",
+        "Attributes": "25~28 Magical Resistance",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Torq of Soul",
+        "Attributes": "29~31 Magical Resistance",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Torq of Soul",
+        "Attributes": "32~35 Magical Resistance",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Torq of Soul",
+        "Attributes": "36~38 Magical Resistance",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Torq of Soul",
+        "Attributes": "39~41 Magical Resistance",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Wind Locket",
+        "Attributes": "10~12 Armor Rating Add",
+        "Rarity": "Uncommon",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Wind Locket",
+        "Attributes": "13~16 Armor Rating Add",
+        "Rarity": "Rare",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Wind Locket",
+        "Attributes": "17~20 Armor Rating Add",
+        "Rarity": "Epic",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Wind Locket",
+        "Attributes": "21~24 Armor Rating Add",
+        "Rarity": "Legendary",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Wind Locket",
+        "Attributes": "25~27 Armor Rating Add",
+        "Rarity": "Unique",
+        "Type": "Necklace"
+    },
+    {
+        "Name": "Grimsmile Ring",
+        "Attributes": "2 Strength, 2 Vigor, 6~12 Luck",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Courage",
+        "Attributes": "1 Strength",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Courage",
+        "Attributes": "2 Strength",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Courage",
+        "Attributes": "3 Strength",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Courage",
+        "Attributes": "4 Strength",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Courage",
+        "Attributes": "5 Strength",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Finesse",
+        "Attributes": "1 Dexterity",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Finesse",
+        "Attributes": "2 Dexterity",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Finesse",
+        "Attributes": "3 Dexterity",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Finesse",
+        "Attributes": "4 Dexterity",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Finesse",
+        "Attributes": "5 Dexterity",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Quickness",
+        "Attributes": "1 Agility",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Quickness",
+        "Attributes": "2 Agility",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Quickness",
+        "Attributes": "3 Agility",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Quickness",
+        "Attributes": "4 Agility",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Quickness",
+        "Attributes": "5 Agility",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Resolve",
+        "Attributes": "1 Will",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Resolve",
+        "Attributes": "2 Will",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Resolve",
+        "Attributes": "3 Will",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Resolve",
+        "Attributes": "4 Will",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Resolve",
+        "Attributes": "5 Will",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Survival",
+        "Attributes": "1 Resourcefulness",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Survival",
+        "Attributes": "2 Resourcefulness",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Survival",
+        "Attributes": "3 Resourcefulness",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Survival",
+        "Attributes": "4 Resourcefulness",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Survival",
+        "Attributes": "5 Resourcefulness",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Vitality",
+        "Attributes": "1 Vigor",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Vitality",
+        "Attributes": "2 Vigor",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Vitality",
+        "Attributes": "3 Vigor",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Vitality",
+        "Attributes": "4 Vigor",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Vitality",
+        "Attributes": "5 Vigor",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Wisdom",
+        "Attributes": "1 Knowledge",
+        "Rarity": "Uncommon",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Wisdom",
+        "Attributes": "2 Knowledge",
+        "Rarity": "Rare",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Wisdom",
+        "Attributes": "3 Knowledge",
+        "Rarity": "Epic",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Wisdom",
+        "Attributes": "4 Knowledge",
+        "Rarity": "Legendary",
+        "Type": "Ring"
+    },
+    {
+        "Name": "Ring of Wisdom",
+        "Attributes": "5 Knowledge",
+        "Rarity": "Unique",
+        "Type": "Ring"
+    }
+]

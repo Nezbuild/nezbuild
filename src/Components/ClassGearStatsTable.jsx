@@ -11,6 +11,8 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
     let totalStats = { ...baseStats };
     let flatHealthBonus = 0;
     let percentHealthBonus = 0;
+    let addedStrength = 0;
+    let addedVigor = 0;
 
     Object.values(equippedGear).forEach((gear) => {
       if (gear) {
@@ -21,6 +23,8 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
             const [value, stat] = attr.trim().split(' ');
             if (stat && !isNaN(value)) {
               totalStats[stat] = (totalStats[stat] || 0) + parseInt(value, 10);
+              if (stat === 'Strength') addedStrength += parseInt(value, 10);
+              if (stat === 'Vigor') addedVigor += parseInt(value, 10);
             }
           });
         }
@@ -41,8 +45,11 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
       }
     });
 
-    // Apply health calculations
-    totalStats.Health = Math.floor((baseStats.Health + flatHealthBonus) * (1 + percentHealthBonus));
+    // Apply new health formula using added Strength and Vigor only
+    totalStats.Health = Math.ceil(baseStats.Health + (0.438 * addedStrength) + (1.513 * addedVigor) + flatHealthBonus);
+    totalStats.AddedStrength = addedStrength;
+    totalStats.AddedVigor = addedVigor;
+
     return totalStats;
   };
 
@@ -65,10 +72,16 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
             <tr key={stat}>
               <td>{stat}</td>
               <td>{baseStats[stat]}</td>
-              <td>{totalStats[stat] - baseStats[stat] || 0}</td>
+              <td>{stat === 'Strength' ? totalStats.AddedStrength : stat === 'Vigor' ? totalStats.AddedVigor : totalStats[stat] - baseStats[stat] || 0}</td>
               <td>{totalStats[stat]}</td>
             </tr>
           ))}
+          <tr>
+            <td>Health</td>
+            <td>{baseStats.Health}</td>
+            <td>{totalStats.Health - baseStats.Health}</td>
+            <td>{totalStats.Health}</td>
+          </tr>
         </tbody>
       </table>
     </div>

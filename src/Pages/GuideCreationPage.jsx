@@ -218,6 +218,31 @@ const GuideCreationPage = () => {
             </div>
             <p><strong>Category:</strong> {guideData.category}</p>
             <p><strong>Tags:</strong> {guideData.tags.join(', ')}</p>
+            <GearLayout>
+              {[
+                'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
+                'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
+                'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
+              ].map((slot) => {
+                const gear = guideData.gearSelections[slot]; // Get gear item
+                const imageSrc = gear ? getGearImage(gear.Name, slot) : null; // ✅ Use the same logic as Step4
+
+                return (
+                  <div key={slot} className={`gear-slot ${slot}`}>
+                    {gear ? (
+                      <img
+                        src={imageSrc}
+                        onError={(e) => (e.target.src = '/src/assets/images/fallback.png')} 
+                        alt={gear.Name}
+                        style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                      />
+                    ) : (
+                      `${slot}`
+                    )}
+                  </div>
+                );
+              })}
+            </GearLayout>
             {guideData.synergies.length > 0 ? (
               <>
                 <h3 style={{ color: 'green' }}>Synergies</h3>
@@ -265,31 +290,6 @@ const GuideCreationPage = () => {
             {console.log("🟢 gearSelections Preview Rendering:", guideData.gearSelections)}
 
           <div style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}>
-            <GearLayout>
-              {[
-                'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
-                'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
-                'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
-              ].map((slot) => {
-                const gear = guideData.gearSelections[slot]; // Get gear item
-                const imageSrc = gear ? getGearImage(gear.Name, slot) : null; // ✅ Use the same logic as Step4
-
-                return (
-                  <div key={slot} className={`gear-slot ${slot}`}>
-                    {gear ? (
-                      <img
-                        src={imageSrc}
-                        onError={(e) => (e.target.src = '/src/assets/images/fallback.png')} 
-                        alt={gear.Name}
-                        style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                      />
-                    ) : (
-                      `${slot}`
-                    )}
-                  </div>
-                );
-              })}
-            </GearLayout>
           </div>
             
           </div>

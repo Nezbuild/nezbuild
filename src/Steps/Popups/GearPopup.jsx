@@ -18,7 +18,8 @@ const getGearImage = (name, slot) => {
     return matchedImage ? matchedImage[1].default : '';
 };
 
-const GearPopup = ({ visible, selectedSlot, currentClass, onSelect, onClose }) => {
+const GearPopup = ({ visible, selectedSlot, currentClass, onSelect, onClose, updatedGear }) => {
+    const selectedGearArray = Object.values(updatedGear).flat();  // Convert object to array
     const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(selectedSlot);
     const [selectedImage, setSelectedImage] = useState(null);
     if (!visible) return null;
@@ -109,9 +110,21 @@ const GearPopup = ({ visible, selectedSlot, currentClass, onSelect, onClose }) =
                 <button
                   key={name}
                   onClick={() => {
+                    if (
+                      (['perk1', 'perk2', 'perk3', 'perk4'].includes(selectedSlot) &&
+                          Object.values(updatedGear).some(item => item?.Name === name)) ||
+                      (['skill1', 'skill2'].includes(selectedSlot) &&
+                          Object.values(updatedGear).some(item => item?.Name === name))
+                      ) {
+                          alert(`${name} has already been selected.`);
+                          return;
+                      }
+                  
+                    console.log(updatedGear);
                     setSelectedImage(imgSrc);
                     onSelect(name);
                   }}
+                
                   style={{                  
                       display: 'flex',
                       flexDirection: 'column',

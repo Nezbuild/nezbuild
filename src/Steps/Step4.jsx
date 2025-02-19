@@ -249,6 +249,7 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
         currentClass={data.class}
         onSelect={handleSelectGearName}
         onClose={() => setPopupVisible(null)}
+        updatedGear={gearSelections}
       />
 
       <RarityPopup

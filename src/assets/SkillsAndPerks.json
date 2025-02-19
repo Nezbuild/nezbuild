@@ -1,1220 +1,1199 @@
 [
     {
-        "Name": "Axe Specialization",
-        "Description": "While using\u00a0axes, gain\u00a0+3\u00a0 Weapon Damage.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Axe Specialization",
+        "Description":"While using\u00a0axes, gain\u00a0+3\u00a0 Weapon Damage.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Berserker",
-        "Description": "Gain 3% physical damage bonus for every 10% of your maximum health missing, up to a maximum of 30% physical damage bonus",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Berserker",
+        "Description":"Gain 3% physical damage bonus for every 10% of your maximum health missing, up to a maximum of 30% physical damage bonus",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Carnage",
-        "Description": "When a target is killed, gain\u00a075\u00a0Armor Rating\u00a0for\u00a015s.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Carnage",
+        "Description":"When a target is killed, gain\u00a075\u00a0Armor Rating\u00a0for\u00a015s.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Executioner",
-        "Description": "While using\u00a0axes, gain\u00a010%\u00a0Physical Headshot power.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Executioner",
+        "Description":"While using\u00a0axes, gain\u00a010%\u00a0Physical Headshot power.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Iron Will",
-        "Description": "Gain\u00a075\u00a0Magical Resistance\u00a0and ignore knockback effects. The maximum Magical Damage Reduction\u00a0limit is increased to\u00a075%.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Iron Will",
+        "Description":"Gain\u00a075\u00a0Magical Resistance\u00a0and ignore knockback effects. The maximum Magical Damage Reduction\u00a0limit is increased to\u00a075%.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Morale Boost",
-        "Description": "Recover 33%\u00a0maximum health after killing a player.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Morale Boost",
+        "Description":"Recover 33%\u00a0maximum health after killing a player.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Potion Chugger",
-        "Description": "Gain\u00a020% potency towards all drinks, while reducing the duration by 50%.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Potion Chugger",
+        "Description":"Gain\u00a020% potency towards all drinks, while reducing the duration by 50%.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Savage",
-        "Description": "While not wearing any\u00a0chest armor, gain\u00a010%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Savage",
+        "Description":"While not wearing any\u00a0chest armor, gain\u00a010%\u00a0Physical Damage Bonus.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Crush",
-        "Description": "Gain the ability to destroy unreinforced doors and containers. Also gain\u00a01\u00a0Impact Power\u00a0on your attacks with two-handed weapons to defeat blocks and parries better.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Crush",
+        "Description":"Gain the ability to destroy unreinforced doors and containers. Also gain\u00a01\u00a0Impact Power\u00a0on your attacks with two-handed weapons to defeat blocks and parries better.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Robust",
-        "Description": "Gain\u00a010%\u00a0Max Health Bonus.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Robust",
+        "Description":"Gain\u00a010%\u00a0Max Health Bonus.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Treacherous Lungs",
-        "Description": "Increases the duration of all shouting abilities 30%.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Treacherous Lungs",
+        "Description":"Increases the duration of all shouting abilities 30%.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Two-Hander",
-        "Description": "When attacking with a two-handed\u00a0weapon, gain\u00a05%\u00a0Physical Damage Bonus\u00a0and\u00a05%\u00a0Armor Penetration.",
-        "Class Requirements": "Barbarian",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Two-Hander",
+        "Description":"When attacking with a two-handed\u00a0weapon, gain\u00a05%\u00a0Physical Damage Bonus\u00a0and\u00a05%\u00a0Armor Penetration.",
+        "Class Requirements":"Barbarian",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Achilles Strike",
-        "Description": "The next time you strike a target, inflict\u00a0-30%\u00a0Move Speed Bonus\u00a0for\u00a02.5s. While\u00a0debuffed, each time the target moves they receive\u00a01\u00a0Physical Base Damage.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Achilles Strike",
+        "Description":"Strike a target, reducing their move speed bonus by 30% for 2.5 seconds. While the buffed, each time the target moves they receive physical damage. ",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Blood Exchange",
-        "Description": "For\u00a012s, your attacks have\u00a010%\u00a0Lifesteal. In exchange, suffer\u00a0-10%\u00a0Max Health Bonus\u00a0for the duration.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Blood Exchange",
+        "Description":"While active, each successful hit recovers health at a rate of 10% of damage dealt. In exchange, lose 10% max health bonus for 12 seconds. ",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Rage",
-        "Description": "Gain\u00a015\u00a0Strength,\u00a015\u00a0Vigor, and\u00a012%\u00a0Move Speed Bonus.While active, lose 15%\u00a0Physical Damage Reduction for 6s.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Rage",
+        "Description":"Gain\u00a015\u00a0Strength,\u00a015\u00a0Vigor, and\u00a012%\u00a0Move Speed Bonus.While active, lose 15%\u00a0Physical Damage Reduction for 6s.",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Reckless Attack",
-        "Description": "Gain\u00a085%\u00a0Armor Penetration\u00a0on your next melee attack. While active, lose 85\u00a0Armor Rating.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Reckless Attack",
+        "Description":"Gain\u00a085%\u00a0Armor Penetration\u00a0on your next melee attack. While active, lose 85\u00a0Armor Rating.",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Savage Roar",
-        "Description": "Frightens all enemies within a\u00a07.5m\u00a0radius, causing players to suffer\u00a0-30%\u00a0Physical Damage Bonus\u00a0for\u00a06s\u00a0and forcing monsters to flee for\u00a03s.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Savage Roar",
+        "Description":"Frightens all enemies within a 7.5m range radius for six seconds reducing their physical damage bonus by 30%. ",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "War Cry",
-        "Description": "You and allies within\u00a07.5m\u00a0gain\u00a025%\u00a0Max Health Bonus\u00a0for\u00a07s.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"War Cry",
+        "Description":"Gain 25% max health bonus for seven seconds. This effect applies to yourself and allies within a 7.5m radius.",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "War Sacrifice",
-        "Description": "While active, gain\u00a05\u00a0All Attributes\u00a0for\u00a012s. In exchange, suffer\u00a0-10%\u00a0Percent Max Health Healing\u00a0over\u00a012s.",
-        "Class Requirements": "Barbarian",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"War Sacrifice",
+        "Description":"While active, gained +5 all attributes. In exchange lose 10% of your maximum health over 12 seconds ",
+        "Class Requirements":"Barbarian",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Adrenaline Spike",
-        "Description": "When your health goes below\u00a040%, gain\u00a015%\u00a0Action Speed\u00a0for\u00a012s.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "60s"
+        "Name":"Adrenaline Spike",
+        "Description":"When your health goes below\u00a040%, gain\u00a015%\u00a0Action Speed\u00a0for\u00a012s.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"60s"
     },
     {
-        "Name": "Barricade",
-        "Description": "While in defensive stance, gain\u00a050\u00a0Armor Rating\u00a0and\u00a050\u00a0Magical Resistance.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Barricade",
+        "Description":"While in defensive stance, gain\u00a050\u00a0Armor Rating\u00a0and\u00a050\u00a0Magical Resistance.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Combo Attack",
-        "Description": "When you successfully melee attack consecutively within\u00a02s, gain\u00a010%\u00a0Physical Damage Bonus\u00a0for\u00a02s.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Combo Attack",
+        "Description":"When you successfully melee attack consecutively within\u00a02s, gain\u00a010%\u00a0Physical Damage Bonus temporarily",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Counterattack",
-        "Description": "When you successfully block an attack, gain\u00a010%\u00a0Move Speed Bonus\u00a0and\u00a010%\u00a0Action Speed\u00a0for\u00a03s.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Counterattack",
+        "Description":"When you successfully block an attack, gain\u00a010%\u00a0Move Speed Bonus\u00a0and\u00a010%\u00a0Action Speed\u00a0for\u00a03s.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Defense Mastery",
-        "Description": "Gain an additional\u00a010%\u00a0Item Armor Rating Bonus\u00a0from equipped armor, and raise your\u00a0Physical Damage Reduction\u00a0cap to\u00a075%.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Defense Mastery",
+        "Description":"Gain an additional\u00a010% Armor Rating Bonus\u00a0from equipped armor. The maximum physical reduction limit is increased to 75%.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dual Wield",
-        "Description": "While you have weapons equipped in both hands, gain\u00a010%\u00a0Action Speed.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dual Wield",
+        "Description":"While you have weapons equipped in both hands, gain\u00a010%\u00a0Action Speed.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Projectile Resistance",
-        "Description": "Gain\u00a010%\u00a0Projectile Damage Reduction.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Projectile Resistance",
+        "Description":"Gain\u00a010%\u00a0Projectile Damage Reduction.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shield Mastery",
-        "Description": "While in defensive stance, gain\u00a010%\u00a0Move Speed Bonus. When you successfully block an attack, gain\u00a050%\u00a0Action Speed\u00a0towards your next block or attack.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Shield Mastery",
+        "Description":"While in defensive stance, gain\u00a010%\u00a0Move Speed Bonus. When you successfully block an attack, gain\u00a050%\u00a0Action Speed\u00a0towards your next block or attack.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Slayer",
-        "Description": "While holding a weapon in each hand, gain\u00a05\u00a0Physical Buff Weapon Damage\u00a0and lose the ability to equip plate armor.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Slayer",
+        "Description":"While holding a weapon in each hand, gain\u00a05 Weapon Damage\u00a0and lose the ability to equip plate armor.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Swift",
-        "Description": "Gain\u00a0-30%\u00a0Armor Speed Penalty Bonus. Not applicable to additional speed modifiers.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Swift",
+        "Description":"Reduces the armour move speed penalty by 30%. Not applicable to additional modifiers. ",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sword Mastery",
-        "Description": "When using a\u00a0Sword-type weapon, gain\u00a02\u00a0Physical Buff Weapon Damage\u00a0and\u00a05%\u00a0Action Speed. Also gain\u00a010\u00a0Move Speed Add\u00a0when taking a defensive stance with your sword.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Sword Mastery",
+        "Description":"When using a\u00a0Sword-type weapon, gain\u00a02 Weapon Damage\u00a0and\u00a05%\u00a0Action Speed. Also gain\u00a010\u00a0additional Move Speed when taking a defensive stance with your sword.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Weapon Mastery",
-        "Description": "Gain the ablity to use any weapon. While using non-native weapon to your Class Requirements, lose\u00a0-5%\u00a0Physical Damage Bonus\u00a0and\u00a0-5%\u00a0Magical Power Bonus\u00a0on the weapon.",
-        "Class Requirements": "Fighter",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Weapon Mastery",
+        "Description":"Gain the ablity to use any weapon. While using non-native weapon to your Class Requirements, lose\u00a05%\u00a0Physical Damage Bonus\u00a0and\u00a05%\u00a0Magical damage Bonus\u00a0on the weapon.",
+        "Class Requirements":"Fighter",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Adrenaline Rush",
-        "Description": "Gain\u00a015%\u00a0Action Speed\u00a0and\u00a05%\u00a0Move Speed Bonus\u00a0for\u00a08s. After the duration ends, lose\u00a0-8%\u00a0Action Speed\u00a0and\u00a0-4%\u00a0Move Speed Bonus\u00a0for\u00a02s.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Adrenaline Rush",
+        "Description":"Gain\u00a015%\u00a0Action Speed\u00a0and\u00a05%\u00a0Move Speed Bonus\u00a0for\u00a08s. After the duration ends, lose\u00a08%\u00a0Action Speed\u00a0and\u00a04%\u00a0Move Speed Bonus\u00a0for\u00a02s.",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Breakthrough",
-        "Description": "Remove and become immune to\u00a0Debuffs\u00a0that slow move speed, knockback, and gain\u00a07\u00a0Move Speed Add\u00a0for\u00a012s.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Breakthrough",
+        "Description":"Remove the buffs that slow move speed, grants a 7 additional move speed, and ignores all move speed the buff effects for 12 seconds ",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Perfect Block",
-        "Description": "Gain\u00a05\u00a0Impact Resistance\u00a0for\u00a06s.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "7s"
+        "Name":"Perfect Block",
+        "Description":"Gain\u00a05\u00a0Impact Resistance\u00a0for\u00a06s.",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"7s"
     },
     {
-        "Name": "Second Wind",
-        "Description": "Recover\u00a040%\u00a0Percent Max Health Healing\u00a0over\u00a012s. Additionally, Second Wind removes the negative effects of the Adrenaline Rush.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Second Wind",
+        "Description":"Recover\u00a040%\u00a0Percent Maximum Health over\u00a012s. Additionally, Second Wind removes the negative effects of the Adrenaline Rush.",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shield Slam",
-        "Description": "When using a shield, perform a shield bash attack that actively blocks and deals 25 Physical\u00a0Damage\u00a0(100% Scaling) and decreases the victim's Move Speed Bonus by -20% for 2 seconds after knocking them backwards.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "7s"
+        "Name":"Shield Slam",
+        "Description":"Inflicts 45 physical damage on the target, and reduces the target move speed bonus by 20% for 3 seconds. ",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"7s"
     },
     {
-        "Name": "Spell Reflection",
-        "Description": "While blocking, gain the ability to reflect projectile and hitscan spells while also gaining\u00a05%\u00a0Magical Damage Reduction Mod. This buff persists until triggered, lasting\u00a05s\u00a0while active.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Spell Reflection",
+        "Description":"While blocking, gain the ability to reflect spells. This buff persists until triggered, lasting 5 seconds. While active, also gain 5% magical damage reduction. ",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Sprint",
-        "Description": "Gain\u00a03\u00a0stacks of Momentum, granting\u00a015\u00a0Move Speed Add\u00a0per stack. Lose 1 stack every\u00a02s.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Sprint",
+        "Description":"Gain\u00a03\u00a0stacks of Momentum, granting\u00a015\u00a0additional Move Speed per stack. Lose 1 stack every\u00a02s.",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Taunt",
-        "Description": "Increases the aggro value to all monsters within a\u00a07.5m\u00a0area by 50%. Gain\u00a012%\u00a0Physical Damage Reduction\u00a0and\u00a012%\u00a0Magical Damage Reduction\u00a0for\u00a010s.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Taunt",
+        "Description":"Increases the aggro value to all monsters within a\u00a07.5m\u00a0area by 50%. Gain\u00a012%\u00a0Physical Damage Reduction\u00a0and\u00a012%\u00a0Magical Damage Reduction\u00a0for\u00a010s.",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Victory Strike",
-        "Description": "Your next attack within\u00a010s\u00a0deals an additional\u00a020%\u00a0Physical Damage Bonus. If the target dies from this attack, heal for\u00a015%\u00a0Percent Max Health Healing.",
-        "Class Requirements": "Fighter",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Victory Strike",
+        "Description":"Your next attack deals additional 20% physical damage bonus. If the target dies from the attack, heal for 15% of your maximum health. ",
+        "Class Requirements":"Fighter",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Ambush",
-        "Description": "When coming out of hide, you gain\u00a010%\u00a0Move Speed Bonus\u00a0and\u00a025%\u00a0Physical Damage Bonus\u00a0for\u00a03s. If the melee attack is successful, the effect disappears.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Ambush",
+        "Description":"When coming out of hide, you gain\u00a010%\u00a0Move Speed Bonus\u00a0and\u00a025%\u00a0Physical Damage Bonus\u00a0for\u00a03s. If the melee attack is successful, the effect disappears.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Back Attack",
-        "Description": "When attacking a target from behind (roughly 120-135 degrees) gain\u00a030%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Back Attack",
+        "Description":"When attacking a target from behind, gain 30% backstab power. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Creep",
-        "Description": "While crouching for at least\u00a00.5s, reduce the volume of footsteps significantly.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Creep",
+        "Description":"While crouch walking, reduce the volume of footsteps significantly. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dagger Mastery",
-        "Description": "When swinging a\u00a0dagger, gain\u00a015%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dagger Mastery",
+        "Description":"When using a\u00a0dagger, gain\u00a015%\u00a0Physical Damage Bonus.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Double Jump",
-        "Description": "You gain the ability to jump an additional time in the air, but lose\u00a0-10\u00a0Move Speed Add. After double jumping, receive a 75%\u00a0Movement Multiplier\u00a0until landing.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Double Jump",
+        "Description":"You gain the ability to jump an additional time in the air, but lose\u00a010\u00a0additional move speed.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Hide Mastery",
-        "Description": "Increases the Hide skill duration to 1.5x and multiplies the cooldown by\u00a00.7x.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Hide Mastery",
+        "Description":"Increases the duration of the hide skill by 1.5 times and reduce its cooldown time by 30%. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Jokester",
-        "Description": "Grant self and all party members\u00a02\u00a0All Attributes\u00a0within\u00a06m.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Jokester",
+        "Description":"Give all party members +2 all attributes. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Pickpocket",
-        "Description": "Steal items from a chosen nearby enemy by using the \"interact\" key. Stolen item is chosen randomly from enemies inventory. Items currently equipped by enemies cannot be stolen. Additionally, your hide will not be revealed when you are bumped into. Items worn in utility slots do not appear on the waist. Pickpocket is not permitted in\u00a0Arena.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Pickpocket",
+        "Description":"Steal items from nearby enemies. Additionally, your hide will not be revealed when you are bumped into. Items worn in utility slots do not appear on the waist. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Poisoned Weapon",
-        "Description": "A successful attack applies poison that deals\u00a04\u00a0\u00a0Neutral\u00a0Magical Base Damage\u00a0over\u00a04s\u00a0and causes the target to suffer\u00a0-10%\u00a0Incoming\u00a0Physical Healing Mod\u00a0and\u00a0-10%\u00a0Incoming\u00a0Magical Healing Mod. The poison can stack up to\u00a05\u00a0times at once and all stacks refresh when adding more stacks.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Poisoned Weapon",
+        "Description":"a successful attack applies poison that deals 4 magical damage and reduces their incoming physical healing by 10% and incoming magical healing by 10% over 4 seconds. The poison can stack up to 5 times. ",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Stealth",
-        "Description": "While hiding, gain the ability to move\u00a010\u00a0steps while crouching or slow walking. Also gain\u00a03\u00a0Move Speed Add\u00a0per remaining step.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Stealth",
+        "Description":"While hiding, gain the ability to move\u00a010\u00a0steps while crouching or slow walking. Also gain\u00a03\u00a0additional move speed  per remaining step.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Thrust",
-        "Description": "When swinging a\u00a0dagger, gain an additional\u00a020%\u00a0Armor Penetration.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Thrust",
+        "Description":"When using a\u00a0dagger, gain an additional\u00a020%\u00a0Armor Penetration.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Traps and Locks",
-        "Description": "You can unlock locked locks without a lockpick and detect traps within\u00a04.5m\u00a0to disarm them.",
-        "Class Requirements": "Rogue",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Traps and Locks",
+        "Description":"You can unlock locked locks without a lockpick and detect traps within a certain range to disarm them.",
+        "Class Requirements":"Rogue",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Caltrops",
-        "Description": "Drops Caltrops at your feet that deal\u00a010\u00a0Physical Base Damage\u00a0and slows by\u00a0-50%\u00a0Move Speed Bonus\u00a0to the next character that steps on them for\u00a03s.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "12s"
+        "Name":"Caltrops",
+        "Description":"Drops Caltrops at your feet that deal 10 physical damage and slows the move speed bonus by 50% of anything that steps on them for three seconds. ",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"12s"
     },
     {
-        "Name": "Cut Throat",
-        "Description": "When you successfully hit a target,\u00a0silence\u00a0them for\u00a02s, disabling the target's skills/spells/performance abilities.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Cut Throat",
+        "Description":"When you successfully hit a target,\u00a0silence\u00a0them for\u00a02s, disabling the target's skills\/spells\/performance abilities.",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Hide",
-        "Description": "Become invisible for\u00a08s. It is possible to change your equipment in this state. You are revealed when you attempt an action, such as moving, attacking, using a skill. Additionally, you will be revealed when you are bumped into.\u00a02 Charges.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "32s"
+        "Name":"Hide",
+        "Description":"Become invisible for\u00a08s. It is possible to change your equipment in this state. You are revealed when you attempt an action, such as moving, attacking, using a skill.",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"32s"
     },
     {
-        "Name": "Rupture",
-        "Description": "The next successful attack causes the target to bleed for\u00a020\u00a0Physical Base Damage\u00a0over\u00a05s. The\u00a0Buff\u00a0is consumed when an attack hits an object or target.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Rupture",
+        "Description":"The next successful attack causes the target to bleed for\u00a020\u00a0Physical damage over\u00a05 seconds. The\u00a0Buff\u00a0is consumed when an attack hits an object or target.",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Smoke Pot",
-        "Description": "A smoke pot is deployed creating a smoke screen. The smoke screen lasts\u00a012s\u00a0and covers a\u00a06m\u00a0area. While an enemy target is within the smoke screen it slows them by\u00a0-10%\u00a0Move Speed Bonus.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Smoke Pot",
+        "Description":"A smoke pot is deployed creating a smoke screen. The smoke screen lasts\u00a012s\u00a0and covers a\u00a06m\u00a0area. When an enemy target enters the smoke screen, reduces their move speed bonus by 10%.",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Tumbling",
-        "Description": "When used, backtumbles in the opposite direction the player is facing.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "0.5s"
+        "Name":"Tumbling",
+        "Description":"When used, backtumbles in the opposite direction the player is facing.",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"0.5s"
     },
     {
-        "Name": "Weakpoint Attack",
-        "Description": "When you successfully hit a target, reduce their armor rating by\u00a0-40%\u00a0Item Armor Rating Bonus\u00a0for\u00a03s. Only when melee attacking.",
-        "Class Requirements": "Rogue",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Weakpoint Attack",
+        "Description":"When you successfully hit a target, reduce their armour rating bonus by 40% for 3 seconds. Only when melee attacking. ",
+        "Class Requirements":"Rogue",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Camping Mastery",
-        "Description": "Gain\u00a050%\u00a0Regular Interaction Speed\u00a0while setting up\u00a0Campfires\u00a0and increases the duration to\u00a01.3x.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Camping Mastery",
+        "Description":"Reduces campfire set up time by 50% and increases duration by 30%. ",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Chase",
-        "Description": "Detect recent enemy footsteps within\u00a05.5m\u00a0and can hear enemy footstep sounds from farther away.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Chase",
+        "Description":"Detect recent enemy footsteps and can hear enemy footstep sounds from farther away. ",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Crippling Shot",
-        "Description": "Hitting the target's leg with a projectile inflicts\u00a0-40%\u00a0Move Speed Bonus\u00a0for\u00a01s.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Crippling Shot",
+        "Description":"Hitting the targets leg reduces their move speed bones by 40% for 1 second. ",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Crossbow Mastery",
-        "Description": "While using a\u00a0crossbow, gain\u00a05%\u00a0Physical Damage Bonus\u00a0and an additional\u00a050%\u00a0Action Speed\u00a0while reloading.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Crossbow Mastery",
+        "Description":"While using a\u00a0crossbow, gain\u00a05%\u00a0Physical Damage Bonus\u00a0and an additional\u00a050%\u00a0Action Speed\u00a0while reloading.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Kinesthesia",
-        "Description": "When moving with the bowstring drawn, receive a\u00a0movement multiplier\u00a0of\u00a0115%.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Kinesthesia",
+        "Description":"When moving with the bowstring drawn move speed bonus increases by 15%.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Nimble Hands",
-        "Description": "When using a\u00a0bow, increases the animation's base draw speed by 15%.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Nimble Hands",
+        "Description":"When using a\u00a0bow, increases your draw speed by 15%.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Quick Reload",
-        "Description": "When reloading a\u00a0bow-type\u00a0weapon, gain\u00a050%\u00a0Action Speed.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Quick Reload",
+        "Description":"When reloading a\u00a0bow-type\u00a0weapon, gain\u00a050%\u00a0Action Speed.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Ranged Weapons Mastery",
-        "Description": "When attacking with a ranged (bow/crossbow) weapon, gain\u00a05%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Ranged Weapons Mastery",
+        "Description":"When attacking with a ranged weapon, gain\u00a05%\u00a0Physical Damage Bonus.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sharpshooter",
-        "Description": "When attacking with a ranged weapon, gain\u00a015%\u00a0Physical Headshot Hit Location Bonus.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Sharpshooter",
+        "Description":"When attacking with a ranged weapon, gain\u00a015%\u00a0headshot power.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spear Proficiency",
-        "Description": "Gain the ability to equip\u00a0spears. While using a spear, gain\u00a05\u00a0Physical Power.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spear Proficiency",
+        "Description":"Gain the ability to equip\u00a0spears. While using a spear, gain\u00a05\u00a0Physical Power.",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Trap Mastery",
-        "Description": "When installing traps, gain\u00a0100%\u00a0Regular Interaction Speed.",
-        "Class Requirements": "Ranger",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Trap Mastery",
+        "Description":"Dramatically decreases installation time for traps. ",
+        "Class Requirements":"Ranger",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Back Step",
-        "Description": "Quickly retreats\u00a04m\u00a0in\u00a00.2s. It can also be used in the air.\u00a02 Charges",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "12s"
+        "Name":"Back Step",
+        "Description":"Quickly retreat a short distance. It can be used in the air. ",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"12s"
     },
     {
-        "Name": "Field Ration",
-        "Description": "Forage food and recover\u00a025\u00a0Physical Base Healing.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Field Ration",
+        "Description":"Forage food and recover\u00a025\u00a0health.",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Forceful Shot",
-        "Description": "When using a\u00a0bow-type\u00a0weapon, gain the ability to knock targets\u00a02.5m\u00a0back for\u00a08s.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Forceful Shot",
+        "Description":"When using a bow type weapon, gain the ability to knock targets back for 8 seconds. ",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Multishot",
-        "Description": "When using a\u00a0bow-type\u00a0weapon, fire 5 arrows at once in cone shaped dispersion.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "22s"
+        "Name":"Multishot",
+        "Description":"Fire 5 arrows at once in cone shaped dispersion.",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"22s"
     },
     {
-        "Name": "Penetrating Shot",
-        "Description": "Gain\u00a050%\u00a0Physical Headshot Penetration\u00a0and\u00a025%\u00a0Armor Penetration\u00a0for\u00a08s.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Penetrating Shot",
+        "Description":"Gain\u00a050% Headshot Penetration\u00a0and\u00a025%\u00a0Armor Penetration\u00a0for\u00a08 seconds.",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Quick Fire",
-        "Description": "Gain an additional\u00a050%\u00a0Action Speed\u00a0for\u00a08s\u00a0while using\u00a0bow-type\u00a0weapons.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Quick Fire",
+        "Description":"Gain an additional\u00a050%\u00a0Action Speed\u00a0for\u00a08 seconds while using\u00a0bow-type\u00a0weapons.",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Quickshot",
-        "Description": "Fire arrows in a quick succession. Each\u00a0bow-type\u00a0will fire a different amount of arrows.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "22s"
+        "Name":"Quickshot",
+        "Description":"Fire arrows in a quick succession. Each\u00a0bow-type\u00a0will fire a different amount of arrows.",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"22s"
     },
     {
-        "Name": "True Shot",
-        "Description": "The next projectile within\u00a08s\u00a0is no longer affected by gravity and gains\u00a08%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"True Shot",
+        "Description":"Projectile flight speed is greatly increased, also increasing physical damage bonus by 8% .",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Purge Shot",
-        "Description": "Removes all magical\u00a0Buffs\u00a0from a target on each successful hit with a ranged weapon for\u00a08s. For each removed buff, you additionally deal\u00a015\u00a0True Physical Base Damage.",
-        "Class Requirements": "Ranger",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Purge Shot",
+        "Description":"removes all magical buffs from a target on each successful hit with a ranged weapon within 8 seconds. Deals 15 true physical damage on removing buffs. ",
+        "Class Requirements":"Ranger",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Arcane Feedback",
-        "Description": "When you deal damage with an\u00a0\u00a0Arcane\u00a0spell, gain a stacking bonus granting\u00a03%\u00a0Spell Casting Speed\u00a0and\u00a03%\u00a0\u00a0Arcane\u00a0Power Bonus\u00a0per stack for\u00a07s. This skill can stack up to\u00a05\u00a0times and the duration resets with each with each successful stack.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Arcane Feedback",
+        "Description":"When you deal damage with an arcane spell, gain a stacking bonus granting 3% spellcasting speed and 3% arcane magical damage bonus per stack for seven seconds. This skill can stack up to 5 times and the duration resets with each successful stack. ",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Arcane Mastery",
-        "Description": "Gain\u00a05%\u00a0\u00a0Arcane\u00a0Power Bonus\u00a0and reduces the cast time of\u00a0\u00a0Arcane\u00a0spells by\u00a00.5s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Arcane Mastery",
+        "Description":"Gain 5% arcane magical damage bonus and reduce the cast time of arcane spells by 0.5 seconds.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Fire Mastery",
-        "Description": "Gain\u00a05%\u00a0\u00a0Fire\u00a0Power Bonus. The duration of applied burns are increased by 2 seconds and deal 2 more base damage (except Explosion Spell which gains 1/1), and burn the target to suffer\u00a0-50%\u00a0Incoming\u00a0Physical Healing Mod\u00a0and\u00a0-50%\u00a0Incoming\u00a0Magical Healing Mod\u00a0for\u00a05s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Fire Mastery",
+        "Description":"Gain 5% fire magical damage bonus. The duration of applied burns are increased by two seconds, and a burned target reduces incoming physical healing by 50% and incoming magical healing by 50% for five seconds. ",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Ice Mastery",
-        "Description": "Dealing damage with\u00a0\u00a0Ice\u00a0freezes the target's feet and prevents them from moving for\u00a00.5s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Ice Mastery",
+        "Description":"Dealing damage with\u00a0Ice\u00a0magic freezes the target's feet and prevents them from moving for\u00a00.5 seconds.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Ice Shield",
-        "Description": "Gain\u00a020\u00a0Armor Rating\u00a0while not on cooldown. Inflict frostbite on melee attackers, causing them to suffer\u00a0-20%\u00a0Move Speed Bonus\u00a0and\u00a0-20%\u00a0Action Speed\u00a0for\u00a00.5s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "5s"
+        "Name":"Ice Shield",
+        "Description":"Gain 20 armour rating. Inflict frostbite for 0.5 seconds on melee attacker. Does not inflict while on cool down.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"5s"
     },
     {
-        "Name": "Mana Surge",
-        "Description": "Gain\u00a010%\u00a0Magical Power Bonus.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Mana Surge",
+        "Description":"Gain\u00a010%\u00a0Magical damage Bonus.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Melt",
-        "Description": "When you deal magical\u00a0\u00a0Fire\u00a0Damage\u00a0to a target, they suffer\u00a0-20%\u00a0Physical Damage Reduction\u00a0for\u00a05s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Melt",
+        "Description":"When you deal magical fire damage to a target, the target loses 20% physical damage reduction for five seconds. ",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Quick Chant",
-        "Description": "Gain\u00a015%\u00a0Spell Casting Speed.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Quick Chant",
+        "Description":"Gain\u00a015%\u00a0Spell Casting Speed.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Reactive Shield",
-        "Description": "When you take damage, gain a\u00a015\u00a0Base Shield\u00a0(0%\u00a0Scaling) for\u00a03s. The shield will reactivate after\u00a012s.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Reactive Shield",
+        "Description":"When you take damage, gain an arcane shield that lasts for three seconds. The shield can absorb 15 total damage and will only reactivate after a cool down period. ",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sage",
-        "Description": "Gain\u00a010%\u00a0Knowledge Bonus.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Sage",
+        "Description":"Gain\u00a010%\u00a0Knowledge Bonus.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Overload",
-        "Description": "Suffer\u00a0-20%\u00a0Knowledge Bonus\u00a0but in turn, gain\u00a060%\u00a0Max Spell Count Bonus.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spell Overload",
+        "Description":"Reduces knowledge bonus by 20% and increases all spells counts by 60%. ",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Staff Mastery",
-        "Description": "When using a\u00a0staff-type\u00a0weapon, you gain\u00a02\u00a0Buff Magical Damage\u00a0as\u00a0Base damage.",
-        "Class Requirements": "Wizard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Staff Mastery",
+        "Description":"When using a\u00a0staff-type\u00a0weapon, you gain 2 magic weapon damage.",
+        "Class Requirements":"Wizard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Arcane Shield",
-        "Description": "Gain a\u00a015\u00a0Base Shield\u00a0(50%\u00a0Scaling) for\u00a012s. When the maximum amount is absorbed, the shield unleashes an Arcane Explosion, dealing\u00a05\u00a0\u00a0Arcane\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) to enemy targets in a\u00a02m\u00a0radius around you.",
-        "Class Requirements": "Wizard",
-        "Type": "Skill",
-        "Cooldown": "25s"
+        "Name":"Arcane Shield",
+        "Description":"Gain a shield around you that absorbs 15 damage from all damage sources for 12 seconds. When the maximum amount of absorb has been reached, the shield  unleashes an arcane explosion, dealing five magical damage to enemy targets in a two meter radius around you. ",
+        "Class Requirements":"Wizard",
+        "Type":"Skill",
+        "Cooldown":"25s"
     },
     {
-        "Name": "Intense Focus",
-        "Description": "Reduce the cast time of your next spell to\u00a00.1s.",
-        "Class Requirements": "Wizard",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Intense Focus",
+        "Description":"Reduce the cast time of your next spell to\u00a00.1 seconds.",
+        "Class Requirements":"Wizard",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Meditation",
-        "Description": "Enter a\u00a0meditative\u00a0state and recover spells at a rate of\u00a034\u00a0spell cost\u00a0per\u00a00.75s over\u00a024s. While meditating you are also\u00a0Resting\u00a0and can benefit from\u00a0Campfires",
-        "Class Requirements": "Wizard",
-        "Type": "Skill",
-        "Cooldown": "45s"
+        "Name":"Meditation",
+        "Description":"Enter a\u00a0meditative\u00a0state and recover spells at a rate of\u00a034\u00a0spells cost over\u00a024 seconds.",
+        "Class Requirements":"Wizard",
+        "Type":"Skill",
+        "Cooldown":"45s"
     },
     {
-        "Name": "Spell Memory",
-        "Description": "Gain the ability to memorize spells to use in the dungeon.",
-        "Class Requirements": "Wizard",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory",
+        "Description":"Gain the ability to memorize spells to use in the dungeon.",
+        "Class Requirements":"Wizard",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Memory II",
-        "Description": "Gain the ability to memorize additional spells to use in the dungeon.",
-        "Class Requirements": "Wizard",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory II",
+        "Description":"Gain the ability to memorize additional spells to use in the dungeon.",
+        "Class Requirements":"Wizard",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Advanced Healer",
-        "Description": "Gain\u00a05\u00a0Outgoing\u00a0Magical Healing Add.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Advanced Healer",
+        "Description":"Gain\u00a05 Magical Healing.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Blunt Weapon Mastery",
-        "Description": "While using a\u00a0Mace, gain\u00a010%\u00a0Physical Damage Bonus.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Blunt Weapon Mastery",
+        "Description":"While using a\u00a0blunt weapon, gain\u00a010%\u00a0Physical Damage Bonus.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Brewmaster",
-        "Description": "When you drink\u00a0alcohol, you no longer exhibit the detrimental drunk effects and gain\u00a010\u00a0Strength.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Brewmaster",
+        "Description":"When you drink\u00a0alcohol, you no longer exhibit the detrimental drunk effects and gain\u00a010\u00a0Strength.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Faithfulness",
-        "Description": "Gain\u00a015%\u00a0\u00a0Divine\u00a0Power Bonus. When a\u00a0\u00a0Divine\u00a0attack is successful, cause the target to suffer\u00a0-15%\u00a0Move Speed Bonus\u00a0for\u00a01.5s.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "3s"
+        "Name":"Faithfulness",
+        "Description":"Gain 15% divine magical damage bonus. When a divine attack is successful, reduce their move speed bonus by 15% for 1.5 seconds. Does not inflict while on cooldown. ",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"3s"
     },
     {
-        "Name": "Holy Aura",
-        "Description": "Gain\u00a015\u00a0Armor Rating\u00a0and\u00a015\u00a0Magical Resistance. This effects both yourself and allies within\u00a06m.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Holy Aura",
+        "Description":"Gain\u00a015\u00a0Armor Rating\u00a0and\u00a015\u00a0Magic Resistance. This affects both yourself and allies within\u00a06m.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Holy Water",
-        "Description": "Drinking any of the drinks will eliminate all removable curse effects.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Holy Water",
+        "Description":"Drinking drink eliminates all removable curse effects.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Kindness",
-        "Description": "Heal yourself for\u00a015%\u00a0of the spell total heal amount when healing another character.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Kindness",
+        "Description":"Heal yourself for\u00a015%\u00a0of the spell's total heal amount when healing another target.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Over Healing",
-        "Description": "If the target would be healed for more than their missing health, the extra\u00a0magical healing\u00a0will be received as bonus health up to\u00a020%\u00a0of the target's\u00a0maximum health. This bonus health decays at\u00a0-2%\u00a0Percent Max Health Healing\u00a0per second.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Over Healing",
+        "Description":"Even if the targets health is at full health, additional healing can be done by 20% of the targets maximum health. Bonus health degenerates at 2% per second. ",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Perseverance",
-        "Description": "Reduces all incoming damage by\u00a02\u00a0Physical Absolute Reduction/2\u00a0Magical Absolute Reduction. Cannot reduce below 1.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Perseverance",
+        "Description":"Reduces all types of incoming damage by\u00a02.",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Protection from Evil",
-        "Description": "Gain\u00a0-30%\u00a0Debuff Duration Bonus.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Protection from Evil",
+        "Description":"Reduce the duration of all harmful effects by 30%. ",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Requiem",
-        "Description": "Resurrecting an ally revives them with\u00a0-50%\u00a0HP lost. When reviving an ally at an\u00a0Altar of Sacrifice, you do not sacrifice any of your own health.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Requiem",
+        "Description":"Resurrecting an ally revives them with 50% HP instead of a sliver of life. When reviving an ally at the altar of sacrifice, you do not need to sacrifice any of your own health. ",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Undead Slaying",
-        "Description": "Gain\u00a020%\u00a0Undead\u00a0Race Damage Bonus.",
-        "Class Requirements": "Cleric",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Undead Slaying",
+        "Description":"Gain 20% undead damage bonus against undead monsters. ",
+        "Class Requirements":"Cleric",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Divine Protection",
-        "Description": "Receive the blessing of the divine and gain\u00a030%\u00a0Physical Damage Reduction\u00a0for\u00a04s.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "45s"
+        "Name":"Divine Protection",
+        "Description":"Gain 30% physical damage reduction for four seconds. ",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"45s"
     },
     {
-        "Name": "Holy Purification",
-        "Description": "After casting for\u00a01.5s, deal\u00a0100\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0to all\u00a0Undead\u00a0Monsters\u00a0within\u00a07.5m.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "45s"
+        "Name":"Holy Purification",
+        "Description":"After channelling for 1.5 seconds, deal 100 divine magical damage to all undead monsters within a 7.5 meter radius around you. ",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"45s"
     },
     {
-        "Name": "Judgement",
-        "Description": "After channeling for\u00a01s, instantly deal\u00a025\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0to a target within\u00a05m\u00a0and cause them to suffer\u00a0-30%\u00a0Move Speed Bonus\u00a0for\u00a02s.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Judgement",
+        "Description":"After channelling for one second, deal 25 divine magical damage to a target and reduce their move speed bonus by 30% for two seconds. Once the channel begins on a target, crosshair targeting is no longer required this spell has a 5 m range and will fail if the target goes out of range. ",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Smite",
-        "Description": "When activated, your melee physical attacks deal an additional instance of\u00a010\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0for\u00a07s. This new instance never benefits from\u00a0Hit Location Bonus.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "18s"
+        "Name":"Smite",
+        "Description":"Deal an additional 10 magical damage to all enemies you hit within seven seconds. Only when Melee attacking. ",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"18s"
     },
     {
-        "Name": "Spell Memory",
-        "Description": "Allows you to memorize spells to use in the dungeon.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory",
+        "Description":"Gain the ability to memorise spells to use in the dungeon.",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Memory II",
-        "Description": "Allows you to memorize additional spells to use in the dungeon.",
-        "Class Requirements": "Cleric",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory II",
+        "Description":"Gain the ability to memorise additional spells to use in the dungeon. ",
+        "Class Requirements":"Cleric",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Charismatic Performance",
-        "Description": "Upgrades a 'good' performance into a 'perfect' performance.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Charismatic Performance",
+        "Description":"Upgrades a good performance into a perfect performance. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dancing Feet",
-        "Description": "Gain\u00a010\u00a0Move Speed Add\u00a0when holding an instrument.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dancing Feet",
+        "Description":"While holding an instrument, gain 10 additional move speed.",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Fermata",
-        "Description": "Gain\u00a05\u00a0Resourcefulness",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Fermata",
+        "Description":"Gain\u00a05\u00a0Resourcefulness",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Jolly Time",
-        "Description": "Drinking\u00a0Ale\u00a0recovers\u00a05\u00a0Physical Base Healing\u00a0(100%\u00a0Scaling) and grants\u00a010\u00a0Move Speed Add\u00a0when drunk.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Jolly Time",
+        "Description":"Drinking\u00a0Ale\u00a0recovers\u00a05\u00a0health, and grants\u00a010 additional move speed  while drunk.",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Lore Mastery",
-        "Description": "A high level of understanding of objects grants you\u00a025%\u00a0Regular Interaction Speed.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Lore Mastery",
+        "Description":"Grants 25% regular interaction speed .",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Melodic Protection",
-        "Description": "While playing songs, gain\u00a030%\u00a0Physical Damage Reduction.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Melodic Protection",
+        "Description":"While playing music, gain 30% physical damage reduction. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Rapier Mastery",
-        "Description": "When a\u00a0rapier\u00a0is equipped, gain\u00a02\u00a0Physical Buff Weapon Damage\u00a0and\u00a05%\u00a0Action Speed.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Rapier Mastery",
+        "Description":"While using rapier, gain two weapon damage and 5% action speed. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Reinforced Instruments",
-        "Description": "Gain\u00a050%\u00a0Physical Damage Bonus\u00a0when attacking with a musical instrument as a weapon. (This does not apply to Songs)",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Reinforced Instruments",
+        "Description":"When attacking with an instrument, gain 50% physical damage bonus. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Story Teller",
-        "Description": "Give all party members within\u00a06m\u00a03\u00a0Will\u00a0and\u00a03\u00a0Knowledge.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Story Teller",
+        "Description":"Give all nearby party members around a +3 will and +3 knowledge buff. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Superior Dexterity",
-        "Description": "Gain\u00a050%\u00a0Item Equip Speed Bonus when switching between weapons/utility items.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Superior Dexterity",
+        "Description":"50% faster switching time when switching between weapons\/utility items. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Wanderer's Luck",
-        "Description": "Increases the chances of finding high-quality items when opening treasure chests by gaining\u00a050\u00a0Luck.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Wanderer's Luck",
+        "Description":"Increases the chance of finding high-quality items when opening treasure chests. ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "War Song",
-        "Description": "Successfully performed songs grant\u00a03\u00a0Physical Buff Weapon Damage\u00a0to yourself and allies within\u00a06m\u00a0for\u00a06s.",
-        "Class Requirements": "Bard",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"War Song",
+        "Description":"Successful performance increases nearby allies weapon damage by three for six seconds ",
+        "Class Requirements":"Bard",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dissonance",
-        "Description": "Creates an unpleasant noise to block hostile targets within a\u00a06m\u00a0area from casting spells,\u00a0Silencing\u00a0them for\u00a03s.",
-        "Class Requirements": "Bard",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Dissonance",
+        "Description":"Plays an instrument to make an unpleasant noise that silence all enemy targets for three seconds.",
+        "Class Requirements":"Bard",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Encore",
-        "Description": "The next song is automatically played to the end without any input and is sure to succeed. Gain\u00a0100%\u00a0Manual Dexterity\u00a0on this song, though capped to 50%.",
-        "Class Requirements": "Bard",
-        "Type": "Skill",
-        "Cooldown": "4s"
+        "Name":"Encore",
+        "Description":"The next song will automatically play at maximum speed and will be played perfectly. ",
+        "Class Requirements":"Bard",
+        "Type":"Skill",
+        "Cooldown":"4s"
     },
     {
-        "Name": "Party Maker",
-        "Description": "Remove drunk effect from self and all allies within\u00a06m.",
-        "Class Requirements": "Bard",
-        "Type": "Skill",
-        "Cooldown": "25s"
+        "Name":"Party Maker",
+        "Description":"Play an instrument to remove the drinking effect from all nearby allies. ",
+        "Class Requirements":"Bard",
+        "Type":"Skill",
+        "Cooldown":"25s"
     },
     {
-        "Name": "Music Memory",
-        "Description": "Can store up to 5 sheet music as space permits.",
-        "Class Requirements": "Bard",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Music Memory",
+        "Description":"Gain the ability to store up to 5 sheets of music. ",
+        "Class Requirements":"Bard",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Music Memory II",
-        "Description": "Can store up to an additional 5 sheet music as space permits.",
-        "Class Requirements": "Bard",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Music Memory II",
+        "Description":"Gain the ability to store up to 5 sheets of music. ",
+        "Class Requirements":"Bard",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dreamwalk",
-        "Description": "When you take damage while in human form, gain\u00a05\u00a0Magical Power\u00a0for\u00a03s\u00a0and become spiritual, phasing through targets and becoming invulnerable, but being unable to attack and use skills while still able to cast spells.\u00a018s\u00a0Cooldown in the form of a\u00a0Debuff.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dreamwalk",
+        "Description":"When you take damage, your magical power increases by five for three seconds and you become spiritual. The player does not collide with other targets and cannot attack or use skills but can cast spells this ability triggers once every 18 seconds.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Enhanced Wildness",
-        "Description": "While in animal form, gain\u00a05\u00a0Move Speed Add\u00a0and\u00a010\u00a0Armor Rating.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Enhanced Wildness",
+        "Description":"While you are in animal form, you gain five additional move speed and 10 armor rating",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Force of Nature",
-        "Description": "When Druid heals anyone (including self) and they are not at maximum health they gain\u00a03\u00a0Physical Power\u00a0for\u00a03s\u00a0on each tick of received healing.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Force of Nature",
+        "Description":"When you heal a target, the target gains three physical power for three seconds.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Herbal Sensing",
-        "Description": "Detect nearby herbs.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Herbal Sensing",
+        "Description":"Detects nearby herbs.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Natural Healing",
-        "Description": "Heal yourself and nearby allies\u00a01\u00a0Magical Base Healing\u00a0(10%\u00a0Scaling) every 3s.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Natural Healing",
+        "Description":"Recovering yourself and nearby allies one health every three seconds. ",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shapeshift Mastery",
-        "Description": "Allows you to change Shapeshift form instantly, bypassing cast time entirely.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Shapeshift Mastery",
+        "Description":"Changes form instantly without casting time. ",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spirit Bond",
-        "Description": "You transfer\u00a015%\u00a0of\u00a0Damage\u00a0received by a party member within\u00a06m\u00a0to yourself, up to\u00a020\u00a0damage per instance.\u00a01s\u00a0Cooldown in the form of a\u00a0Debuff.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spirit Bond",
+        "Description":"Once every 1 second, you will receive 15% of damage received by party members instead, can receive damage up to 20. ",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spirit Magic Mastery",
-        "Description": "When you cast\u00a0\u00a0Spirit\u00a0magic, gain\u00a010\u00a0Magical Power.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spirit Magic Mastery",
+        "Description":"When you cast\u00a0\u00a0Spirit\u00a0magic, you gain\u00a010\u00a0Magical Power.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sun and Moon",
-        "Description": "Nearby allies and self gain\u00a03\u00a0Vigor\u00a0and\u00a05\u00a0Magical Power.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Sun and Moon",
+        "Description":"Nearby allies gain\u00a03\u00a0Vigor\u00a0and\u00a05\u00a0Magical Power.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Thorn Coat",
-        "Description": "When melee attacked, return\u00a05\u00a0True Physical Base Damage\u00a0to the attacker.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Thorn Coat",
+        "Description":"When melee attacked, return\u00a05\u00a0True Physical Damage\u00a0to the attacker.",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Lifebloom Aura",
-        "Description": "Restores an additional 2\u00a0Health\u00a0(0%\u00a0Scaling) per tick to target when caster heals self or allies within\u00a06m. Disables Shapeshifting.",
-        "Class Requirements": "Druid",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Lifebloom Aura",
+        "Description":"Restores an additional two health to target when Caster Heals self or allies within aura range. Disable Shapeshift. ",
+        "Class Requirements":"Druid",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shapeshift Memory",
-        "Description": "Transforms one of 5 creatures, cannot use tools in non-human state.\u00a06s\u00a0Cooldown. Max\u00a04 Charges\u00a0which recover on cooldown.",
-        "Class Requirements": "Druid",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Shapeshift Memory",
+        "Description":"Transforms into the selected creature. Tools cannot be used in a nonhuman state. ",
+        "Class Requirements":"Druid",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shapeshift Memory II",
-        "Description": "Transforms into one of 5 additional creatures, cannot use tools in non-human state.\u00a06s\u00a0Cooldown. Max\u00a04 Charges\u00a0which recover on cooldown.",
-        "Class Requirements": "Druid",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory II",
+        "Description":"Gain the ability to memorise additional spells to use in the dungeon. ",
+        "Class Requirements":"Druid",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Memory",
-        "Description": "Allows you to memorize spells to use in the dungeon.",
-        "Class Requirements": "Druid",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory",
+        "Description":"Gain the ability to memorise spells to use in the dungeon. ",
+        "Class Requirements":"Druid",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Apex of Sorcery",
-        "Description": "While casting spells, move at\u00a01%\u00a0movement speed, but gain\u00a050%\u00a0Magical Power Bonus\u00a0and\u00a050%\u00a0Spell Casting Speed.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Apex of Sorcery",
+        "Description":"While casting spells, reduce movement speed by 99%, but gain 50% magical damage bonus and 50% spellcasting speed. ",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Mana Fold",
-        "Description": "Your cooldowns are\u00a00.75x\u00a0as long, but suffer\u00a0-15%\u00a0Spell Casting Speed.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Mana Fold",
+        "Description":"Reduce cooldowns of all spells by 25%, but reduce spellcasting speed by 15%.",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Merge",
-        "Description": "While using bare hands, casting two combinable spells simultaneously allows you to use a new spell.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spell Merge",
+        "Description":"While using bare hands, casting two combinable spells simultaneously allows you to use a new spell.",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Sculpting",
-        "Description": "Increases the range of all spells to\u00a0125%\u00a0and the area of effect by 25%, but increase the\u00a0Cooldown\u00a0of your\u00a0Spells\u00a0that have a radial component to\u00a01.25x.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spell Sculpting",
+        "Description":"Increases the range of all spells by 25% and the area of effect by 25%, but increases the cool downtime by 25%. ",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Spell Stride",
-        "Description": "Gain\u00a05%\u00a0Move Speed Bonus\u00a0while casting spells.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Spell Stride",
+        "Description":"Gain 5% moves been bonus while casting spells",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Time Distortion",
-        "Description": "All spell casting times are reduced to 0, but cooldown times are\u00a04x\u00a0as long.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Time Distortion",
+        "Description":"All spellcasting times are reduced to 0, but cooldown times are increased by four times ",
+        "Class Requirements":"Sorcerer",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sorcery Memory",
-        "Description": "Gain the ability to use sorcery in the dungeon.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Sorcery Memory",
+        "Description":"Gain the ability to use sorcery in the dungeon ",
+        "Class Requirements":"Sorcerer",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sorcery Memory II",
-        "Description": "Gain the ability to use sorcery in the dungeon.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Sorcery Memory II",
+        "Description":"Gain the ability to use sorcery in the dungeon.",
+        "Class Requirements":"Sorcerer",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Sorcery Combat",
-        "Description": "Gain the ability to wield magical casting weapons in melee combat.",
-        "Class Requirements": "Sorcerer",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Antimagic",
+        "Description":"Gain 25% magical damage reduction except against divine magic.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Antimagic",
-        "Description": "Gain\u00a025%\u00a0Damage Reduction\u00a0against all\u00a0Magical Elements\u00a0except\u00a0\u00a0Divine,\u00a0\u00a0Curse, and\u00a0\u00a0Neutral.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Curse Mastery",
+        "Description":"Gain 30% duration towards all curses cast. ",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Curse Mastery",
-        "Description": "Gain additional base duration towards all curses you cast.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dark Enhancement",
+        "Description":"Gain 10% dark magical damage bonus towards dark magic spells.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dark Enhancement",
-        "Description": "Gain\u00a010%\u00a0\u00a0Dark\u00a0Power Bonus\u00a0towards dark magic spells.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Dark Reflection",
+        "Description":"While active, reflect 10 magical damage to the Melee. Does not reflect while on cool down.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"15s"
     },
     {
-        "Name": "Dark Reflection",
-        "Description": "While active, reflect\u00a010\u00a0\u00a0Dark\u00a0Magical Base Damage\u00a0(75%\u00a0Scaling) to the melee attacker. Does not reflect while on cooldown.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "15s"
+        "Name":"Demon Armor",
+        "Description":"Gain the ability to equip plate armour. Lose spellcasting speed by 10%.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Demon Armor",
-        "Description": "Gain the ability to equip plate armor. Suffer\u00a0-10%\u00a0Spell Casting Speed.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Immortal Lament",
+        "Description":"Casting spells will no longer take you below 1 health.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Immortal Lament",
-        "Description": "Casting spells will no longer take you below 1 health.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Infernal Pledge",
+        "Description":"Reduces damage taken from undead and demons by 25%. ",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Infernal Pledge",
-        "Description": "Gain\u00a025%\u00a0Undead\u00a0Race Damage Reduction\u00a0and\u00a025%\u00a0Demon\u00a0Race Damage Reduction.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Malice",
+        "Description":"Gain\u00a010%\u00a0Will Bonus.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Malice",
-        "Description": "Gain\u00a010%\u00a0Will Bonus.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Shadow Touch",
+        "Description":"Dealing physical damage to an enemy with a Melee weapon deals 2 true magical damage and heals you for two health",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Shadow Touch",
-        "Description": "Dealing physical damage to an enemy with melee weapon deals\u00a02\u00a0\u00a0Dark\u00a0True Magical Base Damage\u00a0and heals you for\u00a02\u00a0Magical Base Healing\u00a0(0%\u00a0Scaling).",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Soul Collector",
+        "Description":"When you deal the final blow to an enemy, one darkness shard is collected. Gain one all attributes, 20% dark magical damage bonus for each shard collected, up to a maximum of five shards. When a dark magic spell is cast, consume all collected shards.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Soul Collector",
-        "Description": "When you deal the final blow to an enemy, one darkness shard is collected.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Torture Mastery",
+        "Description":"All curses inflicted upon enemies restore two health to the caster with each instance of damage dealt. All warlock spells costs are doubled when this perk is equipped.",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Torture Mastery",
-        "Description": "All curses inflicted upon enemies restores\u00a02\u00a0Magical Base Healing\u00a0(15%\u00a0Scaling) to the caster with each instance of damage dealt. All spells cost\u00a02x",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Vampirism",
+        "Description":"Gain 20% magical healing bonus. ",
+        "Class Requirements":"Warlock",
+        "Type":"Perk",
+        "Cooldown":"None"
     },
     {
-        "Name": "Vampirism",
-        "Description": "Gain\u00a020%\u00a0Outgoing\u00a0Magical Healing Mod.",
-        "Class Requirements": "Warlock",
-        "Type": "Perk",
-        "Cooldown": "None"
+        "Name":"Blood Pact",
+        "Description":"Take the form of your contracted Demon, gaining an additional 50 max health, 30 armour rating, and 30 magic resistance. Your entire body is covered in abyssal flame, taking 2% damage per second and dealing 2 magical damage per second to nearby characters. once activated, the effect cannot be stopped until the contract is complete, additionally by consuming darkness shards you gain one all attributes, 10% dark magical damage bonus for each darkness shard consumed when you become demon your skills change to Demon only skills.",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"0.2s"
     },
     {
-        "Name": "Blood Pact",
-        "Description": "Assimilate the contracted demon after casting for\u00a00.3s, and transform into a demon form (total transformation animation of about 3s). While in this form, gain an additional\u00a050\u00a0Max Health Add\u00a0(following the normal rules for\u00a0temporary max health),\u00a030\u00a0Armor Rating, Your entire body is covered in Abyssal Flame, taking\u00a0-2%\u00a0Percent Max Health Healing\u00a0damage per second and dealing\u00a02\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(25%\u00a0Scaling) per second in\u00a00.2s\u00a0ticks to characters within\u00a00.5m. You can move during the cast and transformation animations, but once started you can't use skills, spells, interact with objects, or cancel the transformation. Additionally, all Darkness Shards are consumed on cast completion, and you gain\u00a01\u00a0All Attributes\u00a0for each Darkness Shard consumed. When you become a demon, your skills change to demon-only skills: Unbind and Exploitation Strike. Your unarmed attacks also change (see Details below). and\u00a030\u00a0Magical Resistance.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "0.2s"
+        "Name":"Blow of Corruption",
+        "Description":"Your next physical attack deals 12 magical damage to the target and reduces their incoming physical healing by 80% and incoming magical healing by 80% for 12 seconds.",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"24s"
     },
     {
-        "Name": "Unbind",
-        "Description": "Only available while Blood Pact is active, replacing the Blood Pact skill. Return to your true self, reverting the Pact's effects on you (aside from health lost to Abyssal Flame and Shadow Shards consumed) including the buff from Exploitation Strike (the max health loss Once started, you can move but the cast cannot be cancelled. follows the normal rules for\u00a0temporary max health).",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Dark Offering",
+        "Description":"Channel your mind, sacrificing 10% of your max health per second to gain 5% magical damage bonus and 5% physical damage bonus. This bonus last for 15 seconds. ",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Exploitation Strike",
-        "Description": "Only available while Blood Pact is active, replacing the non-Blood Pact skill. Deal an additional\u00a04\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) over\u00a04s\u00a0to all enemies you hit with a physical attack within\u00a04s\u00a0and heals the caster by\u00a05%\u00a0of the target's maximum health, up to\u00a020\u00a0per hit. Buff is immediately removed when Unbind cast finishes.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "28s"
+        "Name":"Phantomize",
+        "Description":"phase through Melee attacks and projectiles for six seconds. While active, gain 5% move speed bonus and lose 50% magical damage reduction. During this period you can only move and do not collide with other players or monsters.",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"28s"
     },
     {
-        "Name": "Blow of Corruption",
-        "Description": "Your next physical attack within\u00a08s\u00a0deals\u00a012\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0(75%\u00a0Scaling) to the target and causes them to suffer\u00a0-80%\u00a0Incoming\u00a0Physical Healing Mod\u00a0and\u00a0-80%\u00a0Incoming\u00a0Magical Healing Mod\u00a0for\u00a012s. Hitting an obstacle or a shield with the blade (not the hilt) counts as the next attack and will waste the effect.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "24s"
+        "Name":"Spell Memory",
+        "Description":"Gain the ability to memorize spells to use in the dungeon.",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"None"
     },
     {
-        "Name": "Dark Offering",
-        "Description": "Channel\u00a0your mind for up to\u00a010s\u00a0(), sacrificing\u00a0-10%\u00a0Percent Max Health Healing\u00a0per\u00a01s\u00a0(()) to gain\u00a05%\u00a0Physical Damage Bonus\u00a0and\u00a05%\u00a0Magical Power Bonus\u00a0per stack, up to\u00a010\u00a0stacks. This bonus lasts for\u00a015s. All stacks are refreshed upon gaining a new stack.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "28s"
-    },
-    {
-        "Name": "Phantomize",
-        "Description": "Phase through melee attacks and projectiles and become untargeteable for\u00a06s. While active, gain\u00a05%\u00a0Move Speed Bonus\u00a0and suffer\u00a0-50%\u00a0Magical Damage Reduction. During this period you can only move and do not collide with other players or monsters, but are still vulnerable to AoE damage.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "28s"
-    },
-    {
-        "Name": "Spell Memory",
-        "Description": "Gain the ability to memorize spells to use in the dungeon.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "None"
-    },
-    {
-        "Name": "Spell Memory II",
-        "Description": "Gain the ability to memorize additional spells to use in the dungeon.",
-        "Class Requirements": "Warlock",
-        "Type": "Skill",
-        "Cooldown": "None"
+        "Name":"Spell Memory II",
+        "Description":"Gain the ability to memorize additional spells to use in the dungeon.",
+        "Class Requirements":"Warlock",
+        "Type":"Skill",
+        "Cooldown":"None"
     }
 ]

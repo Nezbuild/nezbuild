@@ -1,0 +1,555 @@
+[
+    {
+        "Name":"Zap",
+        "Description":"Deals\u00a020\u00a0\u00a0Light\u00a0Magical Base Damage\u00a0and burns the target for\u00a01s, dealing\u00a01\u00a0\u00a0Fire\u00a0Magical Base Damage.",
+        "Spell Count":5,
+        "Tier":1,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Light Orb",
+        "Description":"Cast spheres of floating light that travels up to\u00a0Infinite meters\u00a0to brightly illuminate your surroundings for 40 seconds.",
+        "Spell Count":5,
+        "Tier":1,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Magic Lock",
+        "Description":"Lockable objects such as doors or boxes will be locked for\u00a010s.",
+        "Spell Count":5,
+        "Tier":2,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Slow",
+        "Description":"Cause the target to suffer\u00a0-40%\u00a0Move Speed Bonus\u00a0for\u00a02s.",
+        "Spell Count":3,
+        "Tier":2,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Ignite",
+        "Description":"Set the target's weapon on fire for\u00a015s. While active, deal\u00a05\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0and burn enemies for\u00a01\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0over\u00a01s\u00a0on successful attacks.",
+        "Spell Count":10,
+        "Tier":2,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Ice Bolt",
+        "Description":"Deal\u00a030\u00a0\u00a0\u00a0Ice\u00a0Magical Base Damage\u00a0with\u00a04\u00a0Impact Power\u00a0and inflicts\u00a0-20%\u00a0Move Speed Bonus\u00a0and\u00a0-20%\u00a0Action Speed\u00a0for\u00a01s.",
+        "Spell Count":5,
+        "Tier":2,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Magic Missile",
+        "Description":"Channel\u00a0for up to\u00a03s\u00a0() while remaining still and fire a homing missile every\u00a00.3s\u00a0() that each deal\u00a011\u00a0\u00a0\u00a0Arcane\u00a0Magical Base Damage\u00a0with\u00a02\u00a0Impact Power.",
+        "Spell Count":10,
+        "Tier":3,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Haste",
+        "Description":"Grants the target\u00a05%\u00a0Move Speed Bonus,\u00a010%\u00a0Action Speed,\u00a010%\u00a0Spell Casting Speed\u00a0for\u00a08s.",
+        "Spell Count":4,
+        "Tier":3,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Lightning Strike",
+        "Description":"When cast, a bolt of lightning falls in the targeted area after\u00a00.5s, electrocuting enemies, dealing\u00a030\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0in a\u00a00.8m\u00a0blast radius and inflicting\u00a0-20%\u00a0Move Speed Bonus\u00a0for\u00a01s.",
+        "Spell Count":5,
+        "Tier":4,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Invisibility",
+        "Description":"Grants the target invisibility for\u00a04s. While active, the target also gains\u00a05%\u00a0Move Speed Bonus.",
+        "Spell Count":4,
+        "Tier":4,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Fireball",
+        "Description":"Shoot a burning fireball dealing\u00a025\u00a0\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0with\u00a06\u00a0Impact Power) to a direct hit target and\u00a010\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0as area of effect with\u00a04\u00a0Impact Power\u00a0while knocking back nearby targets. Additionally either one can burn the targets, dealing\u00a03\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0over\u00a03s.",
+        "Spell Count":4,
+        "Tier":4,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Explosion",
+        "Description":"When cast, places a mark on the targeted object within\u00a08m\u00a0or in the air if no object in range. The mark explodes after\u00a03s\u00a0dealing\u00a025\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0with\u00a06\u00a0Impact Power\u00a0to enemies within a\u00a01m\u00a0area and burns, dealing\u00a03\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0over\u00a02s.",
+        "Spell Count":4,
+        "Tier":5,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Chain Lightning",
+        "Description":"Electrocutes the target, dealing\u00a030\u00a0\u00a0Lightning\u00a0Magical Base Damage, and fires another chain lightning that is transferred to a random target within\u00a08m\u00a0area up to 3 times. A bounced chain deals\u00a025\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0\/\u00a025\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0\/\u00a020\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0depending on how many times it bounces. Additionally, targets hit by this shock will also suffer\u00a0-20%\u00a0Move Speed Bonus\u00a0for\u00a01s. It does not transfer to the target it was transferred to previously, and it transfers to the caster if you are nearby.",
+        "Spell Count":2,
+        "Tier":6,
+        "Class":"Wizard"
+    },
+    {
+        "Name":"Protection",
+        "Description":"Target within\u00a07m\u00a0receives a\u00a020\u00a0Physical Base Shield\u00a0for\u00a020s. Casts to self if no target is found.",
+        "Spell Count":"5\u00a0",
+        "Tier":1,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Bless",
+        "Description":"Target within\u00a07m\u00a0gains\u00a02\u00a0All Attributes\u00a0for\u00a030s. Casts to self if no target is found.",
+        "Spell Count":"5\u00a0",
+        "Tier":1,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Divine Strike",
+        "Description":"Target within\u00a07m\u00a0gains\u00a05\u00a0Divine Strike Damage\u00a0for\u00a020s. Casts to self if no target is found.",
+        "Spell Count":"4\u00a0",
+        "Tier":2,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Cleanse",
+        "Description":"Removes all harmful magic and poison effects from target within\u00a07m. Casts to self if no target is found.",
+        "Spell Count":"5\u00a0",
+        "Tier":2,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Lesser Heal",
+        "Description":"Heals target within\u00a07m\u00a0for\u00a015\u00a0Magical Base Healing. Casts to self if no target is found.",
+        "Spell Count":"4\u00a0",
+        "Tier":3,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Bind",
+        "Description":"Binds target within\u00a07m\u00a0in place for\u00a00.75s.",
+        "Spell Count":"4\u00a0",
+        "Tier":3,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Holy Strike",
+        "Description":"Creates an AoE burst of light in a specified area within\u00a07m\u00a0that hits all targets within\u00a01m\u00a0(including friendly targets) after a\u00a00.5s\u00a0delay, dealing\u00a020\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0and disorienting their vision over\u00a04s.",
+        "Spell Count":"4\u00a0",
+        "Tier":4,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Holy Light",
+        "Description":"Heals target player within\u00a07m\u00a0for\u00a025\u00a0Magical Base Healing - OR - Deals\u00a0100\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0to target\u00a0Undead\u00a0Monster\u00a0within the same range.",
+        "Spell Count":"3\u00a0",
+        "Tier":5,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Sanctuary",
+        "Description":"Channel\u00a0for up to\u00a05s\u00a0() while remaining still, creating a\u00a03.5m\u00a0AoE around the Cleric which pulses every\u00a01s\u00a0(),\u00a0healing\u00a0players for\u00a05\u00a0Magical Base Healing\u00a0and dealing\u00a014\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0to\u00a0Undead\u00a0Monsters\u00a0with each pulse.",
+        "Spell Count":"2\u00a0",
+        "Tier":6,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Locust Swarm",
+        "Description":"Channel\u00a0a swarm of locusts in a target area within\u00a07m\u00a0for up to\u00a06s\u00a0() while remaining still, dealing\u00a013\u00a0\u00a0Divine\u00a0Magical Base Damage\u00a0per second in\u00a00.1s\u00a0ticks while also inflicting\u00a0-50%\u00a0Incoming\u00a0Physical Healing Mod\u00a0and\u00a0-50%\u00a0Incoming\u00a0Magical Healing Mod, all in a\u00a03m\u00a0radius.",
+        "Spell Count":"2\u00a0",
+        "Tier":7,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Earthquake",
+        "Description":"Channel\u00a0an earthquake in a specified area within\u00a07m\u00a0for up to\u00a06s\u00a0() while remaining still, dealing\u00a07\u00a0\u00a0Earth\u00a0Magical Base Damage\u00a0to targets per step they move whilst causing them to suffer\u00a0-50%\u00a0Move Speed Bonus\u00a0in a\u00a02.5m\u00a0radius.",
+        "Spell Count":"2\u00a0",
+        "Tier":7,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Resurrection",
+        "Description":"Target a fallen ally to\u00a0Channel\u00a0while remaining still, reviving them after\u00a020s\u00a0(), but causing them to suffer\u00a0-99%\u00a0Percent Max Health Healing\u00a0on revival.",
+        "Spell Count":"1\u00a0",
+        "Tier":8,
+        "Class":"Cleric"
+    },
+    {
+        "Name":"Rousing Rhythms",
+        "Description":"Grant\u00a0all allies\u00a0within range\u00a02\u00a0All Attributes\u00a0for\u00a030s\/60s\/120s.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Din of Darkness",
+        "Description":"After finishing the song,\u00a0Channel\u00a0for another\u00a07.36s\u00a0during which you deal\u00a01\/3\/5\u00a0\u00a0Dark\u00a0Magical Base Damage\u00a0per beat to\u00a0all enemies\/monsters\u00a0within range.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Beats of Alacrity",
+        "Description":"Grant\u00a0self\u00a05\/7\/9\u00a0Move Speed Add\u00a0for\u00a060s\/120s\/240s.",
+        "Spell Count":"None",
+        "Tier":1,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Allegro",
+        "Description":"After playing, grant\u00a0all allies\u00a0within range 1 stack of the Allegro\u00a0Buff\u00a0every\u00a01s\u00a0up to\u00a03\u00a0times, refreshing the duration each time. Max\u00a03\u00a0stacks, each stack granting\u00a03%\/4.5%\/6%\u00a0Action Speed\u00a0and\u00a03%\/4.5%\/6%\u00a0Spell Casting Speed\u00a0for\u00a08s.",
+        "Spell Count":"None",
+        "Tier":4,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Accelerando",
+        "Description":"After playing, grant\u00a0all allies\u00a0within range 1 stack of the Accelerando\u00a0Buff\u00a0every\u00a01s\u00a0up to\u00a03\u00a0times, refreshing the duration each time. Max\u00a03\u00a0stacks, each stack granting\u00a01\/3\/5\u00a0Move Speed Add\u00a0for\u00a08s.",
+        "Spell Count":"None",
+        "Tier":4,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Unchained Harmony",
+        "Description":"Open all doors\/containers within range, including locked containers but not locked doors.",
+        "Spell Count":"None",
+        "Tier":5,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Shriek of Weakness",
+        "Description":"Shriek into the ears of\u00a0all enemies\/monsters\u00a0within range, causing them to suffer\u00a0-3\/-4\/-5\u00a0Physical Power\u00a0and\u00a0-10\/-20\/-30\u00a0Armor Rating\u00a0for\u00a06s\/12s\/18s.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Piercing Shrill",
+        "Description":"Deal\u00a015\/20\/25\u00a0Physical Base Damage\u00a0to\u00a0all enemies\/monsters\u00a0within range and inflict the echo sound effect on the affected target for\u00a03s\u00a0if the target is a player.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Banshees Howl",
+        "Description":"Cause\u00a0all enemies\/monsters\u00a0(except Sub-boss and boss monsters) within range to suffer\u00a0-1\/-2\/-3\u00a0All Attributes\u00a0for\u00a020s.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Song of Silence",
+        "Description":"Silence\u00a0all enemies\/monsters\u00a0within range for\u00a01s\/1.5s\/2s. See\u00a0Silence\u00a0page for more details.",
+        "Spell Count":"None",
+        "Tier":2,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Peacemaking",
+        "Description":"Channel\u00a0for\u00a05s, during which,\u00a0all characters\u00a0within range lose the ability to fight or use any attack related animation when enchanted. Monsters will still follow the performer.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Lament of Languor",
+        "Description":"Cause\u00a0all enemies\/monsters\u00a0within range to suffer\u00a0-10\u00a0Move Speed Add\u00a0for\u00a06s\/12s\/18s.",
+        "Spell Count":"None",
+        "Tier":2,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Chaotic Discord",
+        "Description":"Channel\u00a0for\u00a05s\u00a0during which you excite\u00a0all monsters\u00a0(no effect on players) within range to attack the nearest target except the performer.\u00a0Monsters\u00a0deaths inflicted by other monsters are accredited to the Bard, at least for Adventure Points. If there is no other target other than the performer nearby, the monster will not attack but will still follow the performer.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Aria of Alacrity",
+        "Description":"Grants\u00a0self\u00a04%\/6%\/8%\u00a0Action Speed\u00a0for\u00a060s\/120s\/240s.",
+        "Spell Count":"None",
+        "Tier":1,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Tranquility",
+        "Description":"Grants\u00a0all allies\u00a0within range the ability to restore\u00a01\u00a0Recoverable Healing\u00a0per second when resting for\u00a010s\/20s\/30s.",
+        "Spell Count":"None",
+        "Tier":2,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Song of Shadow",
+        "Description":"Grants\u00a0all allies\u00a0within range invisibility for\u00a010s\/15s\/20s. Invisibility appears to work like\u00a0Hide\u00a0except being bumped into will not break invisibility.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Harmonic Shield",
+        "Description":"Grants\u00a0all allies\u00a0within range\u00a015\u00a0Armor Rating\u00a0and\u00a015\u00a0Magical Resistance\u00a0for\u00a030s\/60s\/120s.",
+        "Spell Count":"None",
+        "Tier":4,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Chorale of Clarity",
+        "Description":"Grants\u00a0all allies\u00a0within range the ability to restore\u00a08\u00a0Spell Points\u00a0every\u00a02s\u00a0when resting for\u00a08s\/16s\/24s.",
+        "Spell Count":"None",
+        "Tier":3,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Ballad of Courage",
+        "Description":"Grants\u00a0self\u00a05\/7\/10\u00a0Physical Power\u00a0for\u00a060s\/120s\/240s.",
+        "Spell Count":"None",
+        "Tier":1,
+        "Class":"Bard"
+    },
+    {
+        "Name":"Power of Sacrifice",
+        "Description":"Curse the target, dealing\u00a03\u00a0\u00a0Curse\u00a0Magical Base Damage\u00a0(0%\u00a0Scaling) per second while granting them\u00a015\u00a0Strength\u00a0and\u00a015\u00a0Vigor\u00a0for\u00a012s.",
+        "Spell Count":4,
+        "Tier":1,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Curse of Weakness",
+        "Description":"Curse the target, causing them to suffer\u00a0-25%\u00a0All Attributes Bonus, as well as\u00a0-15%\u00a0Physical Damage Reduction Mod\u00a0and\u00a0-15%\u00a0Magical Damage Reduction Mod\u00a0for\u00a012s.",
+        "Spell Count":4,
+        "Tier":1,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Bolt of Darkness",
+        "Description":"Fires a bolt that deals\u00a020\u00a0\u00a0Dark\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) to the target.",
+        "Spell Count":4,
+        "Tier":1,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Curse of Pain",
+        "Description":"Curse the target, inflicting\u00a015\u00a0\u00a0Hybrid\u00a0Magical Base Damage(50%\u00a0Scaling) over\u00a08s. Additionally, if the target was not already cursed, they instantly receive\u00a015\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0(75%\u00a0Scaling).",
+        "Spell Count":4,
+        "Tier":2,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Bloodstained Blade",
+        "Description":"Target gains\u00a05\u00a0Physical Buff Weapon Damage\u00a0for\u00a020s. When the target swings their weapon, they take\u00a03\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0(0%\u00a0Scaling). Self cast if no target is found.",
+        "Spell Count":4,
+        "Tier":2,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Spell Predation",
+        "Description":"Consume all removable magical\u00a0Buffs\u00a0on the enemy and for each\u00a0status\u00a0removed, gain 1 Darkness Shard and deal\u00a03\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0100%\u00a0Scaling.",
+        "Spell Count":4,
+        "Tier":3,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Ray of Darkness",
+        "Description":"Channel\u00a0a dark beam for up to\u00a05s\u00a0(), dealing\u00a012\u00a0\u00a0Dark\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) per second in .1s ticks to any target the beam touches. Moving and aiming are possible while channeling.",
+        "Spell Count":5,
+        "Tier":4,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Life Drain",
+        "Description":"Channel\u00a0for up to\u00a07.5s\u00a0(), dealing\u00a05\u00a0\u00a0Evil\u00a0Magical Base Damage\u00a0(25%\u00a0Scaling) to the target per\u00a01s\u00a0().\u00a0Convert\u00a0100% of the damage dealt into health for the caster. If the channel would deal damage to a corpse, it will automatically cancel instead.",
+        "Spell Count":5,
+        "Tier":4,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Hellfire",
+        "Description":"Create eternal hellfire and blasts it towards the target. Deals\u00a060\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(50%\u00a0Scaling) per second in\u00a00.2s\u00a0ticks with\u00a012\u00a0Impact Power\u00a0to any target within the area of effect. The hellfire does not dissipate when it reaches a target and can travel through walls.",
+        "Spell Count":6,
+        "Tier":4,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Flame Walker",
+        "Description":"While active, gain the ability to leave a trail of Hellfire for\u00a06s. Each step leaves a trails that lasts 4 seconds. Targets that enter the flame area will burn, taking\u00a05\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) per second in\u00a00.2s\u00a0ticks, per stack. (max\u00a02\u00a0stacks)",
+        "Spell Count":6,
+        "Tier":5,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Eldritch Shield",
+        "Description":"Grants the target a\u00a025\u00a0Magical Base Shield\u00a0(0%\u00a0Scaling\u00a0per 1s) for\u00a015s. When the shield absorbs its maximum damage, gain\u00a020%\u00a0\u00a0Dark\u00a0Power Bonus\u00a0towards the next dark spell cast within\u00a04s.",
+        "Spell Count":6,
+        "Tier":5,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Summon Hydra",
+        "Description":"Summon a Hydra, which inhabits a\u00a00.75m\u00a0area, that spits fireballs dealing\u00a010\u00a0\u00a0Dark\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a04\u00a0Impact Power\u00a0to enemy targets for 10 seconds. The Hydra can also detects hidden targets.",
+        "Spell Count":12,
+        "Tier":6,
+        "Class":"Warlock"
+    },
+    {
+        "Name":"Nature's Touch",
+        "Description":"Target receives\u00a015\u00a0Recoverable Health\u00a0and\u00a015\u00a0Magical Base Healing\u00a0over\u00a012s.",
+        "Spell Count":"4\u00a0",
+        "Tier":1,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Barkskin Armor",
+        "Description":"Grant self\u00a025\u00a0Armor Rating\u00a0for\u00a010s.",
+        "Spell Count":"5\u00a0",
+        "Tier":2,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Dreamfire",
+        "Description":"Deal\u00a015\u00a0\u00a0Spirit\u00a0Magical Base Damage\u00a0to enemies within a chosen\u00a00.8m\u00a0area after a\u00a00.5s\u00a0delay. Any allies or self currently affected by Nature's Touch that are within\u00a07m\u00a0of you are instantly healed for\u00a010\u00a0Magical Base Healing\u00a0per enemy target.",
+        "Spell Count":"4\u00a0",
+        "Tier":3,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Thorn Barrier",
+        "Description":"Creates a 1.2m tall,\u00a02m\u00a0radius thorn barrier that lasts for 8 seconds. Any character touching the thorn barrier will take\u00a04\u00a0Physical Base Damage\u00a0(0%\u00a0Scaling) per second.",
+        "Spell Count":"3\u00a0",
+        "Tier":4,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Entangling Vines",
+        "Description":"Spreads roots across the floor in a\u00a01m\u00a0radius that last for\u00a06s. Any targets that pass through the area are rooted in place for\u00a01s. After the effect is removed, the target gets immunity to the entangling effects for 1 second. Can only have one on the field at once.",
+        "Spell Count":"3\u00a0",
+        "Tier":4,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Restore",
+        "Description":"Allies within\u00a03m\u00a0of you including yourself are granted\u00a0Restore,\u00a0healing\u00a0them for\u00a030\u00a0Magical Base Healing\u00a0over\u00a010s.",
+        "Spell Count":"3\u00a0",
+        "Tier":5,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Summon Treant",
+        "Description":"Summons a mobile\u00a0Treant\u00a0in a\u00a0targeted\u00a0area within\u00a07m\u00a0to fight for 12 seconds.\u00a0Treants\u00a0deal 35.2 damage with 4\u00a0Impact Power\u00a0per hit and have\u00a0Demolition.",
+        "Spell Count":"2\u00a0",
+        "Tier":5,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Tree of Life",
+        "Description":"Sprout a tree of life onto a player within a cast range of\u00a07m, granting\u00a05\u00a0All Attributes,\u00a040\u00a0Recoverable Health, and\u00a015\u00a0Magical Base Healing\u00a0over\u00a010s.",
+        "Spell Count":"2\u00a0",
+        "Tier":6,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Mending Grove",
+        "Description":"Create a forest area centered around you with a\u00a03m\u00a0radius. Targets that remain in the area gain\u00a010%\u00a0Max Health Bonus\u00a0and are healed for\u00a010\u00a0Magical Base Healing\u00a0per second for\u00a07s.",
+        "Spell Count":"2\u00a0",
+        "Tier":6,
+        "Class":"Druid"
+    },
+    {
+        "Name":"Fire Arrow",
+        "Description":"Fire a homing arrow every\u00a00.2s\u00a0() for\u00a00.6s\u00a0() in a radial pattern, each dealing\u00a010\u00a0\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a04\u00a0Impact Power\u00a0and inflicting\u00a0Burn.",
+        "Spell Count":"3s",
+        "Tier":1,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Stone Skin",
+        "Description":"Surround yourself with stone for\u00a010s, gaining\u00a010%\u00a0Physical Damage Reduction\u00a0and\u00a05%\u00a0Physical Power Bonus, but suffering\u00a0-10\u00a0Move Speed Add.",
+        "Spell Count":"3s",
+        "Tier":1,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Water Bolt",
+        "Description":"Launch a condensed water orb with a radius of\u00a00.2m\u00a0at\u00a06m\/s, dealing\u00a020\u00a0\u00a0\u00a0Ice\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a04\u00a0Impact Power\u00a0to targets it touches and inflicting\u00a0Wet\u00a0for\u00a02s.",
+        "Spell Count":"3s",
+        "Tier":1,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Windblast",
+        "Description":"Deal\u00a010\u00a0\u00a0Air\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) to a target within\u00a07m\u00a0and push them back\u00a03m.",
+        "Spell Count":"3s",
+        "Tier":1,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Eruption",
+        "Description":"Cause a ground explosion up to\u00a07m\u00a0away that is\u00a00.8m\u00a0wide, dealing\u00a020\u00a0\u00a0Earth\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a04\u00a0Impact Power\u00a0and lifting all targets within the area into the air\u00a01000\u00a0over\u00a00.75s.",
+        "Spell Count":"6s",
+        "Tier":2,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Flamestrike",
+        "Description":"Create a fire pillar lasting\u00a03.1s, dealing 35 (100%) Fire Damage on creation and\u00a010\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(50%\u00a0Scaling) with\u00a06\u00a0Impact Power\u00a0per second in\u00a00.2s\u00a0ticks to enemies inside while inflicting\u00a0Burn.",
+        "Spell Count":"6s",
+        "Tier":2,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Glaciate",
+        "Description":"Envelop your weapon in ice for\u00a015s, inflicting\u00a0Frostbite\u00a0for\u00a01s\u00a0on hit.",
+        "Spell Count":"6s",
+        "Tier":2,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Ice Spear",
+        "Description":"Fire an ice spear that travels\u00a016.5m\/s\u00a0and pierces all targets along its path, dealing\u00a030\u00a0\u00a0\u00a0Ice\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a04\u00a0Impact Power.",
+        "Spell Count":"6s",
+        "Tier":2,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Fire Orb",
+        "Description":"Launch a fire orb forward, dealing\u00a05\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(50%\u00a0Scaling) per second to nearby targets. The orb lasts for 6 seconds and deals\u00a030\u00a0\u00a0\u00a0Fire\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) with\u00a012\u00a0Impact Power\u00a0to targets it touches.",
+        "Spell Count":"9s",
+        "Tier":3,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Lightning Bolt",
+        "Description":"Channel\u00a0a lightning beam for\u00a05s\u00a0() while moving,\u00a0Electrifying\u00a0a target within\u00a07m\u00a0and dealing\u00a05\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) per\u00a00.1s\u00a0().",
+        "Spell Count":"9s",
+        "Tier":3,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Vortex",
+        "Description":"Create a vortex centered on the caster. Targets touching the vortex take\u00a015\u00a0\u00a0Air\u00a0Magical Base Damage\u00a0(100%\u00a0Scaling) and are pushed back.",
+        "Spell Count":"9s",
+        "Tier":3,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Levitation",
+        "Description":"Instantly lift a target within\u00a07m\u00a0into the air over\u00a01s\u00a0and gently lower them back down over\u00a03s.",
+        "Spell Count":"15s",
+        "Tier":5,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Lightning Sphere",
+        "Description":"Surround yourself with an electromagnetic field for\u00a06s,\u00a0Electrifying\u00a0all targets within\u00a01.75m\u00a0for\u00a05\u00a0\u00a0Lightning\u00a0Magical Base Damage\u00a0(50%\u00a0Scaling) per second.",
+        "Spell Count":"15s",
+        "Tier":5,
+        "Class":"Sorcerer"
+    },
+    {
+        "Name":"Summon Earth Elemental",
+        "Description":"Summon an Earth Elemental within a cast range of\u00a07m\u00a0that lasts 24s. The Earth Elemental has a radius of\u00a00.75m, grants the caster\u00a030\u00a0Armor Rating, and deals\u00a040\u00a0\u00a0Physical Base Damage\u00a0(100%\u00a0Scaling) to nearby enemies.",
+        "Spell Count":"21s",
+        "Tier":7,
+        "Class":"Sorcerer"
+    }
+]

@@ -7,6 +7,7 @@ import Step2 from '../Steps/Step2';
 import Step3 from '../Steps/Step3';
 import Step4 from '../Steps/Step4';
 import Step5 from '../Steps/Step5';
+import Step6 from '../Steps/Step6';
 import GearLayout from '../Styles/GearLayout'; // ✅ Import GearLayout
 import { truncateName } from '../Steps/Utils/gearHelpers';
 import ClassGearStatsTable from '../Components/ClassGearStatsTable';
@@ -31,15 +32,17 @@ const GuideCreationPage = () => {
     class: '',
     category: '',
     tags: [],
-    gearSelections: {},  // Changed from string to object
-    perks: [],
+    gearSelections: {},
+    perks: [],  // Perks selection
     skills: [],
+    spells: [],  // Add spells selection here
     strategyDescription: '',
     synergies: [],
     threats: [],
     synergyText: '',
     threatText: ''
-  });
+});
+
   
 
   const [isStep1And3Completed, setStep1And3Completed] = useState(false);
@@ -67,22 +70,31 @@ const GuideCreationPage = () => {
 
     return () => clearInterval(saveInterval);
   }, [guideData]);
-
+  const spellMemoryPerks = ["Spell Memory", "Spell Memory II", "Music Memory", "Music Memory II"];
+  const hasSpellMemoryPerk = guideData.gearSelections && Object.values(guideData.gearSelections).some(gear => spellMemoryPerks.includes(gear?.Name));
+  console.log("YA RAB YA MOSAHEL",hasSpellMemoryPerk);
   const handleNext = () => {
-    if (currentStep === 1 && (!guideData.title || !guideData.shortDescription)) {
-      alert('Please complete the required fields before proceeding.');
-      return;
-    }
-    if (currentStep === 2 && !guideData.class) {
-      alert('Please complete the required fields before proceeding.');
-      return;
-    }
-    if (currentStep === 3 && (!guideData.gearSelections || !guideData.strategyDescription)) {
-      alert('Please complete the required fields before proceeding.');
-      return;
-    }
-    if (currentStep < 5) setCurrentStep(currentStep + 1);
+      if (currentStep === 1 && (!guideData.title || !guideData.shortDescription)) {
+          alert('Please complete the required fields before proceeding.');
+          return;
+      }
+      if (currentStep === 2 && !guideData.class) {
+          alert('Please complete the required fields before proceeding.');
+          return;
+      }
+      if (currentStep === 3 && (!guideData.gearSelections || !guideData.strategyDescription)) {
+          alert('Please complete the required fields before proceeding.');
+          return;
+      }
+  
+      // If a spell memory perk is selected, go to Step 6 before finishing
+      if (currentStep === 4 && hasSpellMemoryPerk) {
+          setCurrentStep(6);
+      } else if (currentStep < 5) {
+          setCurrentStep(currentStep + 1);
+      }
   };
+  
 
   const handlePrevious = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -188,10 +200,20 @@ const GuideCreationPage = () => {
             <Step5 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
           </>
         )}
+        {currentStep === 4 && (
+            <Step6 
+                selectedSpells={guideData.spells} 
+                setSelectedSpells={(spells) => updateData('spells', spells)}
+                selectedPerks={guideData.gearSelections} 
+                onNext={handleNext} 
+                onPrevious={handlePrevious} 
+            />
+        )}
+
         <div style={{ display: 'flex', justifyContent: 'left', marginTop: '20px' }}>
           <NavigationButtons
             currentStep={currentStep}
-            totalSteps={4}
+            totalSteps={10}
             onNext={handleNext}
             onPrevious={handlePrevious}
           />

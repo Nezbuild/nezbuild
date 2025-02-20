@@ -2,9 +2,22 @@ import React from 'react';
 import ClassStats from './ClassStats'; // Import class base stats
 
 const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
+  console.log("Selected Class:", selectedClass);
+  console.log("Equipped Gear:", equippedGear);
+
   if (!selectedClass || !ClassStats[selectedClass]) return null; // Ensure class exists
 
   const baseStats = ClassStats[selectedClass];
+
+  // Function to extract perks from equippedGear
+  const extractPerks = () => {
+    return Object.values(equippedGear)
+      .filter(gear => gear.Type === 'Perk')
+      .map(perk => perk.Name);
+  };
+
+  const perks = extractPerks();
+  console.log("Extracted Perks:", perks);
 
   // Function to calculate total stats
   const calculateTotalStats = () => {
@@ -16,6 +29,7 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
 
     Object.values(equippedGear).forEach((gear) => {
       if (gear) {
+        console.log("Processing Gear:", gear);
         // Extract attributes
         if (gear.Attributes) {
           const attributesArray = gear.Attributes.split(',');
@@ -45,11 +59,33 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
       }
     });
 
+    console.log("Total Strength Added:", addedStrength);
+    console.log("Total Vigor Added:", addedVigor);
+
     // Apply new health formula using added Strength and Vigor only
     totalStats.Health = Math.ceil(baseStats.Health + (0.438 * addedStrength) + (1.513 * addedVigor) + flatHealthBonus);
     totalStats.AddedStrength = addedStrength;
     totalStats.AddedVigor = addedVigor;
 
+    // Apply perk effects
+    if (perks.includes('Malice')) {
+      totalStats.Will = Math.ceil((totalStats.Will || baseStats.Will || 0) * 1.1);
+    }
+    if (perks.includes('Robust')) {
+      totalStats.Health = Math.ceil(totalStats.Health * 1.1);
+    }
+    if (perks.includes('Sage')) {
+      totalStats.Knowledge = Math.ceil((totalStats.Knowledge || baseStats.Knowledge || 0) * 1.1);
+    }
+    if (perks.includes('Jokester')) {
+      Object.keys(totalStats).forEach((stat) => {
+        if (typeof totalStats[stat] === 'number') {
+          totalStats[stat] += 2;
+        }
+      });
+    }
+
+    console.log("Final Total Stats:", totalStats);
     return totalStats;
   };
 

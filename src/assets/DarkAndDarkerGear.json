@@ -3221,7 +3221,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Poor",
         "MS": -6,
         "Armor/magical Rating": "26 Armor Rating, 25 Magical Resistance",
@@ -3231,7 +3231,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Common",
         "MS": -6,
         "Armor/magical Rating": "28 Armor Rating, 25 Magical Resistance",
@@ -3241,7 +3241,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Uncommon",
         "MS": -6,
         "Armor/magical Rating": "29~34 Armor Rating, 25 Magical Resistance",
@@ -3251,7 +3251,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Rare",
         "MS": -6,
         "Armor/magical Rating": "35~36 Armor Rating, 25 Magical Resistance",
@@ -3261,7 +3261,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Epic",
         "MS": -6,
         "Armor/magical Rating": "37~38 Armor Rating, 25 Magical Resistance",
@@ -3271,7 +3271,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Legendary",
         "MS": -6,
         "Armor/magical Rating": "39 Armor Rating, 25 Magical Resistance",
@@ -3281,7 +3281,7 @@
     },
     {
         "Name": "Cloth Frock ",
-        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlcok",
+        "Class Requirements": "Wizard, Cleric, Sorcerer, Druid, Warlock",
         "Rarity": "Unique",
         "MS": -6,
         "Armor/magical Rating": "42~45 Armor Rating, 25 Magical Resistance",
@@ -6341,7 +6341,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Poor",
         "MS": "None",
         "Armor/magical Rating": "6~7 Armor Rating",
@@ -6351,7 +6351,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Common",
         "MS": "None",
         "Armor/magical Rating": "7~8 Armor Rating",
@@ -6361,7 +6361,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Uncommon",
         "MS": "None",
         "Armor/magical Rating": "8~9 Armor Rating",
@@ -6371,7 +6371,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Rare",
         "MS": "None",
         "Armor/magical Rating": "9~10 Armor Rating",
@@ -6381,7 +6381,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Epic",
         "MS": "None",
         "Armor/magical Rating": "10~11 Armor Rating",
@@ -6391,7 +6391,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Legendary",
         "MS": "None",
         "Armor/magical Rating": "11~12 Armor Rating",
@@ -6401,7 +6401,7 @@
     },
     {
         "Name": "Cloth Mystic Gloves",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Unique",
         "MS": "None",
         "Armor/magical Rating": "14 Armor Rating",
@@ -6751,7 +6751,7 @@
     },
     {
         "Name": "Cloth Frostlight Mystic Gloves ",
-        "Class Requirements": "Cleric, Wizard, Warlcok",
+        "Class Requirements": "Cleric, Wizard, Warlock",
         "Rarity": "Epic",
         "MS": 1,
         "Armor/magical Rating": "10~11 Armor Rating",

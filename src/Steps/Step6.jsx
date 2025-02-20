@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import spellsData from '../assets/SpellsAndSongs.json'; // Adjust path as needed
 
+const spellImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
+
+const getSpellImage = (name) => {
+    const processedName = name.replace(/\s+/g, '');
+    const matchedImage = Object.entries(spellImages).find(([path]) => 
+      path.toLowerCase().endsWith(`/${processedName.toLowerCase()}.png`)
+    );
+    return matchedImage ? matchedImage[1].default : '';
+};
+
 const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
     if (!visible) return null;
     return (
@@ -43,6 +53,9 @@ const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
                             onSelect(spell);
                         }}
                         style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
                             padding: '10px',
                             background: 'transparent',
                             border: '1px solid #FFD700',
@@ -51,6 +64,7 @@ const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
                             cursor: 'pointer',
                         }}
                     >
+                        <img src={getSpellImage(spell.Name)} alt={spell.Name} style={{ maxWidth: '60px', maxHeight: '60px', marginBottom: '5px' }} />
                         {spell.Name}
                     </button>
                 ))}
@@ -90,15 +104,11 @@ const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selected
         setPopupVisible(false);
     };
 
-    const handleRemoveSpell = (index) => {
-        setSelectedSpells(selectedSpells.filter((_, i) => i !== index));
-    };
-
     return shouldShowStep6 ? (
         <div style={{ padding: '20px', color: '#FFD700', backgroundColor: '#333', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h2>Select Your Spells</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
-                {[...Array(5)].map((_, i) => (
+                {[...Array(10)].map((_, i) => (
                     <button
                         key={i}
                         onClick={() => handleSlotClick(i)}
@@ -110,24 +120,14 @@ const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selected
                             color: '#FFD700',
                             borderRadius: '5px',
                             cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
                         }}
                     >
-                        {selectedSpells[i]?.Name || `Slot ${i + 1}`}
+                        {selectedSpells[i] ? <img src={getSpellImage(selectedSpells[i].Name)} alt={selectedSpells[i].Name} style={{ maxWidth: '60px', maxHeight: '60px' }} /> : `Slot ${i + 1}`}
                     </button>
                 ))}
-            </div>
-            <h3>Selected Spells:</h3>
-            <ul>
-                {selectedSpells.map((spell, index) => (
-                    <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
-                        {spell.Name}
-                        <button onClick={() => handleRemoveSpell(index)} style={{ marginLeft: '10px', background: 'red', color: 'white', border: 'none', cursor: 'pointer' }}>X</button>
-                    </li>
-                ))}
-            </ul>
-            <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
-                <button onClick={onPrevious} style={{ padding: '10px', backgroundColor: '#1E90FF', color: '#FFF', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Back</button>
-                <button onClick={onNext} style={{ padding: '10px', backgroundColor: '#4CAF50', color: '#FFF', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Next</button>
             </div>
             <SpellPopup visible={popupVisible} onSelect={handleSpellSelection} onClose={() => setPopupVisible(false)} selectedSpells={selectedSpells} />
         </div>

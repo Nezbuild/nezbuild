@@ -5,9 +5,13 @@ import weaponsData from '/src/assets/Weapons.json';
 import accessoriesData from '/src/assets/Accessories.json';
 import mergeWeapons from '/src/assets/merged_weapons_shields.json';
 import skillsData from '/src/assets/SkillsAndPerks.json';
-console.log("🔍 Skills Data Loaded:", skillsData);
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
-console.log("Accessories Data:", accessoriesData);
+const extractPerks = (ol) => {
+  return Object.values(ol)
+    .filter(gear => gear.Type === 'Perk')
+    .map(perk => perk.Name);
+};
+
 
 const getGearImage = (name, slot) => {
     const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(slot);
@@ -19,9 +23,14 @@ const getGearImage = (name, slot) => {
 };
 
 const GearPopup = ({ visible, selectedSlot, currentClass, onSelect, onClose, updatedGear }) => {
+    const perks = extractPerks(updatedGear);
     const selectedGearArray = Object.values(updatedGear).flat();  // Convert object to array
     const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(selectedSlot);
     const [selectedImage, setSelectedImage] = useState(null);
+    const hasSlayer = perks.includes("Slayer");
+    const hasWeaponMastery = perks.includes("Weapon Mastery");
+    const hasDemonArmor = perks.includes("Demon Armor");
+  console.log("YAAAAAA RABANAAAAAA", hasSlayer, hasDemonArmor, hasWeaponMastery);
     if (!visible) return null;
 
     const typeMap = {
@@ -92,17 +101,54 @@ const GearPopup = ({ visible, selectedSlot, currentClass, onSelect, onClose, upd
                   width: '100%',
           }}>
             {[...new Set(getRelevantGear()
-              .filter(gear => 
-                (
-                  ['perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2'].includes(selectedSlot) || 
-                  gear.Type === typeMap[selectedSlot]
-                ) &&
-                (
-                  ['ring1', 'ring2', 'amulet'].includes(selectedSlot) || 
-                  !gear['Class Requirements'] || gear['Class Requirements'] === "None" || 
-                  gear['Class Requirements'].includes(currentClass)
-                )
-              )
+            .filter(gear => {
+              const firstWord = gear.Name.split(' ')[0]; // Extracts "Plate", "Leather", etc.
+              const isPlate = firstWord === "Plate";
+              const isWeapon = typeMap[selectedSlot] === "Weapon";
+              const isPerk = typeMap[selectedSlot] === "Perk";
+              // Extract perks from equipped gear
+              const perks = extractPerks(updatedGear);
+              const hasSlayer = perks.includes("Slayer");
+              const hasWeaponMastery = perks.includes("Weapon Mastery");
+              const hasDemonArmor = perks.includes("Demon Armor");
+              const hasPlateArmorEquipped = Object.values(updatedGear).some(gear => 
+                gear?.Name && gear.Name.split(' ')[0] === "Plate"
+              );            
+              console.log("PERK SHIT",isPlate );
+              // Slayer blocks plate armor unless Demon Armor is present
+              if (hasSlayer && isPlate && !hasDemonArmor) return false;
+          
+              // Weapon Mastery allows any weapon
+              if (hasWeaponMastery && isWeapon) return true;
+              if (hasDemonArmor && isPlate&&gear.Type === typeMap[selectedSlot]) return true;
+              if (isPerk && gear.Name === "Slayer" && hasPlateArmorEquipped) {
+                console.log(`❌ Hiding Perk: Slayer (Blocked because Plate armor is equipped)`);
+                return false;
+              }
+              return (
+                  (
+                      ['perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2'].includes(selectedSlot) || 
+                      gear.Type === typeMap[selectedSlot]
+                  ) &&
+                  (
+                      ['ring1', 'ring2', 'amulet'].includes(selectedSlot) || 
+                      !gear['Class Requirements'] || gear['Class Requirements'] === "None" || 
+                      gear['Class Requirements'].includes(currentClass)
+                  )
+              );
+          })
+          
+              // .filter(gear => 
+              //   (
+              //     ['perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2'].includes(selectedSlot) || 
+              //     gear.Type === typeMap[selectedSlot]
+              //   ) &&
+              //   (
+              //     ['ring1', 'ring2', 'amulet'].includes(selectedSlot) || 
+              //     !gear['Class Requirements'] || gear['Class Requirements'] === "None" || 
+              //     gear['Class Requirements'].includes(currentClass)
+              //   )
+              // )
               .map(gear => gear.Name)
             )].map((name) => {
               const imgSrc = getGearImage(name, selectedSlot);

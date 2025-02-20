@@ -56,14 +56,53 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
     }
     console.log("Loaded Gear Data:", { gearData, shieldsData, weaponsData, accessoriesData });
   }, []);
+  // const handleRemoveGear = (slot) => {
+  //   setSelectedGear((prev) => {
+  //     const { [slot]: _, ...updatedGear } = prev; // ✅ Create a new object without the slot
+  //     console.log(`🗑 Removed gear from slot: ${slot}`, updatedGear);
+  //     handleGearSelection(updatedGear);
+  //     return updatedGear;
+  //   });
+  // };
   const handleRemoveGear = (slot) => {
     setSelectedGear((prev) => {
-      const { [slot]: _, ...updatedGear } = prev; // ✅ Create a new object without the slot
-      console.log(`🗑 Removed gear from slot: ${slot}`, updatedGear);
-      handleGearSelection(updatedGear);
-      return updatedGear;
+        const { [slot]: removedGear, ...updatedGear } = prev; // ✅ Remove the selected slot
+
+        console.log(`🗑 Removed gear from slot: ${slot}`, removedGear);
+
+        // Detect if Demon Armor or Weapon Mastery was removed
+        const isDemonArmorRemoved = removedGear?.Name === "Demon Armor";
+        const isWeaponMasteryRemoved = removedGear?.Name === "Weapon Mastery";
+
+        // Remove all Plate armor if Demon Armor is removed
+        if (isDemonArmorRemoved) {
+            Object.keys(updatedGear).forEach((key) => {
+                if (updatedGear[key]?.Name?.split(' ')[0] === "Plate") {
+                    console.log(`❌ Removing ${updatedGear[key].Name} (Blocked because Demon Armor was removed)`);
+                    delete updatedGear[key];
+                }
+            });
+        }
+
+        // Remove all non-Fighter weapons if Weapon Mastery is removed
+        if (isWeaponMasteryRemoved) {
+            Object.keys(updatedGear).forEach((key) => {
+                if (
+                    updatedGear[key]?.Type === "Weapon" && 
+                    updatedGear[key]?.["Class Requirements"] &&
+                    !updatedGear[key]["Class Requirements"].includes("Fighter")
+                ) {
+                    console.log(`❌ Removing ${updatedGear[key].Name} (Blocked because Weapon Mastery was removed)`);
+                    delete updatedGear[key];
+                }
+            });
+        }
+
+        handleGearSelection(updatedGear);
+        return updatedGear;
     });
-  };
+};
+
   
   const lockAndRemoveSlots = (primarySlot, secondarySlot) => {
     setSelectedGear((prev) => {

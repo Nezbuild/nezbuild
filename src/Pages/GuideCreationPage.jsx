@@ -70,7 +70,7 @@ const GuideCreationPage = () => {
 
     return () => clearInterval(saveInterval);
   }, [guideData]);
-  const spellMemoryPerks = ["Spell Memory", "Spell Memory II", "Music Memory", "Music Memory II"];
+  const spellMemoryPerks = ["Spell Memory", "Spell Memory II", "Music Memory", "Music Memory II", "Sorcery Memory", "Sorcery Memory II"];
   const hasSpellMemoryPerk = guideData.gearSelections && Object.values(guideData.gearSelections).some(gear => spellMemoryPerks.includes(gear?.Name));
   console.log("YA RAB YA MOSAHEL",hasSpellMemoryPerk);
   const handleNext = () => {
@@ -204,7 +204,8 @@ const GuideCreationPage = () => {
             <Step6 
                 selectedSpells={guideData.spells} 
                 setSelectedSpells={(spells) => updateData('spells', spells)}
-                selectedPerks={guideData.gearSelections} 
+                selectedPerks={guideData.gearSelections}
+                currentClass={guideData.class} 
                 onNext={handleNext} 
                 onPrevious={handlePrevious} 
             />

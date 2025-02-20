@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import spellsData from '../assets/SpellsAndSongs.json'; // Adjust path as needed
 
 const spellImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
-
 const getSpellImage = (name) => {
     const processedName = name.replace(/\s+/g, '');
     const matchedImage = Object.entries(spellImages).find(([path]) => 
@@ -11,7 +10,7 @@ const getSpellImage = (name) => {
     return matchedImage ? matchedImage[1].default : '';
 };
 
-const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
+const SpellPopup = ({ visible, onSelect, onClose, selectedSpells, filteredSpells }) => {
     if (!visible) return null;
     return (
         <div style={{
@@ -42,7 +41,7 @@ const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
                 borderRadius: '0.25rem',
                 width: '100%',
             }}>
-                {spellsData.map((spell) => (
+                {filteredSpells.map((spell) => (
                     <button
                         key={spell.Name}
                         onClick={() => {
@@ -84,14 +83,26 @@ const SpellPopup = ({ visible, onSelect, onClose, selectedSpells }) => {
     );
 };
 
-const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selectedPerks }) => {
-    const spellMemoryPerks = ["Spell Memory", "Spell Memory II", "Music Memory", "Music Memory II"];
+const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selectedPerks, currentClass }) => {
+    const getTotalTierCost = () => {
+        return selectedSpells.reduce((sum, spell) => sum + (spell?.Tier || 0), 0);
+    };    
+    const spellMemoryPerks = ["Spell Memory", "Spell Memory II", "Music Memory", "Music Memory II", "Sorcery Memory", "Sorcery Memory II"];
     
-    const shouldShowStep6 = Boolean(selectedPerks && typeof selectedPerks === 'object' && Object.values(selectedPerks).some(perk => perk?.Name && spellMemoryPerks.includes(perk.Name)));
+
+    // Filter spells by class requirement
+    const filteredSpells = spellsData.filter(spell =>
+        spell["Class Requirements"]=== currentClass // Convert string to array and check
+    );
     
+    // Check if we should show Step6 (Only if a spell memory perk is equipped)
+    const shouldShowStep6 = Boolean(selectedPerks && typeof selectedPerks === 'object' && 
+        Object.values(selectedPerks).some(perk => perk?.Name && spellMemoryPerks.includes(perk.Name))
+    );
+
     const [popupVisible, setPopupVisible] = useState(false);
     const [selectedSlot, setSelectedSlot] = useState(null);
-    
+
     const handleSlotClick = (slotIndex) => {
         setSelectedSlot(slotIndex);
         setPopupVisible(true);
@@ -129,9 +140,20 @@ const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selected
                     </button>
                 ))}
             </div>
-            <SpellPopup visible={popupVisible} onSelect={handleSpellSelection} onClose={() => setPopupVisible(false)} selectedSpells={selectedSpells} />
+
+            {/* Spell Selection Popup */}
+            <SpellPopup 
+                visible={popupVisible} 
+                onSelect={handleSpellSelection} 
+                onClose={() => setPopupVisible(false)} 
+                selectedSpells={selectedSpells} 
+                filteredSpells={filteredSpells} // Pass filtered spells to the popup
+            />
+            <h3>Total Spell Tier Cost: {getTotalTierCost()}</h3>
+
         </div>
     ) : null;
 };
+
 
 export default Step6;

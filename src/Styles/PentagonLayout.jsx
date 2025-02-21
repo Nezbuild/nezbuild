@@ -1,22 +1,18 @@
-// PentagonLayout.js
+// PentagonLayout.jsx
 import React from 'react';
 
 /**
- * Calculates the (left, top) coordinates for a regular pentagon's vertices,
- * all centered within a square of size x size.
- * 
- * @param {Number} size   The width/height of the container (px).
- * @param {Number} offset The center offset from edges (distance from top/left).
- * @return {Array}        Array of 5 objects like { left, top } in px.
+ * Calculates (left, top) coords for 5 vertices of a regular pentagon,
+ * centered in a size x size container.
  */
 function getPentagonPositions(size = 200, offset = 100) {
   const numVertices = 5;
   const angleStep = (2 * Math.PI) / numVertices;
-  const radius = size * 0.4; // distance from center to vertex (tweak as needed)
+  const radius = size * 0.4;
 
   const positions = [];
   for (let i = 0; i < numVertices; i++) {
-    // Start at -90 degrees so the first vertex is at the top
+    // start at -90°, top center
     const angle = i * angleStep - Math.PI / 2;
     const x = offset + radius * Math.cos(angle);
     const y = offset + radius * Math.sin(angle);
@@ -27,18 +23,25 @@ function getPentagonPositions(size = 200, offset = 100) {
 
 /**
  * PentagonLayout
- * Renders 5 slots in a pentagon shape using absolute positioning.
- * 
- * @param {Array}   spells       Array of 5 spells (or empty placeholders)
- * @param {Number}  startIndex   Starting slot index (0 for first pentagon, 5 for second)
- * @param {Function} onSlotClick Callback when a slot is clicked
- * @param {Function} getSpellImage Function to get image path from spell name
+ * @param {Array} spells        5 spells for these slots
+ * @param {Number} startIndex   0 for first pentagon, 5 for second
+ * @param {Function} onSlotClick
+ * @param {Function} onRemoveSpell
+ * @param {Function} getSpellImage
+ * @param {Array} overCapacityMap
+ * @param {Boolean} isEnabled   If false, all these slots are disabled/grayed out
  */
-export default function PentagonLayout({ spells, startIndex, onSlotClick, getSpellImage }) {
-  // We'll fix the container to 200px by 200px for demonstration
+export default function PentagonLayout({
+  spells,
+  startIndex,
+  onSlotClick,
+  onRemoveSpell,
+  getSpellImage,
+  overCapacityMap = [],
+  isEnabled = false
+}) {
   const size = 350;
-  const positions = getPentagonPositions(size, size / 2); 
-  // positions is array of { left, top } for each of the 5 vertices
+  const positions = getPentagonPositions(size, size / 2);
 
   return (
     <div
@@ -46,46 +49,115 @@ export default function PentagonLayout({ spells, startIndex, onSlotClick, getSpe
         position: 'relative',
         width: `${size}px`,
         height: `${size}px`,
-        border: '0px solid #FFD700',
-        borderRadius: '10px',
-        // background: '#444', // just to visualize container, remove if you want
+        margin: '20px',
       }}
     >
       {positions.map((pos, i) => {
         const spell = spells[i];
         const slotIndex = startIndex + i;
+        const isOver = overCapacityMap[slotIndex];
 
         return (
-          <button
+          <div
             key={slotIndex}
-            onClick={() => onSlotClick(slotIndex)}
             style={{
               position: 'absolute',
               left: `${pos.left}px`,
               top: `${pos.top}px`,
-              transform: 'translate(-50%, -20%)',
-              width: '100px',
-              height: '100px',
-              border: '1px solid #FFD700',
-              borderRadius: '10%',
-              background: spell ? '#666' : 'transparent',
-              color: '#FFD700',
-              cursor: 'pointer',
+              transform: 'translate(-50%, -50%)',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center'
             }}
           >
-            {spell ? (
-              <img
-                src={getSpellImage(spell.Name)}
-                alt={spell.Name}
-                style={{ width: '80px', height: '80px', objectFit:"contain" }}
-              />
-            ) : (
-              <span style={{ fontSize: '12px' }}>Slot {slotIndex + 1}</span>
+            {/* Spell Button */}
+            <button
+              onClick={() => onSlotClick?.(slotIndex)}
+              disabled={!isEnabled}
+              style={{
+                width: '90px',
+                height: '90px',
+                border: '1px solid #FFD700',
+                borderRadius: '10%',
+                background: isEnabled
+                  ? (spell ? '#666' : 'transparent')
+                  : 'transparent',            // gray if disabled
+                color: '#FFD700',
+                cursor: isEnabled ? 'pointer' : 'not-allowed',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              {spell ? (
+                <>
+                  <img
+                    src={getSpellImage(spell.Name)}
+                    alt={spell.Name}
+                    style={{
+                      width: '80%',
+                      height: '80%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                  {/* Red overlay if over capacity */}
+                  {isOver && (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(255, 0, 0, 0.3)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <div
+                        style={{
+                          color: '#ff0000',
+                          fontSize: '2rem',
+                          fontWeight: 'bold',
+                          textShadow: '1px 1px 2px #000'
+                        }}
+                      >
+                        X
+                      </div>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <span style={{ fontSize: '12px' }}>
+                  Slot {slotIndex + 1}
+                </span>
+              )}
+            </button>
+
+            {/* "Remove" button only if there's a spell. 
+                Also disabled if isEnabled === false */}
+            {spell && (
+              <button
+                onClick={() => onRemoveSpell?.(slotIndex)}
+                disabled={!isEnabled}
+                style={{
+                  marginTop: '5px',
+                  padding: '0 5px',
+                  fontSize: '12px',
+                  background: 'transparent',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: isEnabled ? 'pointer' : 'not-allowed'
+                }}
+              >
+                ❌
+              </button>
             )}
-          </button>
+          </div>
         );
       })}
     </div>

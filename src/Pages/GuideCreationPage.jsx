@@ -7,10 +7,10 @@ import Step2 from '../Steps/Step2';
 import Step3 from '../Steps/Step3';
 import Step4 from '../Steps/Step4';
 import Step5 from '../Steps/Step5';
-import Step6 from '../Steps/Step6';
+import Step6 from '../Steps/Step6';  // We'll use this in the preview
 import GearLayout from '../Styles/GearLayout';
 import { truncateName } from '../Steps/Utils/gearHelpers';
-import ClassGearStatsTable from '../Components/ClassGearStatsTable';
+import ClassGearStatsTable from '../Components/ClassGearStatsTable'; // Show in preview
 
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
 
@@ -83,7 +83,7 @@ const GuideCreationPage = () => {
     guideData.gearSelections &&
     Object.values(guideData.gearSelections).some(gear => spellMemoryPerks.includes(gear?.Name));
 
-  console.log('YA RAB YA MOSAHEL', hasSpellMemoryPerk);
+  console.log('Debug: hasSpellMemoryPerk ->', hasSpellMemoryPerk);
 
   // Next step logic
   const handleNext = () => {
@@ -129,10 +129,11 @@ const GuideCreationPage = () => {
     setGuideData(prevState => {
       let updatedState = { ...prevState, [key]: value };
 
-      // Check if class changed -> clear gearSelections
+      // Check if class changed -> clear gearSelections + spells
       if (key === 'class' && value !== prevState.class) {
         updatedState.gearSelections = {};
-        console.log('[updateData] Class changed -> gearSelections cleared.');
+        updatedState.spells = []; // Clear spells as well
+        console.log('[updateData] Class changed -> gearSelections & spells cleared.');
       }
 
       // If we have selectedClasses data, auto-populate synergies/threats
@@ -170,6 +171,9 @@ const GuideCreationPage = () => {
       category: '',
       tags: [],
       gearSelections: {},
+      perks: [],
+      skills: [],
+      spells: [],
       strategyDescription: '',
       synergies: [],
       threats: [],
@@ -308,6 +312,11 @@ const GuideCreationPage = () => {
           >
             <h2>{guideData.title}</h2>
             <p>{guideData.shortDescription}</p>
+
+            {/* Class Stats Table in Preview */}
+            <h3>Class Stats</h3>
+            <ClassGearStatsTable characterStats={characterStats} />
+
             <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '1rem' }}>
               <img
                 src={`../src/assets/images/${guideData.class}.png`}
@@ -420,9 +429,18 @@ const GuideCreationPage = () => {
             <h3>Gear Selections</h3>
             {console.log('🟢 gearSelections Preview Rendering:', guideData.gearSelections)}
 
-            <div style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}>
-              {/* Additional gear info if needed */}
-            </div>
+            {/* Show the final Step6 spells in the preview (read-only or fully interactive) */}
+            <h3 style={{ marginTop: '20px' }}>Spell Layout</h3>
+            <Step6
+              selectedSpells={guideData.spells}
+              setSelectedSpells={() => {}}
+              selectedPerks={guideData.gearSelections}
+              currentClass={guideData.class}
+              memory={characterStats.Memory || 0}
+              onNext={() => {}}
+              onPrevious={() => {}}
+            />
+
           </div>
         )}
       </div>

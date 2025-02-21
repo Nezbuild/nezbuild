@@ -318,13 +318,6 @@ const Step6 = ({
 
       <h3>Total Spell Cost: {getTotalTierCost()}</h3>
       <h3>Memory Capacity: {memory}</h3>
-
-      <div style={{ marginTop: '20px' }}>
-        <button onClick={onPrevious} style={{ marginRight: '10px' }}>
-          Previous
-        </button>
-        <button onClick={onNext}>Next</button>
-      </div>
     </div>
   ) : null;
 };

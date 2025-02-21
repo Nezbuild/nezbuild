@@ -246,16 +246,28 @@ const Step6 = ({
   };
 
   const handleSpellSelection = (spell) => {
-    const newSpells = [...selectedSpells];
-    const firstEmptyIndex = newSpells.findIndex(s => !s);
-    if (firstEmptyIndex === -1) {
-      alert("No free slots left!");
+    // Build an array of which slot indexes are enabled
+    let enabledSlots = [];
+    if (hasMemoryI) {
+      enabledSlots.push(...[0, 1, 2, 3, 4]);
+    }
+    if (hasMemoryII) {
+      enabledSlots.push(...[5, 6, 7, 8, 9]);
+    }
+  
+    // Find the first (lowest index) enabled slot that is empty
+    const slotIndex = enabledSlots.find(index => !selectedSpells[index]);
+    if (slotIndex === undefined) {
+      alert("No free slots left in enabled slots!");
       return;
     }
-    newSpells[firstEmptyIndex] = spell;
+  
+    // Now place the spell there
+    const newSpells = [...selectedSpells];
+    newSpells[slotIndex] = spell;
     setSelectedSpells(newSpells);
     setPopupVisible(false);
-  };
+  };  
 
   // 8) Remove a spell from a given slot
   const handleRemoveSpell = (slotIndex) => {

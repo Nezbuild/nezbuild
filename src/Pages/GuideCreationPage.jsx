@@ -12,6 +12,10 @@ import GearLayout from '../Styles/GearLayout'; // ✅ Import GearLayout
 import { truncateName } from '../Steps/Utils/gearHelpers';
 import ClassGearStatsTable from '../Components/ClassGearStatsTable';
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
+const handleStatsUpdate = (stats) => {
+  console.log("📥 GuideCreationPage Received Stats:", stats); // Debug log
+  setCharacterStats(stats);
+};
 
 
 const getGearImage = (name, slot) => {
@@ -25,6 +29,7 @@ const getGearImage = (name, slot) => {
   return matchedImage ? matchedImage[1].default : '';
 };
 const GuideCreationPage = () => {
+  const [characterStats, setCharacterStats] = useState({});
   const [currentStep, setCurrentStep] = useState(1);
   const [guideData, setGuideData] = useState({
     title: '',
@@ -196,19 +201,22 @@ const GuideCreationPage = () => {
               isStepCompleted={isStep4And5Completed} 
               gearSelections={guideData.gearSelections}
               handleGearSelection={handleGearSelection} // ✅ Pass function here
+              onStatsUpdate={setCharacterStats}  // ✅ Add this line to store stats
             />
             <Step5 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
           </>
         )}
         {currentStep === 4 && (
-            <Step6 
-                selectedSpells={guideData.spells} 
-                setSelectedSpells={(spells) => updateData('spells', spells)}
-                selectedPerks={guideData.gearSelections}
-                currentClass={guideData.class} 
-                onNext={handleNext} 
-                onPrevious={handlePrevious} 
+            <Step6
+              selectedSpells={guideData.spells} 
+              setSelectedSpells={(spells) => updateData('spells', spells)}
+              selectedPerks={guideData.gearSelections}
+              currentClass={guideData.class} 
+              memory={characterStats.Memory || 0}  // ✅ Pass memory stat
+              onNext={handleNext} 
+              onPrevious={handlePrevious} 
             />
+
         )}
 
         <div style={{ display: 'flex', justifyContent: 'left', marginTop: '20px' }}>

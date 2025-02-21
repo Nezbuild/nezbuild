@@ -92,6 +92,7 @@ const ClassStats = {
       Knowledge: 20,
       Resourcefulness: 18,
       Health: 105.5,
+      Memory: 14,
     },
     Sorcerer: {
       Strength: 10,
@@ -102,6 +103,7 @@ const ClassStats = {
       Knowledge: 20,
       Resourcefulness: 12,
       Health: 100,
+      Memory: 14,
     },
   };
   

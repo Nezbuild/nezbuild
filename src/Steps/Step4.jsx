@@ -41,7 +41,20 @@ const getGearDataBySlot = (slot) => {
   return [];
 };
 
-const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
+const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsUpdate }) => {  
+  const [calculatedStats, setCalculatedStats] = useState({});
+  const handleStatsUpdate = (stats) => {
+    console.log("📥 Step4 Received Stats:", stats);
+    setCalculatedStats(stats);
+
+    // ✅ Ensure `onStatsUpdate` exists before calling it
+    if (onStatsUpdate) {
+      console.log("📤 Step4 Sending Stats to GuideCreationPage:", stats);
+      onStatsUpdate(stats);
+    } else {
+      console.error("🚨 `onStatsUpdate` is undefined in Step4!");
+    }
+  };
   const [popupVisible, setPopupVisible] = useState(null);
   const [rarityPromptVisible, setRarityPromptVisible] = useState(false);
   const [selectedGearName, setSelectedGearName] = useState(null);
@@ -310,7 +323,9 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections }) => {
         <ClassGearStatsTable 
           selectedClass={data.class}
           equippedGear={selectedGear}
+          onStatsUpdate={handleStatsUpdate} // Pass stats back to Step4
         />
+
       </div>
     </div>
     

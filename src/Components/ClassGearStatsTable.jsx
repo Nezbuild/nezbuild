@@ -1,14 +1,14 @@
-import React from 'react';
-import ClassStats from './ClassStats'; // Import class base stats
+import React, { useEffect, useState } from 'react';
+import ClassStats from './ClassStats';
 
-const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
+const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => {
   console.log("Selected Class:", selectedClass);
   console.log("Equipped Gear:", equippedGear);
 
   if (!selectedClass || !ClassStats[selectedClass]) return null; // Ensure class exists
 
   const baseStats = ClassStats[selectedClass];
-
+  console.log('BASE STATS', baseStats);
   // Function to extract perks from equippedGear
   const extractPerks = () => {
     return Object.values(equippedGear)
@@ -89,7 +89,17 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
     return totalStats;
   };
 
+  const [prevStats, setPrevStats] = useState(null);
   const totalStats = calculateTotalStats();
+
+  // ✅ Prevent unnecessary updates
+  useEffect(() => {
+    if (JSON.stringify(prevStats) !== JSON.stringify(totalStats)) {
+      setPrevStats(totalStats);
+      console.log("📤 Sending Stats to Step4:", { ...totalStats, Memory: totalStats.Knowledge - 6 });
+      onStatsUpdate({ ...totalStats, Memory: totalStats.Knowledge - 6 }); // ✅ Include Memory
+    }
+  }, [totalStats, onStatsUpdate]);  
 
   return (
     <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #FFD700', borderRadius: '10px' }}>
@@ -104,20 +114,34 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.keys(baseStats).map((stat) => (
-            <tr key={stat}>
-              <td>{stat}</td>
-              <td>{baseStats[stat]}</td>
-              <td>{stat === 'Strength' ? totalStats.AddedStrength : stat === 'Vigor' ? totalStats.AddedVigor : totalStats[stat] - baseStats[stat] || 0}</td>
-              <td>{totalStats[stat]}</td>
-            </tr>
-          ))}
+          {Object.keys(baseStats).map((stat) => 
+            stat !== "Health" && stat !== "Memory" && ( // ✅ Avoid duplicate Health & Memory rows
+              <tr key={stat}>
+                <td>{stat}</td>
+                <td>{baseStats[stat]}</td>
+                <td>{stat === 'Strength' ? totalStats.AddedStrength : stat === 'Vigor' ? totalStats.AddedVigor : totalStats[stat] - baseStats[stat] || 0}</td>
+                <td>{totalStats[stat]}</td>
+              </tr>
+            )
+          )}
           <tr>
             <td>Health</td>
             <td>{baseStats.Health}</td>
             <td>{totalStats.Health - baseStats.Health}</td>
             <td>{totalStats.Health}</td>
           </tr>
+
+          {/* ✅ Only show Memory if the class has it */}
+          {baseStats.Memory !== undefined && (
+            <tr>
+              <td>Memory</td>
+              <td>{baseStats.Knowledge-6}</td>
+              <td>{totalStats.Knowledge - 6 - baseStats.Memory}</td> 
+              <td>{totalStats.Knowledge - 6}</td>
+            </tr>
+          )}
+
+
         </tbody>
       </table>
     </div>

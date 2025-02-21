@@ -83,7 +83,8 @@ const SpellPopup = ({ visible, onSelect, onClose, selectedSpells, filteredSpells
     );
 };
 
-const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selectedPerks, currentClass }) => {
+const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selectedPerks, currentClass, memory }) => {
+    console.log("MEMMEMEMEMEMEMEMME", memory);
     const getTotalTierCost = () => {
         return selectedSpells.reduce((sum, spell) => sum + (spell?.Tier || 0), 0);
     };    
@@ -150,6 +151,7 @@ const Step6 = ({ selectedSpells, setSelectedSpells, onNext, onPrevious, selected
                 filteredSpells={filteredSpells} // Pass filtered spells to the popup
             />
             <h3>Total Spell Tier Cost: {getTotalTierCost()}</h3>
+            <h3>Spell Memory: {getTotalTierCost()} / {memory}</h3>
 
         </div>
     ) : null;

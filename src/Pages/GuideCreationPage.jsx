@@ -430,7 +430,7 @@ const GuideCreationPage = () => {
             {console.log('🟢 gearSelections Preview Rendering:', guideData.gearSelections)}
 
             {/* Spell Layout (Read-Only) */}
-            <h3 style={{ marginTop: '20px' }}>Spell Layout</h3>
+            <h3 style={{ marginTop: '20px' }}>Spells</h3>
             <Step6
               selectedSpells={guideData.spells}
               setSelectedSpells={() => {}}
@@ -439,6 +439,7 @@ const GuideCreationPage = () => {
               memory={characterStats.Memory || 0}
               onNext={() => {}}
               onPrevious={() => {}}
+              readOnly={true}
             />
           </div>
         )}

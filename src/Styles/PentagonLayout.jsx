@@ -23,13 +23,14 @@ function getPentagonPositions(size = 200, offset = 100) {
 
 /**
  * PentagonLayout
- * @param {Array} spells        5 spells for these slots
- * @param {Number} startIndex   0 for first pentagon, 5 for second
+ * @param {Array} spells        - 5 spells for these slots
+ * @param {Number} startIndex   - 0 for first pentagon, 5 for second
  * @param {Function} onSlotClick
  * @param {Function} onRemoveSpell
  * @param {Function} getSpellImage
  * @param {Array} overCapacityMap
- * @param {Boolean} isEnabled   If false, all these slots are disabled/grayed out
+ * @param {Boolean} isEnabled   - If false, all these slots are disabled/grayed out
+ * @param {Boolean} readOnly    - If true, hide over-capacity overlay & remove button
  */
 export default function PentagonLayout({
   spells,
@@ -38,7 +39,8 @@ export default function PentagonLayout({
   onRemoveSpell,
   getSpellImage,
   overCapacityMap = [],
-  isEnabled = false
+  isEnabled = false,
+  readOnly = false
 }) {
   const size = 350;
   const positions = getPentagonPositions(size, size / 2);
@@ -49,7 +51,7 @@ export default function PentagonLayout({
         position: 'relative',
         width: `${size}px`,
         height: `${size}px`,
-        margin: '20px',
+        margin: '20px'
       }}
     >
       {positions.map((pos, i) => {
@@ -73,7 +75,7 @@ export default function PentagonLayout({
             {/* Spell Button */}
             <button
               onClick={() => onSlotClick?.(slotIndex)}
-              disabled={!isEnabled}
+              disabled={!isEnabled || readOnly} // no slot click if readOnly
               style={{
                 width: '90px',
                 height: '90px',
@@ -81,9 +83,9 @@ export default function PentagonLayout({
                 borderRadius: '10%',
                 background: isEnabled
                   ? (spell ? '#666' : 'transparent')
-                  : 'transparent',            // gray if disabled
+                  : 'transparent',
                 color: '#FFD700',
-                cursor: isEnabled ? 'pointer' : 'not-allowed',
+                cursor: isEnabled && !readOnly ? 'pointer' : 'not-allowed',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -102,8 +104,8 @@ export default function PentagonLayout({
                       objectFit: 'contain'
                     }}
                   />
-                  {/* Red overlay if over capacity */}
-                  {isOver && (
+                  {/* Red overlay if over capacity AND not readOnly */}
+                  {!readOnly && isOver && (
                     <div
                       style={{
                         position: 'absolute',
@@ -137,9 +139,8 @@ export default function PentagonLayout({
               )}
             </button>
 
-            {/* "Remove" button only if there's a spell. 
-                Also disabled if isEnabled === false */}
-            {spell && (
+            {/* "Remove" button only if there's a spell & not readOnly */}
+            {spell && !readOnly && (
               <button
                 onClick={() => onRemoveSpell?.(slotIndex)}
                 disabled={!isEnabled}

@@ -126,8 +126,8 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => 
           )}
           <tr>
             <td>Health</td>
-            <td>{baseStats.Health}</td>
-            <td>{totalStats.Health - baseStats.Health}</td>
+            <td>{Math.ceil(baseStats.Health)}</td>
+            <td>{totalStats.Health - Math.ceil(baseStats.Health)}</td>
             <td>{totalStats.Health}</td>
           </tr>
 

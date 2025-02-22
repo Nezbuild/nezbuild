@@ -7,10 +7,10 @@ import Step2 from '../Steps/Step2';
 import Step3 from '../Steps/Step3';
 import Step4 from '../Steps/Step4';
 import Step5 from '../Steps/Step5';
-import Step6 from '../Steps/Step6';  // We'll use this in the preview
+import Step6 from '../Steps/Step6';
 import GearLayout from '../Styles/GearLayout';
 import { truncateName } from '../Steps/Utils/gearHelpers';
-import ClassGearStatsTable from '../Components/ClassGearStatsTable'; // Show in preview
+import ClassGearStatsTable from '../Components/ClassGearStatsTable';
 
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
 
@@ -21,7 +21,6 @@ const getGearImage = (name, slot) => {
   const matchedImage = Object.entries(gearImages).find(([path]) =>
     path.toLowerCase().endsWith(`/${processedName.toLowerCase()}.png`)
   );
-
   return matchedImage ? matchedImage[1].default : '';
 };
 
@@ -73,7 +72,7 @@ const GuideCreationPage = () => {
     return () => clearInterval(saveInterval);
   }, [guideData]);
 
-  // Check if perk is a memory perk
+  // Check if user has any memory perk
   const spellMemoryPerks = [
     'Spell Memory', 'Spell Memory II',
     'Music Memory', 'Music Memory II',
@@ -83,10 +82,9 @@ const GuideCreationPage = () => {
     guideData.gearSelections &&
     Object.values(guideData.gearSelections).some(gear => spellMemoryPerks.includes(gear?.Name));
 
-  console.log('Debug: hasSpellMemoryPerk ->', hasSpellMemoryPerk);
-
-  // Next step logic
+  // Step navigation logic
   const handleNext = () => {
+    // Step validations
     if (currentStep === 1 && (!guideData.title || !guideData.shortDescription)) {
       alert('Please complete the required fields before proceeding.');
       return;
@@ -100,7 +98,7 @@ const GuideCreationPage = () => {
       return;
     }
 
-    // If a spell memory perk is selected, go to Step 6 before finishing
+    // If has spell perk, jump from step 4 to step 6
     if (currentStep === 4 && hasSpellMemoryPerk) {
       setCurrentStep(6);
     } else if (currentStep < 5) {
@@ -112,37 +110,29 @@ const GuideCreationPage = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
 
-  // Handle gear selections from Step4
+  // Update gear selections (Step4)
   const handleGearSelection = (updatedGear) => {
-    console.log('🔹 handleGearSelection received updatedGear:', updatedGear);
-    setGuideData(prevState => {
-      console.log('✅ Updating Guide Data with Full Gear State');
-      return {
-        ...prevState,
-        gearSelections: updatedGear
-      };
-    });
+    setGuideData(prev => ({
+      ...prev,
+      gearSelections: updatedGear
+    }));
   };
 
-  // Function to update guide data for any key
+  // Generic data update function
   const updateData = (key, value) => {
     setGuideData(prevState => {
       let updatedState = { ...prevState, [key]: value };
 
-      // Check if class changed -> clear gearSelections + spells
+      // If class changed => clear gear & spells
       if (key === 'class' && value !== prevState.class) {
         updatedState.gearSelections = {};
-        updatedState.spells = []; // Clear spells as well
-        console.log('[updateData] Class changed -> gearSelections & spells cleared.');
+        updatedState.spells = [];
       }
-
-      // If we have selectedClasses data, auto-populate synergies/threats
+      // If selectedClasses changed => auto-populate synergies/threats
       if (key === 'selectedClasses') {
         updatedState.synergies = value.synergies || [];
         updatedState.threats = value.threats || [];
       }
-
-      console.log('Updated Guide Data:', updatedState); // Debugging
       return updatedState;
     });
 
@@ -158,10 +148,9 @@ const GuideCreationPage = () => {
   // Manual save
   const handleManualSave = () => {
     localStorage.setItem('savedGuide', JSON.stringify(guideData));
-    console.log('Guide manually saved:', guideData); // Debugging
   };
 
-  // Clear local storage
+  // Clear local storage & reset
   const clearSavedGuide = () => {
     localStorage.removeItem('savedGuide');
     setGuideData({
@@ -180,17 +169,15 @@ const GuideCreationPage = () => {
       synergyText: '',
       threatText: ''
     });
-    console.log('Guide data cleared.'); // Debugging
   };
 
-  // Export as JSON
+  // Export to JSON
   const exportGuide = () => {
     const blob = new Blob([JSON.stringify(guideData, null, 2)], { type: 'application/json' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'guide.json';
     link.click();
-    console.log('Guide exported:', guideData); // Debugging
   };
 
   return (
@@ -200,17 +187,24 @@ const GuideCreationPage = () => {
         <h1>Guide Creation Progress</h1>
         <ProgressBar currentStep={currentStep} totalSteps={4} />
 
+        {/* Step Render Logic */}
         {currentStep === 1 && (
           <>
-            <Step1 data={guideData} updateData={updateData} isStepCompleted={isStep1And3Completed} />
-            <Step3 data={guideData} updateData={updateData} isStepCompleted={isStep1And3Completed} />
+            <Step1 
+              data={guideData} 
+              updateData={updateData} 
+              isStepCompleted={isStep1And3Completed} 
+            />
+            <Step3 
+              data={guideData} 
+              updateData={updateData} 
+              isStepCompleted={isStep1And3Completed} 
+            />
           </>
         )}
-
         {currentStep === 2 && (
           <Step2 data={guideData} updateData={updateData} />
         )}
-
         {currentStep === 3 && (
           <>
             <Step4
@@ -221,10 +215,13 @@ const GuideCreationPage = () => {
               handleGearSelection={handleGearSelection}
               onStatsUpdate={setCharacterStats}
             />
-            <Step5 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
+            <Step5
+              data={guideData}
+              updateData={updateData}
+              isStepCompleted={isStep4And5Completed}
+            />
           </>
         )}
-
         {currentStep === 4 && (
           <Step6
             selectedSpells={guideData.spells}
@@ -237,6 +234,7 @@ const GuideCreationPage = () => {
           />
         )}
 
+        {/* Navigation */}
         <div style={{ display: 'flex', justifyContent: 'left', marginTop: '20px' }}>
           <NavigationButtons
             currentStep={currentStep}
@@ -246,6 +244,7 @@ const GuideCreationPage = () => {
           />
         </div>
 
+        {/* Save / Clear / Export / Preview */}
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
           <button
             onClick={handleManualSave}
@@ -301,6 +300,7 @@ const GuideCreationPage = () => {
           </button>
         </div>
 
+        {/* PREVIEW */}
         {isPreviewVisible && (
           <div
             style={{
@@ -313,10 +313,6 @@ const GuideCreationPage = () => {
             <h2>{guideData.title}</h2>
             <p>{guideData.shortDescription}</p>
 
-            {/* Class Stats Table in Preview */}
-            <h3>Class Stats</h3>
-            <ClassGearStatsTable characterStats={characterStats} />
-
             <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '1rem' }}>
               <img
                 src={`../src/assets/images/${guideData.class}.png`}
@@ -326,12 +322,8 @@ const GuideCreationPage = () => {
               />
               <span style={{ fontSize: '16px', textAlign: 'center' }}>{guideData.class}</span>
             </div>
-            <p>
-              <strong>Category:</strong> {guideData.category}
-            </p>
-            <p>
-              <strong>Tags:</strong> {guideData.tags.join(', ')}
-            </p>
+            <p><strong>Category:</strong> {guideData.category}</p>
+            <p><strong>Tags:</strong> {guideData.tags.join(', ')}</p>
 
             {/* Gear Layout */}
             <GearLayout>
@@ -359,6 +351,14 @@ const GuideCreationPage = () => {
                 );
               })}
             </GearLayout>
+
+            {/* Class Stats Table below Gear Layout */}
+            <h3>Class Stats</h3>
+            <ClassGearStatsTable
+              selectedClass={guideData.class}
+              equippedGear={guideData.gearSelections}
+              onStatsUpdate={stats => setCharacterStats(stats)}
+            />
 
             {/* Synergies */}
             {guideData.synergies.length > 0 ? (
@@ -429,7 +429,7 @@ const GuideCreationPage = () => {
             <h3>Gear Selections</h3>
             {console.log('🟢 gearSelections Preview Rendering:', guideData.gearSelections)}
 
-            {/* Show the final Step6 spells in the preview (read-only or fully interactive) */}
+            {/* Spell Layout (Read-Only) */}
             <h3 style={{ marginTop: '20px' }}>Spell Layout</h3>
             <Step6
               selectedSpells={guideData.spells}
@@ -440,7 +440,6 @@ const GuideCreationPage = () => {
               onNext={() => {}}
               onPrevious={() => {}}
             />
-
           </div>
         )}
       </div>

@@ -1,19 +1,55 @@
 import Tooltip from '../Components/Tooltip';
-import ReactQuill from 'react-quill'; // Ensure react-quill is installed
-import 'react-quill/dist/quill.snow.css'; // Import ReactQuill styles
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
-const Step5 = ({ data, updateData }) => (
-  <div>
-    <h2 style={{ fontSize: '2rem' }}>
-      Step 4: Strategy Description <Tooltip text="Describe the strategy and tactics for your guide." />
-    </h2>
-    <ReactQuill
-      value={data.strategyDescription}
-      onChange={(value) => updateData('strategyDescription', value)}
-      placeholder="Write your strategy here..."
-      style={{ fontSize: '1.25rem' }}
-    />
-  </div>
-);
+const Step5 = ({ data, updateData }) => {
+  return (
+    <div
+      style={{
+        margin: '2rem 0',
+        padding: '2rem',
+        backgroundColor: '#222', // Dark gray box
+        border: '1px solid #444',
+        borderRadius: '0.5rem',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+        color: '#FFD700',
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2rem',
+          marginBottom: '1.5rem',
+          textShadow: '1px 1px 2px #000',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+        }}
+      >
+        Step 5: Strategy Description
+      </h2>
 
-export default Step5; // Ensure this export is present
+      <ReactQuill
+        value={data.strategyDescription}
+        onChange={(value) => updateData('strategyDescription', value)}
+        placeholder="Write your strategy here..."
+        style={{
+          fontSize: '1.25rem',
+          backgroundColor: '#333',
+          color: '#FFD700',
+          border: '1px solid #FFD700',
+          borderRadius: '0.375rem',
+          minHeight: '20px',
+          transition: 'box-shadow 0.3s, border 0.3s',
+        }}
+        onFocus={(e) => {
+          e.target.style.boxShadow = '0 0 6px 2px #FFD700';
+        }}
+        onBlur={(e) => {
+          e.target.style.boxShadow = 'none';
+        }}
+      />
+    </div>
+  );
+};
+
+export default Step5;

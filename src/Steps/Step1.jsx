@@ -1,10 +1,36 @@
+import React from 'react';
 
-const Step1 = ({ data, updateData }) => (
-    <div>
-      <h2 style={{ fontSize: '2rem' }}>
+const Step1 = ({ data, updateData }) => {
+  return (
+    <div
+      style={{
+        margin: '2rem 0',
+        padding: '2rem',
+        backgroundColor: '#222',    // Slightly different shade
+        border: '1px solid #444',   // Subtle border
+        borderRadius: '0.5rem',
+        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2rem',
+          marginBottom: '1.5rem',
+          color: '#FFD700',         // keep golden text
+          textShadow: '1px 1px 2px #000'
+        }}
+      >
         Step 1: Title and Short Description
       </h2>
-      <label style={{ fontSize: '1.25rem' }}>
+
+      <label
+        style={{
+          fontSize: '1.25rem',
+          display: 'block',
+          marginBottom: '0.5rem',
+          color: '#FFD700'
+        }}
+      >
         Guide Title <span style={{ color: '#FF0000' }}>*</span>
       </label>
       <input
@@ -21,9 +47,25 @@ const Step1 = ({ data, updateData }) => (
           border: '1px solid #FFD700',
           borderRadius: '0.375rem',
           marginBottom: '1.5rem',
+          outline: 'none',
+          transition: 'box-shadow 0.3s, border 0.3s',
+        }}
+        onFocus={(e) => {
+          e.target.style.boxShadow = '0 0 6px 2px #FFD700';
+        }}
+        onBlur={(e) => {
+          e.target.style.boxShadow = 'none';
         }}
       />
-      <label style={{ fontSize: '1.25rem' }}>
+
+      <label
+        style={{
+          fontSize: '1.25rem',
+          display: 'block',
+          marginBottom: '0.5rem',
+          color: '#FFD700'
+        }}
+      >
         Short Description <span style={{ color: '#FF0000' }}>*</span>
       </label>
       <textarea
@@ -38,10 +80,19 @@ const Step1 = ({ data, updateData }) => (
           color: '#FFD700',
           border: '1px solid #FFD700',
           borderRadius: '0.375rem',
+          outline: 'none',
+          transition: 'box-shadow 0.3s, border 0.3s',
+          resize: 'vertical',       // let user resize vertically if desired
+        }}
+        onFocus={(e) => {
+          e.target.style.boxShadow = '0 0 6px 2px #FFD700';
+        }}
+        onBlur={(e) => {
+          e.target.style.boxShadow = 'none';
         }}
       />
     </div>
   );
-  
-  export default Step1; // Ensure this default export exists
-  
+};
+
+export default Step1;

@@ -50,32 +50,69 @@ const Step2 = ({ data, updateData }) => {
   };
 
   return (
-    <div>
-      <h2>Step 2: Synergies and Threats</h2>
+    <div
+      style={{
+        margin: '2rem 0',
+        padding: '2rem',
+        backgroundColor: '#222',
+        border: '1px solid #444',
+        borderRadius: '0.5rem',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.5)',
+        color: '#FFD700'
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2rem',
+          marginBottom: '1.5rem',
+          textShadow: '1px 1px 2px #000'
+        }}
+      >
+        Step 2: Synergies and Threats
+      </h2>
 
-      <h3 style={{ color: 'green' }}>Synergies</h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1rem' }}>
-        {classes.map(({ name, icon }) => (
-          <button
-            key={name}
-            onClick={() => handleClassClick(name, 'synergies')}
-            style={{
-              padding: '1rem',
-              backgroundColor: selectedClasses.synergies.includes(name) ? '#50C878' : '#2F2F2F',
-              color: '#FFD700',
-              cursor: 'pointer',
-              outline: 'none',
-
-            }}
-          >
-            <img
-              src={icon}
-              alt={name}
-              style={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
-            />
-            {name}
-          </button>
-        ))}
+      {/* Synergies Section */}
+      <h3 style={{ color: 'green', marginBottom: '1rem' }}>Synergies</h3>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem',
+          marginBottom: '1rem'
+        }}
+      >
+        {classes.map(({ name, icon }) => {
+          const isSelected = selectedClasses.synergies.includes(name);
+          return (
+            <button
+              key={name}
+              onClick={() => handleClassClick(name, 'synergies')}
+              style={{
+                padding: '1rem',
+                backgroundColor: isSelected ? '#50C878' : '#2F2F2F',
+                color: '#FFD700',
+                cursor: 'pointer',
+                outline: 'none',
+                border: '1px solid #FFD700',
+                borderRadius: '0.375rem',
+                transition: 'transform 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              <img
+                src={icon}
+                alt={name}
+                style={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
+              />
+              {name}
+            </button>
+          );
+        })}
       </div>
       <textarea
         value={synergyText}
@@ -89,33 +126,58 @@ const Step2 = ({ data, updateData }) => {
           border: '1px solid #FFD700',
           borderRadius: '0.375rem',
           outline: 'none',
-          boxShadow: '0 0 5px rgba(255, 215, 0, 0.8)',
+          backgroundColor: '#333',
+          color: '#FFD700',
+          fontSize: '1rem',
+          transition: 'box-shadow 0.3s',
+          resize: 'vertical',
         }}
+        onFocus={(e) => (e.target.style.boxShadow = '0 0 6px 2px #FFD700')}
+        onBlur={(e) => (e.target.style.boxShadow = 'none')}
       />
 
-      <h3 style={{ color: 'red' }}>Threats</h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1rem' }}>
-        {classes.map(({ name, icon }) => (
-          <button
-            key={name}
-            onClick={() => handleClassClick(name, 'threats')}
-            style={{
-              padding: '1rem',
-              backgroundColor: selectedClasses.threats.includes(name) ? '#800020' : '#2F2F2F',
-              color: '#FFD700',
-              cursor: 'pointer',
-              outline: 'none',
-
-            }}
-          >
-            <img
-              src={icon}
-              alt={name}
-              style={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
-            />
-            {name}
-          </button>
-        ))}
+      {/* Threats Section */}
+      <h3 style={{ color: 'red', marginBottom: '1rem' }}>Threats</h3>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem',
+          marginBottom: '1rem'
+        }}
+      >
+        {classes.map(({ name, icon }) => {
+          const isSelected = selectedClasses.threats.includes(name);
+          return (
+            <button
+              key={name}
+              onClick={() => handleClassClick(name, 'threats')}
+              style={{
+                padding: '1rem',
+                backgroundColor: isSelected ? '#800020' : '#2F2F2F',
+                color: '#FFD700',
+                cursor: 'pointer',
+                outline: 'none',
+                border: '1px solid #FFD700',
+                borderRadius: '0.375rem',
+                transition: 'transform 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              <img
+                src={icon}
+                alt={name}
+                style={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
+              />
+              {name}
+            </button>
+          );
+        })}
       </div>
       <textarea
         value={threatText}
@@ -128,8 +190,14 @@ const Step2 = ({ data, updateData }) => {
           border: '1px solid #FFD700',
           borderRadius: '0.375rem',
           outline: 'none',
-          boxShadow: '0 0 5px rgba(255, 215, 0, 0.8)',
+          backgroundColor: '#333',
+          color: '#FFD700',
+          fontSize: '1rem',
+          transition: 'box-shadow 0.3s',
+          resize: 'vertical',
         }}
+        onFocus={(e) => (e.target.style.boxShadow = '0 0 6px 2px #FFD700')}
+        onBlur={(e) => (e.target.style.boxShadow = 'none')}
       />
     </div>
   );

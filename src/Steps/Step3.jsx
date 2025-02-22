@@ -1,3 +1,4 @@
+import React from 'react';
 import Tooltip from '../Components/Tooltip';
 
 const Step3 = ({ data, updateData }) => {
@@ -51,17 +52,40 @@ const Step3 = ({ data, updateData }) => {
   };
 
   return (
-    <div>
-      <h2 style={{ fontSize: '2rem' }}>
+    <div
+      style={{
+        margin: '2rem 0',
+        padding: '2rem',
+        backgroundColor: '#222',
+        border: '1px solid #444',
+        borderRadius: '0.5rem',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.5)',
+        color: '#FFD700'
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2rem',
+          marginBottom: '1.5rem',
+          textShadow: '1px 1px 2px #000'
+        }}
+      >
         Step 2: Class, Category, and Style Selection
         <Tooltip text="Select your class, category, and up to 5 tags that describe your guide." />
       </h2>
 
-      <h3 style={{ fontSize: '1.5rem' }}>
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Class Selection
         <Tooltip text="Choose a class for your guide. This step must be completed before selecting a category or tags." />
       </h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1.5rem' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem',
+          marginBottom: '1.5rem'
+        }}
+      >
         {classes.map(({ name, icon }) => (
           <button
             key={name}
@@ -75,35 +99,46 @@ const Step3 = ({ data, updateData }) => {
               padding: '1rem',
               fontSize: '1.25rem',
               backgroundColor: data.class === name ? '#FFD700' : '#2F2F2F',
-              color: data.class === name ? '#000000' : '#FFD700',
-              border: '1px  #FFD700',
+              color: data.class === name ? '#000' : '#FFD700',
+              border: '1px solid #FFD700',
               borderRadius: '0.375rem',
               cursor: 'pointer',
-              opacity: (!data.title || !data.shortDescription) ? 0.5 : 1,
+              opacity: !data.title || !data.shortDescription ? 0.5 : 1,
               width: '120px',
               height: '130px',
+              transition: 'transform 0.2s',
+            }}
+            onMouseEnter={(e) => {
+              if (!(!data.title || !data.shortDescription)) {
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            {/* Control the size of the image */}
             <img
               src={icon}
               alt={name}
-              style={{
-                width: '100px', // IMAGE WIDTH
-                height: '100px', // IMAGE HEIGHT
-                marginBottom: '0.5rem',
-              }}
+              style={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
             />
             {name}
           </button>
         ))}
       </div>
 
-      <h3 style={{ fontSize: '1.5rem' }}>
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Category Selection
         <Tooltip text="Select the game mode category for your guide." />
       </h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1.5rem' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem',
+          marginBottom: '1.5rem'
+        }}
+      >
         {categories.map(({ name, icon }) => (
           <button
             key={name}
@@ -113,23 +148,37 @@ const Step3 = ({ data, updateData }) => {
               padding: '1rem 2rem',
               fontSize: '1.25rem',
               backgroundColor: data.category === name ? '#FFD700' : '#2F2F2F',
-              color: data.category === name ? '#000000' : '#FFD700',
-              border: '1px #FFD700',
+              color: data.category === name ? '#000' : '#FFD700',
+              border: '1px solid #FFD700',
               borderRadius: '0.375rem',
               cursor: 'pointer',
               opacity: data.class ? 1 : 0.5,
+              transition: 'transform 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              if (data.class) e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <span style={{ fontSize: '2.5rem' }}>{icon}</span> {name}
+            <span style={{ fontSize: '2.5rem', marginRight: '0.5rem' }}>{icon}</span>
+            {name}
           </button>
         ))}
       </div>
 
-      <h3 style={{ fontSize: '1.5rem' }}>
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Guide Style Tags
         <Tooltip text="Select up to 5 tags to describe the style of your guide." />
       </h3>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1.5rem'
+        }}
+      >
         {guideTags.map(({ name, icon }) => (
           <button
             key={name}
@@ -139,14 +188,22 @@ const Step3 = ({ data, updateData }) => {
               padding: '1rem 2rem',
               fontSize: '1.25rem',
               backgroundColor: (data.tags || []).includes(name) ? '#FFD700' : '#2F2F2F',
-              color: (data.tags || []).includes(name) ? '#000000' : '#FFD700',
-              border: '1px #FFD700',
+              color: (data.tags || []).includes(name) ? '#000' : '#FFD700',
+              border: '1px solid #FFD700',
               borderRadius: '0.375rem',
               cursor: 'pointer',
               opacity: data.category ? 1 : 0.5,
+              transition: 'transform 0.2s'
+            }}
+            onMouseEnter={(e) => {
+              if (data.category) e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <span style={{ fontSize: '2.5rem' }}>{icon}</span> {name}
+            <span style={{ fontSize: '2.5rem', marginRight: '0.5rem' }}>{icon}</span>
+            {name}
           </button>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { addSpacesBeforeCapitals, truncateName } from '../Utils/gearHelpers';
 import gearData from '/src/assets/DarkAndDarkerGear.json';
 import weaponsData from '/src/assets/Weapons.json';
@@ -19,8 +19,8 @@ const rarityColorMap = {
   Unique: '#F5F5DC'     // off white
 };
 
-const extractPerks = (ol) => {
-  return Object.values(ol)
+const extractPerks = (gearObj) => {
+  return Object.values(gearObj)
     .filter((gear) => gear.Type === 'Perk')
     .map((perk) => perk.Name);
 };
@@ -44,15 +44,19 @@ export default function GearPopup({
 }) {
   if (!visible) return null;
 
-  // Extract any global perks
-  const perks = extractPerks(updatedGear);
-  const hasSlayer = perks.includes('Slayer');
-  const hasWeaponMastery = perks.includes('Weapon Mastery');
-  const hasDemonArmor = perks.includes('Demon Armor');
+  // Memoize extracted perks from updatedGear
+  const perks = useMemo(() => extractPerks(updatedGear), [updatedGear]);
+  const hasSlayer = useMemo(() => perks.includes('Slayer'), [perks]);
+  const hasWeaponMastery = useMemo(() => perks.includes('Weapon Mastery'), [perks]);
+  const hasDemonArmor = useMemo(() => perks.includes('Demon Armor'), [perks]);
 
-  // For truncation
-  const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(selectedSlot);
+  // Determine whether to truncate gear names
+  const shouldTruncate = useMemo(() => 
+    ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(selectedSlot),
+    [selectedSlot]
+  );
 
+  // Mapping for display types based on slot
   const typeMap = {
     head: 'Head',
     chest: 'Chest',
@@ -75,95 +79,80 @@ export default function GearPopup({
     skill2: 'Skill'
   };
 
-  function getRelevantGear() {
+  // Memoize the filtered, unique gear list based on the slot and class
+  const uniqueGear = useMemo(() => {
+    let gearArray;
     if (['Weapon11','Weapon12','Weapon21','Weapon22'].includes(selectedSlot)) {
-      return mergeWeapons;
+      gearArray = mergeWeapons;
+    } else if (['ring1','ring2','amulet'].includes(selectedSlot)) {
+      gearArray = accessoriesData;
+    } else if (['perk1','perk2','perk3','perk4'].includes(selectedSlot)) {
+      gearArray = skillsData.filter((gear) => gear.Type === 'Perk');
+    } else if (['skill1','skill2'].includes(selectedSlot)) {
+      gearArray = skillsData.filter((gear) => gear.Type === 'Skill');
+    } else {
+      gearArray = gearData;
     }
-    if (['ring1','ring2','amulet'].includes(selectedSlot)) {
-      return accessoriesData;
+    // Filter logic:
+    const filtered = gearArray.filter((gear) => {
+      const firstWord = gear.Name.split(' ')[0];
+      const isPlate = firstWord === 'Plate';
+      const isWeapon = typeMap[selectedSlot] === 'Weapon';
+      const isPerk = typeMap[selectedSlot] === 'Perk';
+      const hasPlateArmorEquipped = Object.values(updatedGear).some(
+        (eqGear) => eqGear?.Name && eqGear.Name.split(' ')[0] === 'Plate'
+      );
+      if (hasSlayer && isPlate && !hasDemonArmor) return false;
+      if (hasWeaponMastery && isWeapon) return true;
+      if (hasDemonArmor && isPlate && gear.Type === typeMap[selectedSlot]) return true;
+      if (isPerk && gear.Name === 'Slayer' && hasPlateArmorEquipped) return false;
+      const matchesTypeOrSlot =
+        ['perk1','perk2','perk3','perk4','skill1','skill2'].includes(selectedSlot) ||
+        gear.Type === typeMap[selectedSlot];
+      const classReqOk =
+        ['ring1','ring2','amulet'].includes(selectedSlot) ||
+        !gear['Class Requirements'] ||
+        gear['Class Requirements'] === 'None' ||
+        gear['Class Requirements'].includes(currentClass);
+      return matchesTypeOrSlot && classReqOk;
+    });
+    // Remove duplicates by Name
+    const unique = [];
+    for (const g of filtered) {
+      if (!unique.some((u) => u.Name === g.Name)) {
+        unique.push(g);
+      }
     }
-    if (['perk1','perk2','perk3','perk4'].includes(selectedSlot)) {
-      return skillsData.filter((gear) => gear.Type === 'Perk');
-    }
-    if (['skill1','skill2'].includes(selectedSlot)) {
-      return skillsData.filter((gear) => gear.Type === 'Skill');
-    }
-    return gearData;
-  }
+    return unique;
+  }, [selectedSlot, currentClass, updatedGear, hasSlayer, hasDemonArmor, hasWeaponMastery, typeMap]);
 
-  // Filter logic
-  const relevantGear = getRelevantGear().filter((gear) => {
-    const firstWord = gear.Name.split(' ')[0];
-    const isPlate = firstWord === 'Plate';
-    const isWeapon = typeMap[selectedSlot] === 'Weapon';
-    const isPerk = typeMap[selectedSlot] === 'Perk';
-
-    const hasPlateArmorEquipped = Object.values(updatedGear).some(
-      (eqGear) => eqGear?.Name && eqGear.Name.split(' ')[0] === 'Plate'
-    );
-
-    // If user has Slayer => block plate unless Demon Armor
-    if (hasSlayer && isPlate && !hasDemonArmor) return false;
-    // If user has Weapon Mastery => any weapon is allowed
-    if (hasWeaponMastery && isWeapon) return true;
-    // Demon Armor => plate is okay
-    if (hasDemonArmor && isPlate && gear.Type === typeMap[selectedSlot]) return true;
-    // If perk is "Slayer" but we have plate => block
-    if (isPerk && gear.Name === 'Slayer' && hasPlateArmorEquipped) {
-      return false;
-    }
-
-    // Normal checks
-    const matchesTypeOrSlot =
-      ['perk1','perk2','perk3','perk4','skill1','skill2'].includes(selectedSlot)
-      || gear.Type === typeMap[selectedSlot];
-
-    const classReqOk =
-      ['ring1','ring2','amulet'].includes(selectedSlot)
-      || !gear['Class Requirements']
-      || gear['Class Requirements'] === 'None'
-      || gear['Class Requirements'].includes(currentClass);
-
-    return matchesTypeOrSlot && classReqOk;
-  });
-
-  // Remove duplicates by Name
-  const uniqueGear = [];
-  for (const g of relevantGear) {
-    if (!uniqueGear.some((u) => u.Name === g.Name)) {
-      uniqueGear.push(g);
-    }
-  }
-
-  // On select gear
-  const handleSelectGear = (gearObj) => {
-    // If perk/skill is already selected, block duplicates
+  // Handler for selecting gear
+  const handleSelectGear = useCallback((gearObj) => {
+    const slotType = ['perk1','perk2','perk3','perk4','skill1','skill2'].includes(selectedSlot)
+      ? selectedSlot
+      : null;
+    // Prevent duplicates for perks/skills
     if (
-      (['perk1','perk2','perk3','perk4'].includes(selectedSlot) &&
-        Object.values(updatedGear).some((item) => item?.Name === gearObj.Name)) ||
-      (['skill1','skill2'].includes(selectedSlot) &&
-        Object.values(updatedGear).some((item) => item?.Name === gearObj.Name))
+      slotType &&
+      Object.values(updatedGear).some((item) => item?.Name === gearObj.Name)
     ) {
       alert(`${gearObj.Name} has already been selected.`);
       return;
     }
     onSelect(gearObj.Name);
-  };
+  }, [selectedSlot, updatedGear, onSelect]);
 
-  // Over button hover, show a gray overlay with stats color-coded by Rarity
-  // We'll keep track of which gear is hovered. Then each button compares to that gear.
+  // State for which gear is hovered
   const [hoveredGear, setHoveredGear] = useState(null);
 
-  // Get color from rarity
-  const getRarityColor = (rarity) => {
-    if (!rarity) return '#FFFFFF'; // fallback if no rarity
+  // Memoized function to get color from rarity
+  const getRarityColor = useCallback((rarity) => {
+    if (!rarity) return '#FFFFFF';
     return rarityColorMap[rarity] || '#FFFFFF';
-  };
+  }, []);
 
-  // Render the overlay stats block
-  const renderHoverOverlay = (gearObj) => {
-    // We'll show gear stats (except the name) in a gray background
-    // color-coded by rarity
+  // Render overlay with gear stats
+  const renderHoverOverlay = useCallback((gearObj) => {
     const color = getRarityColor(gearObj.Rarity);
     return (
       <div
@@ -173,7 +162,7 @@ export default function GearPopup({
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(64,64,64,0.7)', // gray overlay
+          backgroundColor: 'rgba(64,64,64,0.7)',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -181,11 +170,9 @@ export default function GearPopup({
           padding: '5px',
           color: color,
           textAlign: 'center',
-          cursor: 'pointer',
+          cursor: 'pointer'
         }}
       >
-        {/* We only show gearObj.Attributes and gearObj.Other or any extra fields.
-            We skip the gear name to avoid duplication. */}
         {gearObj.Attributes && (
           <p style={{ margin: '0.25rem 0' }}>
             <strong>Attributes:</strong> {gearObj.Attributes}
@@ -198,7 +185,7 @@ export default function GearPopup({
         )}
       </div>
     );
-  };
+  }, [getRarityColor]);
 
   return (
     <div
@@ -218,12 +205,13 @@ export default function GearPopup({
         maxHeight: '80vh',
         overflowY: 'auto',
         width: '100%',
-        maxWidth: '500px',
+        maxWidth: '500px'
       }}
     >
-      <h3>Select {selectedSlot?.charAt(0).toUpperCase() + selectedSlot?.slice(1)}</h3>
+      <h3>
+        Select {selectedSlot?.charAt(0).toUpperCase() + selectedSlot?.slice(1)}
+      </h3>
 
-      {/* Gear grid */}
       <div
         style={{
           display: 'grid',
@@ -232,17 +220,14 @@ export default function GearPopup({
           padding: '0.5rem',
           background: '#222222',
           borderRadius: '0.25rem',
-          width: '100%',
+          width: '100%'
         }}
       >
         {uniqueGear.map((gearObj) => {
           const name = gearObj.Name;
           const imgSrc = getGearImage(name, selectedSlot);
-
-          // Keep truncated logic
           const truncatedOrFull = shouldTruncate ? truncateName(name) : name;
           const displayName = addSpacesBeforeCapitals(truncatedOrFull);
-
           return (
             <button
               key={name}
@@ -263,10 +248,9 @@ export default function GearPopup({
                 borderRadius: '0.25rem',
                 width: imgSrc ? 'auto' : '80px',
                 height: imgSrc ? 'auto' : '80px',
-                overflow: 'hidden',
+                overflow: 'hidden'
               }}
             >
-              {/* Gear image */}
               <img
                 src={imgSrc}
                 alt={name}
@@ -275,15 +259,12 @@ export default function GearPopup({
                   maxHeight: '100%',
                   objectFit: 'contain',
                   pointerEvents: 'none',
-                  userSelect: 'none',
+                  userSelect: 'none'
                 }}
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
               />
-              {/* Gear truncated name */}
               {displayName}
-
-              {/* If we're hovering THIS gear, show the overlay */}
               {hoveredGear === gearObj && renderHoverOverlay(gearObj)}
             </button>
           );
@@ -299,7 +280,7 @@ export default function GearPopup({
           border: 'none',
           color: '#222222',
           borderRadius: '0.25rem',
-          cursor: 'pointer',
+          cursor: 'pointer'
         }}
       >
         Close

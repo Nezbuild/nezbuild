@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import GearLayout from '../Styles/GearLayout';
 import GearPopup from './Popups/GearPopup';
 import RarityPopup from './Popups/RarityPopup.jsx';
@@ -11,18 +11,16 @@ import accessoriesData from '../assets/Accessories.json';
 import skillsData from '../assets/SkillsAndPerks.json';
 import ClassGearStatsTable from '../Components/ClassGearStatsTable';
 
-// Rarity color mapping (no logic change, just styling reference)
 const rarityColors = {
-  Poor: '#A9A9A9',    // light gray
-  Common: '#FFFFFF',  // white
+  Poor: '#A9A9A9',
+  Common: '#FFFFFF',
   Uncommon: 'green',
   Rare: 'blue',
   Epic: 'purple',
   Legendary: 'orange',
-  Unique: '#f0e6d2'   // off-white
+  Unique: '#f0e6d2'
 };
 
-// Same gear image logic
 const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
 const getGearImage = (name, slot) => {
   const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(slot);
@@ -33,7 +31,6 @@ const getGearImage = (name, slot) => {
   return matchedImage ? matchedImage[1].default : '';
 };
 
-// Same helper for retrieving gear array by slot
 const getGearDataBySlot = (slot) => {
   if (['Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'].includes(slot)) {
     return mergeWeapons;
@@ -58,43 +55,33 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
   const [selectedGear, setSelectedGear] = useState({});
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [lockedSlots, setLockedSlots] = useState([]);
-  const [hoveredSlot, setHoveredSlot] = useState(null); // purely for hover overlay
+  const [hoveredSlot, setHoveredSlot] = useState(null);
 
-  // -- Stats update logic (unchanged)
-  const handleStatsUpdate = (stats) => {
-    console.log('📥 Step4 Received Stats:', stats);
+  const handleStatsUpdateInternal = useCallback((stats) => {
     setCalculatedStats(stats);
     if (onStatsUpdate) {
-      console.log('📤 Step4 Sending Stats to GuideCreationPage:', stats);
       onStatsUpdate(stats);
     }
-  };
+  }, [onStatsUpdate]);
 
-  // Load existing gearSelections on mount
   useEffect(() => {
     if (gearSelections && Object.keys(gearSelections).length > 0) {
-      console.log('♻️ Reloading saved gear selections:', gearSelections);
       setSelectedGear(gearSelections);
     }
   }, [gearSelections]);
 
-  // Remove gear logic (unchanged)
-  const handleRemoveGear = (slot) => {
+  const handleRemoveGear = useCallback((slot) => {
     setSelectedGear((prev) => {
       const { [slot]: removedGear, ...updatedGear } = prev;
-      console.log(`🗑 Removed gear from slot: ${slot}`, removedGear);
-
-      // Demon Armor removal => remove Plate
+      // Remove Plate if Demon Armor is removed
       if (removedGear?.Name === 'Demon Armor') {
         Object.keys(updatedGear).forEach((key) => {
           if (updatedGear[key]?.Name?.split(' ')[0] === 'Plate') {
-            console.log(`❌ Removing ${updatedGear[key].Name} (Demon Armor removed)`);
             delete updatedGear[key];
           }
         });
       }
-
-      // Weapon Mastery removal => remove non-Fighter weapons
+      // Remove non-Fighter weapons if Weapon Mastery is removed
       if (removedGear?.Name === 'Weapon Mastery') {
         Object.keys(updatedGear).forEach((key) => {
           if (
@@ -102,66 +89,50 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
             updatedGear[key]?.['Class Requirements'] &&
             !updatedGear[key]['Class Requirements'].includes('Fighter')
           ) {
-            console.log(`❌ Removing ${updatedGear[key].Name} (Weapon Mastery removed)`);
             delete updatedGear[key];
           }
         });
       }
-
       handleGearSelection(updatedGear);
       return updatedGear;
     });
-  };
+  }, [handleGearSelection]);
 
-  // Lock secondary slot if we equip a two-handed weapon
-  const lockAndRemoveSlots = (primarySlot, secondarySlot) => {
+  const lockAndRemoveSlots = useCallback((primarySlot, secondarySlot) => {
     setSelectedGear((prev) => {
       const updatedGear = { ...prev };
       handleRemoveGear(secondarySlot);
       return updatedGear;
     });
-    setLockedSlots((prevLocks) => [...prevLocks, secondarySlot]);
-  };
+    setLockedSlots((prev) => [...prev, secondarySlot]);
+  }, [handleRemoveGear]);
 
-  // Unlock secondary slot if we equip a one-handed weapon
-  const unlockSlots = (primarySlot, secondarySlot) => {
-    setLockedSlots((prevLocks) => prevLocks.filter((slot) => slot !== secondarySlot));
-  };
+  const unlockSlots = useCallback((primarySlot, secondarySlot) => {
+    setLockedSlots((prev) => prev.filter((slot) => slot !== secondarySlot));
+  }, []);
 
-  // Gear slot click => open popup
-  const handleGearClick = (slot) => {
-    if (lockedSlots.includes(slot)) {
-      console.warn(`Slot ${slot} is locked.`);
-      return;
-    }
+  const handleGearClick = useCallback((slot) => {
+    if (lockedSlots.includes(slot)) return;
     setSelectedSlot(slot);
     setPopupVisible(slot);
-  };
+  }, [lockedSlots]);
 
-  // From GearPopup => we have gearName => next => RarityPopup
-  const handleSelectGearName = (gearName) => {
+  const handleSelectGearName = useCallback((gearName) => {
     setSelectedGearName(gearName);
     setPopupVisible(null);
     setRarityPromptVisible(true);
-  };
+  }, []);
 
-  // From RarityPopup => finalize gear
-  const handleSelectRarity = (rarity) => {
+  const handleSelectRarity = useCallback((rarity) => {
     const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(selectedSlot);
     const processedName = shouldTruncate ? truncateName(selectedGearName) : selectedGearName;
     const gearList = getGearDataBySlot(selectedSlot);
-
     const selectedGearItem = gearList.find(
       (gear) =>
         (shouldTruncate ? truncateName(gear.Name) : gear.Name) === processedName &&
         gear.Rarity === rarity
     );
-    if (!selectedGearItem) {
-      console.error(`❌ No gear found for ${processedName} w/ rarity ${rarity}`);
-      return;
-    }
-
-    // Weapon logic
+    if (!selectedGearItem) return;
     const isTwoHanded = selectedGearItem['Slot']?.includes('Two Handed');
     const isPrimarySlot = ['Weapon11', 'Weapon21'].includes(selectedSlot);
     const primarySlot = isPrimarySlot
@@ -175,7 +146,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
 
     setSelectedGear((prev) => {
       const updatedGear = { ...prev };
-
       if (isWeapon) {
         if (isTwoHanded) {
           lockAndRemoveSlots(primarySlot, secondarySlot);
@@ -186,7 +156,7 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
             updatedGear[primarySlot] = selectedGearItem;
           } else {
             updatedGear[secondarySlot] = selectedGearItem;
-            if (updatedGear[primarySlot] && updatedGear[primarySlot].Slot.includes('Two Handed') ){
+            if (updatedGear[primarySlot] && updatedGear[primarySlot].Slot.includes('Two Handed')) {
               handleRemoveGear(primarySlot);
             }
           }
@@ -194,8 +164,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
       } else {
         updatedGear[selectedSlot] = selectedGearItem;
       }
-
-      console.log('🔄 Updated Gear State:', updatedGear);
       handleGearSelection(updatedGear);
       return updatedGear;
     });
@@ -204,25 +172,19 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
       ...data.gearSelections,
       ...(isWeapon ? { [primarySlot]: selectedGearItem } : { [selectedSlot]: selectedGearItem })
     });
-    
-
     setRarityPromptVisible(false);
     setSelectedSlot(null);
-  };
+  }, [selectedSlot, selectedGearName, updateData, data.gearSelections, lockAndRemoveSlots, unlockSlots, handleRemoveGear, handleGearSelection]);
 
-  // Rarity color
-  const rarityColorsMap = (gear) => {
-    if (!gear || !gear.Rarity) return '#FFD700'; // fallback
+  const rarityColorsMap = useCallback((gear) => {
+    if (!gear || !gear.Rarity) return '#FFD700';
     return rarityColors[gear.Rarity] || '#FFD700';
-  };
+  }, []);
 
-  // Hover overlay => gear stats
-  const renderHoverOverlay = (slot) => {
+  const renderHoverOverlay = useCallback((slot) => {
     const gear = selectedGear[slot];
     if (!gear || hoveredSlot !== slot) return null;
-
     const textColor = rarityColorsMap(gear);
-
     return (
       <div
         style={{
@@ -259,14 +221,14 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
         )}
       </div>
     );
-  };
+  }, [selectedGear, hoveredSlot, rarityColorsMap]);
 
   return (
     <div
       style={{
         margin: '2rem 0',
         padding: '2rem',
-        backgroundColor: '#222',        // dark gray box
+        backgroundColor: '#222',
         border: '1px solid #444',
         borderRadius: '0.5rem',
         boxShadow: '0 2px 10px rgba(0,0,0,0.5)',
@@ -292,7 +254,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
           const gear = selectedGear[slot];
           const gearImage = gear ? getGearImage(gear.Name, slot) : null;
           const isLocked = lockedSlots.includes(slot);
-
           return (
             <div
               key={slot}
@@ -319,7 +280,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
                   width: '100%',
                   height: '100%'
                 }}
-                // Hover scaling for slot (if not locked)
                 onMouseEnter={(e) => {
                   if (!isLocked) e.currentTarget.parentElement.style.transform = 'scale(1.05)';
                 }}
@@ -338,10 +298,8 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
                 )}
               </div>
 
-              {/* Stats overlay on hover */}
               {renderHoverOverlay(slot)}
 
-              {/* Remove Button */}
               {gear && (
                 <button
                   onClick={(e) => {
@@ -368,7 +326,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
         })}
       </GearLayout>
 
-      {/* Popups */}
       <GearPopup
         visible={popupVisible}
         selectedSlot={selectedSlot}
@@ -385,7 +342,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
         onClose={() => setRarityPromptVisible(false)}
       />
 
-      {/* Class Stats Table */}
       <div
         style={{
           flex: '0.5',
@@ -401,7 +357,7 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
         <ClassGearStatsTable
           selectedClass={data.class}
           equippedGear={selectedGear}
-          onStatsUpdate={handleStatsUpdate}
+          onStatsUpdate={handleStatsUpdateInternal}
         />
       </div>
     </div>

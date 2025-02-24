@@ -18,6 +18,7 @@ const handlePublish = (guideData) => {
     upVotes: 0,
     downVotes: 0,
     commentCount: 0,
+    comments: '',
     awards: [],
     datePublished: new Date().toISOString(),
     // username will be filled from user auth later
@@ -48,6 +49,7 @@ const GuideCreationPage = () => {
     upVotes: 0,
     downVotes: 0,
     commentCount: 0,
+    comments: '',
     awards: [],
     datePublished: '',
     username: ''
@@ -177,6 +179,7 @@ const GuideCreationPage = () => {
       upVotes: 0,
       downVotes: 0,
       commentCount: 0,
+      comments: '',
       awards: [],
       datePublished: '',
       username: ''

@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     
   body {
     margin: 0;
-    padding: 0;
+    padding: 50px;
     background-color: #000000;  /* Black background */
     color: #FFBF00;  /* Gold text */ 
     font-family: 'Poppins', sans-serif;

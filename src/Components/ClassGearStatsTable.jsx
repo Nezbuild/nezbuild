@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ClassStats from './ClassStats';
+import styled from 'styled-components';
 
 const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => {
-  console.log("Selected Class:", selectedClass);
-  console.log("Equipped Gear:", equippedGear);
-
   if (!selectedClass || !ClassStats[selectedClass]) return null; // Ensure class exists
 
   const baseStats = ClassStats[selectedClass];
-  console.log('BASE STATS', baseStats);
-  // Function to extract perks from equippedGear
-  const extractPerks = () => {
-    return Object.values(equippedGear)
+
+  // Extract perks from equippedGear
+  const extractPerks = () =>
+    Object.values(equippedGear)
       .filter(gear => gear.Type === 'Perk')
       .map(perk => perk.Name);
-  };
 
   const perks = extractPerks();
-  console.log("Extracted Perks:", perks);
 
-  // Function to calculate total stats
+  // Calculate total stats
   const calculateTotalStats = () => {
     let totalStats = { ...baseStats };
     let flatHealthBonus = 0;
@@ -29,8 +25,6 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => 
 
     Object.values(equippedGear).forEach((gear) => {
       if (gear) {
-        console.log("Processing Gear:", gear);
-        // Extract attributes
         if (gear.Attributes) {
           const attributesArray = gear.Attributes.split(',');
           attributesArray.forEach((attr) => {
@@ -42,28 +36,26 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => 
             }
           });
         }
-
-        // Extract flat max health bonus
         if (gear.Other) {
           const flatHealthMatch = gear.Other.match(/(\d+)~?\d*\s*Max Health/);
           if (flatHealthMatch) {
-            flatHealthBonus += parseInt(flatHealthMatch[1]);
+            flatHealthBonus += parseInt(flatHealthMatch[1], 10);
           }
-
-          // Extract percentage max health bonus
           const percentHealthMatch = gear.Other.match(/(\d+)~?\d*%\s*Max Health Bonus/);
           if (percentHealthMatch) {
-            percentHealthBonus += parseInt(percentHealthMatch[1]) / 100;
+            percentHealthBonus += parseInt(percentHealthMatch[1], 10) / 100;
           }
         }
       }
     });
 
-    console.log("Total Strength Added:", addedStrength);
-    console.log("Total Vigor Added:", addedVigor);
-
-    // Apply new health formula using added Strength and Vigor only
-    totalStats.Health = Math.ceil(baseStats.Health + (0.438 * addedStrength) + (1.513 * addedVigor) + flatHealthBonus);
+    // Calculate Health using added Strength and Vigor only
+    totalStats.Health = Math.ceil(
+      baseStats.Health +
+        (0.438 * addedStrength) +
+        (1.513 * addedVigor) +
+        flatHealthBonus
+    );
     totalStats.AddedStrength = addedStrength;
     totalStats.AddedVigor = addedVigor;
 
@@ -84,68 +76,110 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => 
         }
       });
     }
-
-    console.log("Final Total Stats:", totalStats);
     return totalStats;
   };
 
   const [prevStats, setPrevStats] = useState(null);
   const totalStats = calculateTotalStats();
 
-  // ✅ Prevent unnecessary updates
+  // Prevent unnecessary updates
   useEffect(() => {
     if (JSON.stringify(prevStats) !== JSON.stringify(totalStats)) {
       setPrevStats(totalStats);
-      console.log("📤 Sending Stats to Step4:", { ...totalStats, Memory: totalStats.Knowledge - 6 });
-      onStatsUpdate({ ...totalStats, Memory: totalStats.Knowledge - 6 }); // ✅ Include Memory
+      onStatsUpdate({ ...totalStats, Memory: totalStats.Knowledge - 6 });
     }
-  }, [totalStats, onStatsUpdate]);  
+  }, [totalStats, onStatsUpdate, prevStats]);
 
   return (
-    <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #FFD700', borderRadius: '10px' }}>
-      <h3>{selectedClass} Stats</h3>
-      <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+    <StatsContainer>
+      <StatsTitle>{selectedClass} Stats</StatsTitle>
+      <StatsTable>
         <thead>
           <tr>
-            <th>Stat</th>
-            <th>Base</th>
-            <th>Gear Bonus</th>
-            <th>Total</th>
+            <TableHeader>Stat</TableHeader>
+            <TableHeader>Base</TableHeader>
+            <TableHeader>Bonus</TableHeader>
+            <TableHeader>Total</TableHeader>
           </tr>
         </thead>
         <tbody>
-          {Object.keys(baseStats).map((stat) => 
-            stat !== "Health" && stat !== "Memory" && ( // ✅ Avoid duplicate Health & Memory rows
-              <tr key={stat}>
-                <td>{stat}</td>
-                <td>{baseStats[stat]}</td>
-                <td>{stat === 'Strength' ? totalStats.AddedStrength : stat === 'Vigor' ? totalStats.AddedVigor : totalStats[stat] - baseStats[stat] || 0}</td>
-                <td>{totalStats[stat]}</td>
-              </tr>
+          {Object.keys(baseStats).map((stat) =>
+            stat !== 'Health' && stat !== 'Memory' && (
+              <TableRow key={stat}>
+                <TableCell>{stat}</TableCell>
+                <TableCell>{baseStats[stat]}</TableCell>
+                <TableCell>
+                  {stat === 'Strength'
+                    ? totalStats.AddedStrength
+                    : stat === 'Vigor'
+                    ? totalStats.AddedVigor
+                    : totalStats[stat] - baseStats[stat] || 0}
+                </TableCell>
+                <TableCell>{totalStats[stat]}</TableCell>
+              </TableRow>
             )
           )}
-          <tr>
-            <td>Health</td>
-            <td>{Math.ceil(baseStats.Health)}</td>
-            <td>{totalStats.Health - Math.ceil(baseStats.Health)}</td>
-            <td>{totalStats.Health}</td>
-          </tr>
-
-          {/* ✅ Only show Memory if the class has it */}
+          <TableRow>
+            <TableCell>Health</TableCell>
+            <TableCell>{Math.ceil(baseStats.Health)}</TableCell>
+            <TableCell>{totalStats.Health - Math.ceil(baseStats.Health)}</TableCell>
+            <TableCell>{totalStats.Health}</TableCell>
+          </TableRow>
           {baseStats.Memory !== undefined && (
-            <tr>
-              <td>Memory</td>
-              <td>{baseStats.Knowledge-6}</td>
-              <td>{totalStats.Knowledge - 6 - baseStats.Memory}</td> 
-              <td>{totalStats.Knowledge - 6}</td>
-            </tr>
+            <TableRow>
+              <TableCell>Memory</TableCell>
+              <TableCell>{baseStats.Knowledge - 6}</TableCell>
+              <TableCell>{totalStats.Knowledge - 6 - baseStats.Memory}</TableCell>
+              <TableCell>{totalStats.Knowledge - 6}</TableCell>
+            </TableRow>
           )}
-
-
         </tbody>
-      </table>
-    </div>
+      </StatsTable>
+    </StatsContainer>
   );
 };
 
 export default ClassGearStatsTable;
+
+// Styled Components
+
+const StatsContainer = styled.div`
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #ffd700;
+  font-family: 'Roboto', sans-serif;
+`;
+
+const StatsTitle = styled.h3`
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #ffd700;
+  padding-bottom: 5px;
+`;
+
+const StatsTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+`;
+
+const TableHeader = styled.th`
+  padding: 8px 5px;
+  text-align: left;
+  border-bottom: 1px solid #ffd700;
+`;
+
+const TableRow = styled.tr`
+  &:nth-child(even) {
+    background: rgba(255, 215, 0, 0.1);
+  }
+`;
+
+const TableCell = styled.td`
+  padding: 8px 5px;
+  border-bottom: 1px solid #333;
+`;

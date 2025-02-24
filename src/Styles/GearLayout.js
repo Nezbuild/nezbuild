@@ -10,7 +10,7 @@ const GearLayout = styled.div`
   text-align: left;
   margin: 0 auto;
   width: 100%;
-  max-width: 50rem;
+  max-width: 100%;
   max-height: 50rem;
   margin-left: 0; /* ✅ Ensure it starts from the left */
   .gear-slot {

@@ -5,23 +5,17 @@ import ProgressBar from '../Components/ProgressBar';
 import Step1 from '../Steps/Step1';
 import Step2 from '../Steps/Step2';
 import Step3 from '../Steps/Step3';
-import Step4 from '../Steps/Step4';
-import Step5 from '../Steps/Step5';
-import Step6 from '../Steps/Step6';
-import GearLayout from '../Styles/GearLayout';
+import Step4 from '../Steps/Step4';   // Gear + strategy
+import Step5 from '../Steps/Step5';   // Possibly synergy/threat step, or another
+import Step6 from '../Steps/Step6';   // Spells
+import Step7 from '../Steps/Step7';   // Final page with "Publish"
 import { truncateName } from '../Steps/Utils/gearHelpers';
-import ClassGearStatsTable from '../Components/ClassGearStatsTable';
 
-const gearImages = import.meta.glob('/src/assets/images/*.png', { eager: true });
-
-const getGearImage = (name, slot) => {
-  const shouldTruncate = ['head', 'chest', 'gloves', 'cape', 'legs', 'feet'].includes(slot);
-  const processedName = shouldTruncate ? truncateName(name) : name.replace(/\s+/g, '');
-
-  const matchedImage = Object.entries(gearImages).find(([path]) =>
-    path.toLowerCase().endsWith(`/${processedName.toLowerCase()}.png`)
-  );
-  return matchedImage ? matchedImage[1].default : '';
+// We'll define the publish function here or inside Step7
+const handlePublish = (guideData) => {
+  // Simulate storing the final guide data
+  console.log('✅ Publish clicked. Final data:', guideData);
+  alert('Guide published successfully!');
 };
 
 const GuideCreationPage = () => {
@@ -47,7 +41,6 @@ const GuideCreationPage = () => {
 
   const [isStep1And3Completed, setStep1And3Completed] = useState(false);
   const [isStep4And5Completed, setStep4And5Completed] = useState(false);
-  const [isPreviewVisible, setPreviewVisible] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -80,50 +73,71 @@ const GuideCreationPage = () => {
   ];
   const hasSpellMemoryPerk =
     guideData.gearSelections &&
-    Object.values(guideData.gearSelections).some(gear => spellMemoryPerks.includes(gear?.Name));
+    Object.values(guideData.gearSelections).some((gear) => spellMemoryPerks.includes(gear?.Name));
 
-  // Step navigation logic
+  // Step logic (we define 5 steps total)
+  // Step 1 => Step1 + Step3
+  // Step 2 => Step2
+  // Step 3 => Step4 + Step5
+  // Step 4 => Step6 (if user has memory perk, else skip to step5)
+  // Step 5 => Step7 (final preview/publish)
   const handleNext = () => {
-    // Step validations
-    if (currentStep === 1 && (!guideData.title || !guideData.shortDescription)) {
-      alert('Please complete the required fields before proceeding.');
+    // Validation per step
+    if (currentStep === 1) {
+      if (!guideData.title || !guideData.shortDescription) {
+        alert('Please complete the required fields before proceeding (title & description).');
+        return;
+      }
+      setCurrentStep(2);
       return;
     }
-    if (currentStep === 2 && !guideData.class) {
-      alert('Please complete the required fields before proceeding.');
+    if (currentStep === 2) {
+      if (!guideData.class) {
+        alert('Please select a class before proceeding.');
+        return;
+      }
+      setCurrentStep(3);
       return;
     }
-    if (currentStep === 3 && (!guideData.gearSelections || !guideData.strategyDescription)) {
-      alert('Please complete the required fields before proceeding.');
+    if (currentStep === 3) {
+      // Validate gearSelections + strategy
+      if (!guideData.gearSelections || !guideData.strategyDescription) {
+        alert('Please complete gear selection and strategy description.');
+        return;
+      }
+      // If has spell memory perk => go step 4, else skip to step 5
+      if (hasSpellMemoryPerk) setCurrentStep(4);
+      else setCurrentStep(5);
       return;
     }
-
-    // If has spell perk, jump from step 4 to step 6
-    if (currentStep === 4 && hasSpellMemoryPerk) {
-      setCurrentStep(6);
-    } else if (currentStep < 5) {
-      setCurrentStep(currentStep + 1);
+    if (currentStep === 4) {
+      // Step6 done => next => step 5
+      setCurrentStep(5);
+      return;
     }
+    // If step5 => final step => do nothing or publish?
+    // We'll rely on the final Step7's "Publish" button instead
   };
 
   const handlePrevious = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
   };
 
-  // Update gear selections (Step4)
+  // Update gear selection
   const handleGearSelection = (updatedGear) => {
-    setGuideData(prev => ({
+    setGuideData((prev) => ({
       ...prev,
       gearSelections: updatedGear
     }));
   };
 
-  // Generic data update function
+  // Generic data update
   const updateData = (key, value) => {
-    setGuideData(prevState => {
+    setGuideData((prevState) => {
       let updatedState = { ...prevState, [key]: value };
-
-      // If class changed => clear gear & spells
+      // If class changed => reset gear + spells
       if (key === 'class' && value !== prevState.class) {
         updatedState.gearSelections = {};
         updatedState.spells = [];
@@ -137,7 +151,7 @@ const GuideCreationPage = () => {
     });
 
     // Update completion flags
-    if ((guideData.title && guideData.shortDescription) && guideData.class) {
+    if (guideData.title && guideData.shortDescription && guideData.class) {
       setStep1And3Completed(true);
     }
     if (guideData.gearSelections && guideData.strategyDescription) {
@@ -150,7 +164,7 @@ const GuideCreationPage = () => {
     localStorage.setItem('savedGuide', JSON.stringify(guideData));
   };
 
-  // Clear local storage & reset
+  // Clear local storage
   const clearSavedGuide = () => {
     localStorage.removeItem('savedGuide');
     setGuideData({
@@ -171,7 +185,7 @@ const GuideCreationPage = () => {
     });
   };
 
-  // Export to JSON
+  // Export JSON
   const exportGuide = () => {
     const blob = new Blob([JSON.stringify(guideData, null, 2)], { type: 'application/json' });
     const link = document.createElement('a');
@@ -183,266 +197,142 @@ const GuideCreationPage = () => {
   return (
     <>
       <GlobalStyle />
-      <div className="content-container">
-        <h1>Guide Creation Progress</h1>
-        <ProgressBar currentStep={currentStep} totalSteps={4} />
 
-        {/* Step Render Logic */}
-        {currentStep === 1 && (
-          <>
-            <Step1 
-              data={guideData} 
-              updateData={updateData} 
-              isStepCompleted={isStep1And3Completed} 
-            />
-            <Step3 
-              data={guideData} 
-              updateData={updateData} 
-              isStepCompleted={isStep1And3Completed} 
-            />
-          </>
-        )}
-        {currentStep === 2 && (
-          <Step2 data={guideData} updateData={updateData} />
-        )}
-        {currentStep === 3 && (
-          <>
-            <Step4
-              data={guideData}
-              updateData={updateData}
-              isStepCompleted={isStep4And5Completed}
-              gearSelections={guideData.gearSelections}
-              handleGearSelection={handleGearSelection}
-              onStatsUpdate={setCharacterStats}
-            />
-            <Step5
-              data={guideData}
-              updateData={updateData}
-              isStepCompleted={isStep4And5Completed}
-            />
-          </>
-        )}
-        {currentStep === 4 && (
-          <Step6
-            selectedSpells={guideData.spells}
-            setSelectedSpells={spells => updateData('spells', spells)}
-            selectedPerks={guideData.gearSelections}
-            currentClass={guideData.class}
-            memory={characterStats.Memory || 0}
-            onNext={handleNext}
-            onPrevious={handlePrevious}
-          />
-        )}
-
-        {/* Navigation */}
-        <div style={{ display: 'flex', justifyContent: 'left', marginTop: '20px' }}>
-          <NavigationButtons
-            currentStep={currentStep}
-            totalSteps={10}
-            onNext={handleNext}
-            onPrevious={handlePrevious}
-          />
-        </div>
-
-        {/* Save / Clear / Export / Preview */}
-        <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
-          <button
-            onClick={handleManualSave}
+      {/* Outer container for black margins */}
+      <div style={{ background: '#000', minHeight: '100vh' }}>
+        {/* Centered content container */}
+        <div
+          style={{
+            margin: '0 auto',
+            maxWidth: '1200px',
+            padding: '2rem',
+            background: '#111',
+            color: '#FFD700',
+            minHeight: '100vh'
+          }}
+        >
+          <h1
             style={{
-              padding: '10px',
-              backgroundColor: '#CD7F32',
-              color: '#FFF',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
+              textAlign: 'center',
+              marginBottom: '1.5rem',
+              fontSize: '2.5rem',
+              textShadow: '1px 1px 3px #000'
             }}
           >
-            Save Now
-          </button>
-          <button
-            onClick={clearSavedGuide}
-            style={{
-              padding: '10px',
-              backgroundColor: '#FF6347',
-              color: '#FFF',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
-            Clear Saved Data
-          </button>
-          <button
-            onClick={exportGuide}
-            style={{
-              padding: '10px',
-              backgroundColor: '#4CAF50',
-              color: '#FFF',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
-            Download Guide
-          </button>
-          <button
-            onClick={() => setPreviewVisible(!isPreviewVisible)}
-            style={{
-              padding: '10px',
-              backgroundColor: '#1E90FF',
-              color: '#FFF',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
-            Preview Guide
-          </button>
-        </div>
+            Guide Creation Progress
+          </h1>
 
-        {/* PREVIEW */}
-        {isPreviewVisible && (
-          <div
-            style={{
-              marginTop: '20px',
-              padding: '20px',
-              border: '5px solid #FFBF00',
-              borderRadius: '10px'
-            }}
-          >
-            <h2>{guideData.title}</h2>
-            <p>{guideData.shortDescription}</p>
+          {/* We have 5 steps total now */}
+          <ProgressBar currentStep={currentStep} totalSteps={5} />
 
-            <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '1rem' }}>
-              <img
-                src={`../src/assets/images/${guideData.class}.png`}
-                onError={e => (e.target.src = '../src/assets/images/fallback.png')}
-                alt={guideData.class}
-                style={{ width: '100px', height: '100px' }}
+          {/* Step Render Logic */}
+          {currentStep === 1 && (
+            <>
+              <Step1 data={guideData} updateData={updateData} isStepCompleted={isStep1And3Completed} />
+              <Step3 data={guideData} updateData={updateData} isStepCompleted={isStep1And3Completed} />
+            </>
+          )}
+
+          {currentStep === 2 && (
+            <Step2 data={guideData} updateData={updateData} />
+          )}
+
+          {currentStep === 3 && (
+            <>
+              <Step4
+                data={guideData}
+                updateData={updateData}
+                isStepCompleted={isStep4And5Completed}
+                gearSelections={guideData.gearSelections}
+                handleGearSelection={handleGearSelection}
+                onStatsUpdate={setCharacterStats}
               />
-              <span style={{ fontSize: '16px', textAlign: 'center' }}>{guideData.class}</span>
-            </div>
-            <p><strong>Category:</strong> {guideData.category}</p>
-            <p><strong>Tags:</strong> {guideData.tags.join(', ')}</p>
+              <Step5
+                data={guideData}
+                updateData={updateData}
+                isStepCompleted={isStep4And5Completed}
+              />
+            </>
+          )}
 
-            {/* Gear Layout */}
-            <GearLayout>
-              {[
-                'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
-                'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
-                'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
-              ].map(slot => {
-                const gear = guideData.gearSelections[slot];
-                const imageSrc = gear ? getGearImage(gear.Name, slot) : null;
-
-                return (
-                  <div key={slot} className={`gear-slot ${slot}`}>
-                    {gear ? (
-                      <img
-                        src={imageSrc}
-                        onError={e => (e.target.src = '/src/assets/images/fallback.png')}
-                        alt={gear.Name}
-                        style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                      />
-                    ) : (
-                      `${slot}`
-                    )}
-                  </div>
-                );
-              })}
-            </GearLayout>
-
-            {/* Class Stats Table below Gear Layout */}
-            <h3>Class Stats</h3>
-            <ClassGearStatsTable
-              selectedClass={guideData.class}
-              equippedGear={guideData.gearSelections}
-              onStatsUpdate={stats => setCharacterStats(stats)}
-            />
-
-            {/* Synergies */}
-            {guideData.synergies.length > 0 ? (
-              <>
-                <h3 style={{ color: 'green' }}>Synergies</h3>
-                <div
-                  style={{
-                    marginBottom: '1rem',
-                    display: 'flex',
-                    gap: '20px',
-                    flexWrap: 'wrap'
-                  }}
-                >
-                  {guideData.synergies.map((synergy, index) => (
-                    <div
-                      key={index}
-                      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-                    >
-                      <img
-                        src={`../src/assets/images/${synergy}.png`}
-                        onError={e => (e.target.src = '../src/assets/images/fallback.png')}
-                        alt={synergy}
-                        style={{ width: '75px', height: '75px', marginBottom: '5px' }}
-                      />
-                      <span style={{ fontSize: '14px', textAlign: 'center' }}>{synergy}</span>
-                    </div>
-                  ))}
-                </div>
-                <p>{guideData.synergyText}</p>
-              </>
-            ) : (
-              <p style={{ color: 'gray' }}>No synergies added yet.</p>
-            )}
-
-            {/* Threats */}
-            {guideData.threats.length > 0 ? (
-              <>
-                <h3 style={{ color: 'red' }}>Threats</h3>
-                <div
-                  style={{
-                    marginBottom: '1rem',
-                    display: 'flex',
-                    gap: '20px',
-                    flexWrap: 'wrap'
-                  }}
-                >
-                  {guideData.threats.map((threat, index) => (
-                    <div
-                      key={index}
-                      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-                    >
-                      <img
-                        src={`../src/assets/images/${threat}.png`}
-                        onError={e => (e.target.src = '../src/assets/images/fallback.png')}
-                        alt={threat}
-                        style={{ width: '75px', height: '75px', marginBottom: '5px' }}
-                      />
-                      <span style={{ fontSize: '14px', textAlign: 'center' }}>{threat}</span>
-                    </div>
-                  ))}
-                </div>
-                <p>{guideData.threatText}</p>
-              </>
-            ) : (
-              <p style={{ color: 'gray' }}>No threats added yet.</p>
-            )}
-
-            <h3>Gear Selections</h3>
-            {console.log('🟢 gearSelections Preview Rendering:', guideData.gearSelections)}
-
-            {/* Spell Layout (Read-Only) */}
-            <h3 style={{ marginTop: '20px' }}>Spells</h3>
+          {currentStep === 4 && (
             <Step6
               selectedSpells={guideData.spells}
-              setSelectedSpells={() => {}}
+              setSelectedSpells={(spells) => updateData('spells', spells)}
               selectedPerks={guideData.gearSelections}
               currentClass={guideData.class}
               memory={characterStats.Memory || 0}
-              onNext={() => {}}
-              onPrevious={() => {}}
-              readOnly={true}
+              onNext={handleNext}
+              onPrevious={handlePrevious}
+            />
+          )}
+
+          {/* Step7 => final page with “Publish” or “Go Back” */}
+          {currentStep === 5 && (
+            <Step7
+              guideData={guideData}
+              characterStats={characterStats}
+              onPrevious={() => setCurrentStep(hasSpellMemoryPerk ? 4 : 3)}
+              onPublish={() => handlePublish(guideData)}
+            />
+          )}
+
+          {/* Navigation */}
+          <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '2rem', gap: '1rem' }}>
+            <NavigationButtons
+              currentStep={currentStep}
+              totalSteps={5}
+              onNext={handleNext}
+              onPrevious={handlePrevious}
             />
           </div>
-        )}
+
+          {/* Save / Clear / Export Buttons */}
+          <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+            <button
+              onClick={handleManualSave}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#CD7F32',
+                color: '#FFF',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                transition: 'background 0.3s'
+              }}
+            >
+              Save Now
+            </button>
+            <button
+              onClick={clearSavedGuide}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#FF6347',
+                color: '#FFF',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                transition: 'background 0.3s'
+              }}
+            >
+              Clear Saved Data
+            </button>
+            <button
+              onClick={exportGuide}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#4CAF50',
+                color: '#FFF',
+                border: 'none',
+                borderRadius: '0.5rem',
+                cursor: 'pointer',
+                transition: 'background 0.3s'
+              }}
+            >
+              Download Guide
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );

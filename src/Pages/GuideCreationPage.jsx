@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import GlobalStyle from '../Styles/GlobalStyle';
 import NavigationButtons from '../Components/NavigationButtons';
 import ProgressBar from '../Components/ProgressBar';
@@ -11,10 +11,18 @@ import Step6 from '../Steps/Step6';   // Spells
 import Step7 from '../Steps/Step7';   // Final page with "Publish"
 import { truncateName } from '../Steps/Utils/gearHelpers';
 
-// We'll define the publish function here or inside Step7
+// Publish handler – ensures votes, awards, comments, and date are set
 const handlePublish = (guideData) => {
-  // Simulate storing the final guide data
-  console.log('✅ Publish clicked. Final data:', guideData);
+  const finalGuideData = {
+    ...guideData,
+    upVotes: 0,
+    downVotes: 0,
+    commentCount: 0,
+    awards: [],
+    datePublished: new Date().toISOString(),
+    // username will be filled from user auth later
+  };
+  console.log('✅ Publish clicked. Final data:', finalGuideData);
   alert('Guide published successfully!');
 };
 
@@ -36,13 +44,19 @@ const GuideCreationPage = () => {
     synergies: [],
     threats: [],
     synergyText: '',
-    threatText: ''
+    threatText: '',
+    upVotes: 0,
+    downVotes: 0,
+    commentCount: 0,
+    awards: [],
+    datePublished: '',
+    username: ''
   });
 
   const [isStep1And3Completed, setStep1And3Completed] = useState(false);
   const [isStep4And5Completed, setStep4And5Completed] = useState(false);
 
-  // Load from localStorage on mount
+  // Load saved guide on mount
   useEffect(() => {
     try {
       const savedGuide = localStorage.getItem('savedGuide');
@@ -57,15 +71,14 @@ const GuideCreationPage = () => {
     }
   }, []);
 
-  // Auto-save every 5s
+  // Debounced auto-save: writes 5 seconds after the last change to guideData
   useEffect(() => {
-    const saveInterval = setInterval(() => {
+    const timeout = setTimeout(() => {
       localStorage.setItem('savedGuide', JSON.stringify(guideData));
     }, 5000);
-    return () => clearInterval(saveInterval);
+    return () => clearTimeout(timeout);
   }, [guideData]);
 
-  // Check if user has any memory perk
   const spellMemoryPerks = [
     'Spell Memory', 'Spell Memory II',
     'Music Memory', 'Music Memory II',
@@ -75,17 +88,10 @@ const GuideCreationPage = () => {
     guideData.gearSelections &&
     Object.values(guideData.gearSelections).some((gear) => spellMemoryPerks.includes(gear?.Name));
 
-  // Step logic (we define 5 steps total)
-  // Step 1 => Step1 + Step3
-  // Step 2 => Step2
-  // Step 3 => Step4 + Step5
-  // Step 4 => Step6 (if user has memory perk, else skip to step5)
-  // Step 5 => Step7 (final preview/publish)
-  const handleNext = () => {
-    // Validation per step
+  const handleNext = useCallback(() => {
     if (currentStep === 1) {
       if (!guideData.title || !guideData.shortDescription) {
-        alert('Please complete the required fields before proceeding (title & description).');
+        alert('Please complete the required fields (title & description).');
         return;
       }
       setCurrentStep(2);
@@ -100,72 +106,58 @@ const GuideCreationPage = () => {
       return;
     }
     if (currentStep === 3) {
-      // Validate gearSelections + strategy
       if (!guideData.gearSelections || !guideData.strategyDescription) {
         alert('Please complete gear selection and strategy description.');
         return;
       }
-      // If has spell memory perk => go step 4, else skip to step 5
-      if (hasSpellMemoryPerk) setCurrentStep(4);
-      else setCurrentStep(5);
+      hasSpellMemoryPerk ? setCurrentStep(4) : setCurrentStep(5);
       return;
     }
     if (currentStep === 4) {
-      // Step6 done => next => step 5
       setCurrentStep(5);
       return;
     }
-    // If step5 => final step => do nothing or publish?
-    // We'll rely on the final Step7's "Publish" button instead
-  };
+  }, [currentStep, guideData, hasSpellMemoryPerk]);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
+      setCurrentStep(!hasSpellMemoryPerk && currentStep === 5 ? 3 : currentStep - 1);
     }
-  };
+  }, [currentStep, hasSpellMemoryPerk]);  
 
-  // Update gear selection
-  const handleGearSelection = (updatedGear) => {
+  const handleGearSelection = useCallback((updatedGear) => {
     setGuideData((prev) => ({
       ...prev,
       gearSelections: updatedGear
     }));
-  };
+  }, []);
 
-  // Generic data update
-  const updateData = (key, value) => {
+  const updateData = useCallback((key, value) => {
     setGuideData((prevState) => {
       let updatedState = { ...prevState, [key]: value };
-      // If class changed => reset gear + spells
       if (key === 'class' && value !== prevState.class) {
         updatedState.gearSelections = {};
         updatedState.spells = [];
       }
-      // If selectedClasses changed => auto-populate synergies/threats
       if (key === 'selectedClasses') {
         updatedState.synergies = value.synergies || [];
         updatedState.threats = value.threats || [];
       }
       return updatedState;
     });
-
-    // Update completion flags
     if (guideData.title && guideData.shortDescription && guideData.class) {
       setStep1And3Completed(true);
     }
     if (guideData.gearSelections && guideData.strategyDescription) {
       setStep4And5Completed(true);
     }
-  };
+  }, [guideData]);
 
-  // Manual save
-  const handleManualSave = () => {
+  const handleManualSave = useCallback(() => {
     localStorage.setItem('savedGuide', JSON.stringify(guideData));
-  };
+  }, [guideData]);
 
-  // Clear local storage
-  const clearSavedGuide = () => {
+  const clearSavedGuide = useCallback(() => {
     localStorage.removeItem('savedGuide');
     setGuideData({
       title: '',
@@ -181,26 +173,28 @@ const GuideCreationPage = () => {
       synergies: [],
       threats: [],
       synergyText: '',
-      threatText: ''
+      threatText: '',
+      upVotes: 0,
+      downVotes: 0,
+      commentCount: 0,
+      awards: [],
+      datePublished: '',
+      username: ''
     });
-  };
+  }, []);
 
-  // Export JSON
-  const exportGuide = () => {
+  const exportGuide = useCallback(() => {
     const blob = new Blob([JSON.stringify(guideData, null, 2)], { type: 'application/json' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'guide.json';
     link.click();
-  };
+  }, [guideData]);
 
   return (
     <>
       <GlobalStyle />
-
-      {/* Outer container for black margins */}
       <div style={{ background: '#000', minHeight: '100vh' }}>
-        {/* Centered content container */}
         <div
           style={{
             margin: '0 auto',
@@ -222,10 +216,8 @@ const GuideCreationPage = () => {
             Guide Creation Progress
           </h1>
 
-          {/* We have 5 steps total now */}
           <ProgressBar currentStep={currentStep} totalSteps={5} />
 
-          {/* Step Render Logic */}
           {currentStep === 1 && (
             <>
               <Step1 data={guideData} updateData={updateData} isStepCompleted={isStep1And3Completed} />
@@ -233,9 +225,7 @@ const GuideCreationPage = () => {
             </>
           )}
 
-          {currentStep === 2 && (
-            <Step2 data={guideData} updateData={updateData} />
-          )}
+          {currentStep === 2 && <Step2 data={guideData} updateData={updateData} />}
 
           {currentStep === 3 && (
             <>
@@ -247,11 +237,7 @@ const GuideCreationPage = () => {
                 handleGearSelection={handleGearSelection}
                 onStatsUpdate={setCharacterStats}
               />
-              <Step5
-                data={guideData}
-                updateData={updateData}
-                isStepCompleted={isStep4And5Completed}
-              />
+              <Step5 data={guideData} updateData={updateData} isStepCompleted={isStep4And5Completed} />
             </>
           )}
 
@@ -267,7 +253,6 @@ const GuideCreationPage = () => {
             />
           )}
 
-          {/* Step7 => final page with “Publish” or “Go Back” */}
           {currentStep === 5 && (
             <Step7
               guideData={guideData}
@@ -277,7 +262,6 @@ const GuideCreationPage = () => {
             />
           )}
 
-          {/* Navigation */}
           <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '2rem', gap: '1rem' }}>
             <NavigationButtons
               currentStep={currentStep}
@@ -287,7 +271,6 @@ const GuideCreationPage = () => {
             />
           </div>
 
-          {/* Save / Clear / Export Buttons */}
           <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center' }}>
             <button
               onClick={handleManualSave}

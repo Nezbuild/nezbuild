@@ -1,135 +1,408 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { FaRegComment, FaShareAlt, FaRegStar, FaThumbsUp, FaThumbsDown, FaFlag } from 'react-icons/fa';
+import GlobalStyle from '../Styles/GlobalStyle';
+import { 
+  FaRegComment, 
+  FaShareAlt, 
+  FaRegStar, 
+  FaThumbsUp, 
+  FaThumbsDown, 
+  FaFlag 
+} from 'react-icons/fa';
+import { collection, query, onSnapshot, doc, updateDoc } from 'firebase/firestore';
+import { db, auth } from '../firebase';
 
-const GuidesContainer = styled.div`
-  width: 100%;
-  max-width: 1125px;
-  padding: 40px 60px; /* Increased padding for better margins */
-  background-color: #2F2F2F;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Increased gap for clearer spacing */
-  margin: 40px auto; /* Center the content with margin */
-`;
-
-const GuideItem = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #1E1E1E;
-  border-radius: 6px;
-  transition: 0.3s;
-  &:hover {
-    background-color: #3A3A3A;
-  }
-`;
-
-const GuideInfo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Increased gap for better readability */
-  flex: 1;
-`;
-
-const ClassLogo = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-`;
-
-const GuideDetails = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: #FFBF00;
-`;
-
-const GuideTitle = styled.h3`
-  margin: 0;
-  font-size: 1.6rem;
-`;
-
-const GuideMeta = styled.p`
-  margin: 4px 0 0;
-  font-size: 1rem;
-  color: #CCCCCC;
-`;
-
-const Stats = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Increased spacing for better clarity */
-  color: #FFBF00;
-`;
-
-const IconButton = styled.button`
-  background: none;
-  border: none;
-  color: #FFBF00;
-  cursor: pointer;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  &:hover {
-    color: #FFFFFF;
-  }
-`;
-
-const guidesData = [
-  {
-    id: 1,
-    classLogo: '/icons/wizard.png',
-    title: 'Ultimate Wizard PvP Guide',
-    description: 'Dominate the battlefield with this high-DPS build.',
-    tags: ['PvP', 'Meta', 'High DPS'],
-    votes: 120,
-    comments: 45,
-    awards: 3,
-    date: 'Jan 25, 2025',
-    author: 'Nezmaster',
-  },
-  {
-    id: 2,
-    classLogo: '/icons/barbarian.png',
-    title: 'Tanky Barbarian Build',
-    description: 'A durable build for soaking up damage in team fights.',
-    tags: ['PvE', 'Tank', 'Survivability'],
-    votes: 85,
-    comments: 30,
-    awards: 1,
-    date: 'Jan 24, 2025',
-    author: 'RoguePlayer',
-  },
+// Filtering arrays
+const classes = [
+  { name: 'Fighter', icon: '../src/assets/images/Fighter.png' },
+  { name: 'Barbarian', icon: '../src/assets/images/Barbarian.png' },
+  { name: 'Rogue', icon: '../src/assets/images/Rogue.png' },
+  { name: 'Ranger', icon: '../src/assets/images/Ranger.png' },
+  { name: 'Wizard', icon: '../src/assets/images/Wizard.png' },
+  { name: 'Cleric', icon: '../src/assets/images/Cleric.png' },
+  { name: 'Bard', icon: '../src/assets/images/Bard.png' },
+  { name: 'Warlock', icon: '../src/assets/images/Warlock.png' },
+  { name: 'Druid', icon: '../src/assets/images/Druid.png' },
+  { name: 'Sorcerer', icon: '../src/assets/images/Sorcerer.png' },
 ];
 
+const categories = [
+  { name: 'Arena', icon: '🏟️' },
+  { name: 'High Roller', icon: '🏆' },
+  { name: 'Normal', icon: '✅' },
+];
+
+const guideTags = [
+  { name: 'DPS', icon: '💥' },
+  { name: 'Tank', icon: '🛡️' },
+  { name: 'Support', icon: '🤝' },
+  { name: 'CC', icon: '🔒' },
+  { name: 'Hybrid', icon: '⚖️' },
+  { name: 'Solo Play', icon: '🏃‍♂️' },
+  { name: 'PvE', icon: '🌍' },
+  { name: 'PvP', icon: '⚔️' },
+  { name: 'Meta Build', icon: '⭐' },
+  { name: 'Off-Meta', icon: '💡' },
+  { name: 'Rat', icon: '🐀' },
+];
+
+// Parameter to control the banner width
+const bannerWidth = '1160px'; // You can adjust this value as needed
+
 const Guides = () => {
+  const [guides, setGuides] = useState([]);
+  // Track votes: { [guideId]: 'like' | 'dislike' }
+  const [votedGuides, setVotedGuides] = useState({});
+  // For toggling comment input (this is now removed from the final view)
+  const [activeCommentGuide, setActiveCommentGuide] = useState(null);
+  // For comment text per guide
+  const [commentText, setCommentText] = useState({});
+  
+  // Filtering and Sorting States
+  const [selectedClass, setSelectedClass] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedTag, setSelectedTag] = useState('');
+  const [sortOption, setSortOption] = useState('date'); // 'date', 'upVotes', 'downVotes'
+  
+  // Check current user
+  const currentUser = auth.currentUser;
+  
+  // Fetch guides from Firestore
+  useEffect(() => {
+    const q = query(collection(db, 'guides'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const guidesArray = [];
+      querySnapshot.forEach((doc) => {
+        guidesArray.push({ id: doc.id, ...doc.data() });
+      });
+      setGuides(guidesArray);
+    });
+    return () => unsubscribe();
+  }, []);
+  
+  // Filtering function
+  const filterGuides = (guide) => {
+    if (selectedClass && guide.class !== selectedClass) return false;
+    if (selectedCategory && guide.category !== selectedCategory) return false;
+    if (selectedTag && (!guide.tags || !guide.tags.includes(selectedTag))) return false;
+    return true;
+  };
+
+  // Sorting function
+  const sortGuides = (a, b) => {
+    if (sortOption === 'date') {
+      // Assuming datePublished is a Firestore timestamp object
+      const dateA = a.datePublished?.seconds || 0;
+      const dateB = b.datePublished?.seconds || 0;
+      return dateB - dateA;
+    }
+    if (sortOption === 'upVotes') {
+      return (b.upVotes || 0) - (a.upVotes || 0);
+    }
+    if (sortOption === 'downVotes') {
+      return (b.downVotes || 0) - (a.downVotes || 0);
+    }
+    return 0;
+  };
+
+  // Handle Vote toggle: If not signed in, require sign-in.
+  const handleVote = async (guideId, voteType) => {
+    if (!currentUser) {
+      alert('Please sign in to vote.');
+      return;
+    }
+    
+    // Determine if a vote exists and how to update counts
+    const previousVote = votedGuides[guideId];
+    const guide = guides.find((g) => g.id === guideId);
+    const guideRef = doc(db, 'guides', guideId);
+    
+    let newUpVotes = guide.upVotes || 0;
+    let newDownVotes = guide.downVotes || 0;
+    
+    if (previousVote === voteType) {
+      // User is removing their vote
+      if (voteType === 'like') {
+        newUpVotes = newUpVotes - 1;
+      } else {
+        newDownVotes = newDownVotes - 1;
+      }
+      setVotedGuides((prev) => {
+        const newVotes = { ...prev };
+        delete newVotes[guideId];
+        return newVotes;
+      });
+    } else if (previousVote && previousVote !== voteType) {
+      // Changing vote: subtract from the previous vote and add to the new vote.
+      if (previousVote === 'like') {
+        newUpVotes = newUpVotes - 1;
+        newDownVotes = newDownVotes + 1;
+      } else {
+        newDownVotes = newDownVotes - 1;
+        newUpVotes = newUpVotes + 1;
+      }
+      setVotedGuides((prev) => ({ ...prev, [guideId]: voteType }));
+    } else {
+      // No previous vote, add vote.
+      if (voteType === 'like') {
+        newUpVotes = newUpVotes + 1;
+      } else {
+        newDownVotes = newDownVotes + 1;
+      }
+      setVotedGuides((prev) => ({ ...prev, [guideId]: voteType }));
+    }
+    
+    try {
+      await updateDoc(guideRef, {
+        upVotes: newUpVotes,
+        downVotes: newDownVotes,
+      });
+    } catch (error) {
+      console.error('Error updating vote:', error);
+      alert('Error processing vote. Please try again.');
+    }
+  };
+  
+  // Open/close comment input; require sign in.
+  const toggleCommentInput = (guideId) => {
+    if (!currentUser) {
+      alert('Please sign in to comment.');
+      return;
+    }
+    setActiveCommentGuide((prev) => (prev === guideId ? null : guideId));
+  };
+
+  // Submit comment (dummy function; remove this from the guides page – comments are added on the view page)
+  const submitComment = (guideId) => {
+    if (!currentUser) {
+      alert('Please sign in to comment.');
+      return;
+    }
+    const comment = commentText[guideId];
+    if (!comment) {
+      alert('Please write a comment before submitting.');
+      return;
+    }
+    alert(`Comment submitted for guide ${guideId}: ${comment}`);
+    setCommentText((prev) => ({ ...prev, [guideId]: '' }));
+    setActiveCommentGuide(null);
+  };
+
+  // Inline styles matching your GuideCreationPage
+  const outerStyle = { background: '#000', minHeight: '100vh' };
+  const innerStyle = {
+    margin: '0 auto',
+    maxWidth: '1200px',
+    padding: '20px 20px',
+    background: '#111',
+    color: '#FFD700',
+    minHeight: '100vh'
+  };
+  const headerStyle = {
+    textAlign: 'center',
+    marginBottom: '1.5rem',
+    fontSize: '2.5rem',
+    textShadow: '1px 1px 3px #000'
+  };
+  const guideItemStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '1rem',
+    backgroundColor: '#1E1E1E',
+    borderRadius: '6px',
+    marginBottom: '1rem',
+    transition: 'background 0.3s',
+    width: bannerWidth,
+  };
+  const guideInfoStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+  };
+  const guideTitleStyle = {
+    margin: 0,
+    fontSize: '1.6rem',
+    color: '#FFD700',
+  };
+  const guideMetaStyle = {
+    margin: '0.25rem 0',
+    fontSize: '1rem',
+    color: '#CCCCCC',
+  };
+  const statsStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  };
+  const iconButtonStyle = {
+    background: 'none',
+    border: 'none',
+    color: '#FFD700',
+    cursor: 'pointer',
+    fontSize: '1.2rem',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+  };
+  const filterBarStyle = {
+    marginBottom: '2rem',
+    display: 'flex',
+    gap: '1rem',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  };
+  const selectStyle = {
+    padding: '0.5rem',
+    borderRadius: '4px',
+    border: '1px solid #333',
+    background: '#222',
+    color: '#FFD700'
+  };
+
+  // Apply filtering and sorting to guides
+  const displayedGuides = guides.filter(filterGuides).sort(sortGuides);
+
   return (
-    <GuidesContainer>
-      {guidesData.map((guide) => (
-        <GuideItem key={guide.id}>
-          <GuideInfo>
-            <ClassLogo src={guide.classLogo} alt={guide.title} />
-            <GuideDetails>
-              <GuideTitle>{guide.title}</GuideTitle>
-              <GuideMeta>{guide.description} - {guide.tags.join(', ')}</GuideMeta>
-              <GuideMeta>By {guide.author} | {guide.date}</GuideMeta>
-            </GuideDetails>
-          </GuideInfo>
-          <Stats>
-            <IconButton><FaThumbsUp /> {guide.votes}</IconButton>
-            <IconButton><FaRegComment /> {guide.comments}</IconButton>
-            <IconButton><FaRegStar /> {guide.awards}</IconButton>
-            <IconButton><FaShareAlt /></IconButton>
-            <IconButton><FaFlag /></IconButton>
-          </Stats>
-        </GuideItem>
-      ))}
-    </GuidesContainer>
+    <>
+      <GlobalStyle />
+      <div style={outerStyle}>
+        <div style={innerStyle}>
+          <h1 style={headerStyle}>Browse Guides</h1>
+          
+          {/* Filtering and Sorting Controls */}
+          <div style={filterBarStyle}>
+            <select
+              style={selectStyle}
+              value={selectedClass}
+              onChange={(e) => setSelectedClass(e.target.value)}
+            >
+              <option value="">All Classes</option>
+              {classes.map((cls) => (
+                <option key={cls.name} value={cls.name}>
+                  {cls.name}
+                </option>
+              ))}
+            </select>
+
+            <select
+              style={selectStyle}
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option value="">All Categories</option>
+              {categories.map((cat) => (
+                <option key={cat.name} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
+
+            <select
+              style={selectStyle}
+              value={selectedTag}
+              onChange={(e) => setSelectedTag(e.target.value)}
+            >
+              <option value="">All Tags</option>
+              {guideTags.map((tag) => (
+                <option key={tag.name} value={tag.name}>
+                  {tag.name}
+                </option>
+              ))}
+            </select>
+
+            <select
+              style={selectStyle}
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+            >
+              <option value="date">Sort by Date</option>
+              <option value="upVotes">Sort by Upvotes</option>
+              <option value="downVotes">Sort by Downvotes</option>
+            </select>
+          </div>
+          
+          {displayedGuides.length === 0 ? (
+            <p style={{ textAlign: 'center' }}>No guides available yet.</p>
+          ) : (
+            displayedGuides.map((guide) => (
+              <div key={guide.id} style={guideItemStyle}>
+                <div style={guideInfoStyle}>
+                  <h3 style={guideTitleStyle}>{guide.title}</h3>
+                  <p style={guideMetaStyle}>{guide.shortDescription}</p>
+                  <p style={guideMetaStyle}>
+                    <strong>Category:</strong> {guide.category || 'N/A'} | <strong>Tags:</strong>{' '}
+                    {guide.tags && guide.tags.length > 0 ? guide.tags.join(', ') : 'None'}
+                  </p>
+                </div>
+                <div style={statsStyle}>
+                  <button
+                    style={iconButtonStyle}
+                    onClick={() => handleVote(guide.id, 'like')}
+                  >
+                    <FaThumbsUp /> {guide.upVotes || 0}
+                  </button>
+                  <button
+                    style={iconButtonStyle}
+                    onClick={() => handleVote(guide.id, 'dislike')}
+                  >
+                    <FaThumbsDown /> {guide.downVotes || 0}
+                  </button>
+                  <button
+                    style={iconButtonStyle}
+                    onClick={() => toggleCommentInput(guide.id)}
+                  >
+                    <FaRegComment /> {guide.commentCount || 0}
+                  </button>
+                  <button style={iconButtonStyle}>
+                    <FaRegStar /> {guide.awards?.length || 0}
+                  </button>
+                  <button style={iconButtonStyle}>
+                    <FaShareAlt />
+                  </button>
+                  <button style={iconButtonStyle}>
+                    <FaFlag />
+                  </button>
+                </div>
+                {/* Comment input area is preserved here if needed; however, for this design we want to move comment input to the view page */}
+                {activeCommentGuide === guide.id && (
+                  <div style={{ marginTop: '1rem' }}>
+                    <input
+                      style={{
+                        width: '80%',
+                        padding: '0.5rem',
+                        borderRadius: '4px',
+                        border: '1px solid #333',
+                        marginRight: '0.5rem',
+                        background: '#222',
+                        color: '#FFD700'
+                      }}
+                      type="text"
+                      placeholder="Write a comment..."
+                      value={commentText[guide.id] || ''}
+                      onChange={(e) =>
+                        setCommentText((prev) => ({ ...prev, [guide.id]: e.target.value }))
+                      }
+                    />
+                    <button
+                      style={{
+                        padding: '0.5rem 1rem',
+                        borderRadius: '4px',
+                        background: '#4CAF50',
+                        color: '#FFF',
+                        border: 'none'
+                      }}
+                      onClick={() => submitComment(guide.id)}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -9,11 +9,8 @@ import Step4 from '../Steps/Step4';   // Gear + strategy
 import Step5 from '../Steps/Step5';   // Possibly synergy/threat step, or another
 import Step6 from '../Steps/Step6';   // Spells
 import Step7 from '../Steps/Step7';   // Final page with "Publish"
-import { truncateName } from '../Steps/Utils/gearHelpers';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
-import { v4 as uuidv4 } from 'uuid';
-
 
 // Publish handler – ensures votes, awards, comments, and date are set
 // Publish handler – now writes the guide data to Firestore
@@ -175,6 +172,7 @@ const GuideCreationPage = () => {
   }, [guideData]);
 
   const clearSavedGuide = useCallback(() => {
+    setCurrentStep(1);
     localStorage.removeItem('savedGuide');
     setGuideData({
       title: '',
@@ -200,14 +198,6 @@ const GuideCreationPage = () => {
       username: ''
     });
   }, []);
-
-  const exportGuide = useCallback(() => {
-    const blob = new Blob([JSON.stringify(guideData, null, 2)], { type: 'application/json' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'guide.json';
-    link.click();
-  }, [guideData]);
 
   return (
     <>
@@ -277,6 +267,7 @@ const GuideCreationPage = () => {
               characterStats={characterStats}
               onPrevious={() => setCurrentStep(hasSpellMemoryPerk ? 4 : 3)}
               onPublish={() => handlePublish(guideData)}
+              hideBottomButtons={false}
             />
           )}
 
@@ -302,7 +293,7 @@ const GuideCreationPage = () => {
                 transition: 'background 0.3s'
               }}
             >
-              Save Now
+              Save
             </button>
             <button
               onClick={clearSavedGuide}
@@ -316,21 +307,7 @@ const GuideCreationPage = () => {
                 transition: 'background 0.3s'
               }}
             >
-              Clear Saved Data
-            </button>
-            <button
-              onClick={exportGuide}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#4CAF50',
-                color: '#FFF',
-                border: 'none',
-                borderRadius: '0.5rem',
-                cursor: 'pointer',
-                transition: 'background 0.3s'
-              }}
-            >
-              Download Guide
+              Clear
             </button>
           </div>
         </div>

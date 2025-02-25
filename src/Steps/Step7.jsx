@@ -17,13 +17,15 @@ const getGearImage = (name, slot) => {
 };
 
 /**
- * Final Step7: shows a complete read-only preview & "Publish" or "Go Back"
+ * Final Step7: shows a complete read-only preview.
+ * Accepts a new boolean prop `hideBottomButtons` to conditionally hide the bottom buttons.
  */
 const Step7 = ({
   guideData,
   characterStats,
   onPrevious,    // callback to go back
-  onPublish      // callback to finalize/publish
+  onPublish,     // callback to finalize/publish
+  hideBottomButtons // if true, the bottom buttons will not be rendered
 }) => {
   // This variable dictates where (horizontally) the stats table appears
   const statsLeft = 850; // in pixels
@@ -37,7 +39,7 @@ const Step7 = ({
       borderRadius: '10px',
       boxShadow: '0 4px 15px rgba(0, 0, 0, 0.7)',
       color: '#FFD700',
-      position: 'relative' // Make this container relative for absolute positioning below
+      position: 'relative' // Container relative for absolute positioning below
     }}>
       <h2 style={{ fontSize: '2rem', marginBottom: '1rem', textAlign: 'center' }}>
         {guideData.title || 'Untitled Guide'}
@@ -119,7 +121,6 @@ const Step7 = ({
           top: 80,
           left: `${statsLeft}px`
         }}>
-          <h3 style={{ margin: 0, textAlign: 'right' }}></h3>
           <ClassGearStatsTable
             selectedClass={guideData.class}
             equippedGear={guideData.gearSelections}
@@ -154,7 +155,6 @@ const Step7 = ({
             ))}
           </div>
 
-          {/* synergyText as multi-line text */}
           <div
             style={{
               textAlign: 'center',
@@ -197,7 +197,6 @@ const Step7 = ({
             ))}
           </div>
 
-          {/* threatText as multi-line text */}
           <div
             style={{
               textAlign: 'center',
@@ -242,35 +241,24 @@ const Step7 = ({
         </div>
       )}
 
-      {/* Bottom Buttons */}
-      <div style={{ marginTop:'2rem', display:'flex', justifyContent:'center', gap:'1rem' }}>
-        <button
-          onClick={onPrevious}
-          style={{
-            padding:'0.75rem 1.5rem',
-            background:'#555',
-            color:'#FFD700',
-            border:'none',
-            borderRadius:'0.5rem',
-            cursor:'pointer'
-          }}
-        >
-          Go Back
-        </button>
-        <button
-          onClick={onPublish}
-          style={{
-            padding:'0.75rem 1.5rem',
-            background:'#4CAF50',
-            color:'#FFF',
-            border:'none',
-            borderRadius:'0.5rem',
-            cursor:'pointer'
-          }}
-        >
-          Publish
-        </button>
-      </div>
+      {/* Bottom Buttons: Render only if hideBottomButtons is not true */}
+      {!hideBottomButtons && (
+        <div style={{ marginTop:'2rem', display:'flex', justifyContent:'center', gap:'1rem' }}>
+          <button
+            onClick={onPublish}
+            style={{
+              padding:'0.75rem 1.5rem',
+              background:'#4CAF50',
+              color:'#FFF',
+              border:'none',
+              borderRadius:'0.5rem',
+              cursor:'pointer'
+            }}
+          >
+            Publish
+          </button>
+        </div>
+      )}
     </div>
   );
 };

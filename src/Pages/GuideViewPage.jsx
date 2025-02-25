@@ -102,7 +102,7 @@ const GuideViewPage = () => {
             ← Back to Guides
           </button>
 
-          <Step7 guideData={guideData} characterStats={characterStats} readOnly={true} />
+          <Step7 guideData={guideData} characterStats={characterStats} hideBottomButtons={true} />
 
           <div style={{ marginTop: '2rem' }}>
             <h3 style={{ textAlign: 'center' }}>Add a Comment</h3>

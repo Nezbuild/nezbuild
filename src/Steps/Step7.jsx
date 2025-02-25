@@ -25,6 +25,9 @@ const Step7 = ({
   onPrevious,    // callback to go back
   onPublish      // callback to finalize/publish
 }) => {
+  // This variable dictates where (horizontally) the stats table appears
+  const statsLeft = 850; // in pixels
+
   return (
     <div style={{
       margin: '2rem 0',
@@ -33,7 +36,8 @@ const Step7 = ({
       border: '1px solid #FFD700',
       borderRadius: '10px',
       boxShadow: '0 4px 15px rgba(0, 0, 0, 0.7)',
-      color: '#FFD700'
+      color: '#FFD700',
+      position: 'relative' // Make this container relative for absolute positioning below
     }}>
       <h2 style={{ fontSize: '2rem', marginBottom: '1rem', textAlign: 'center' }}>
         {guideData.title || 'Untitled Guide'}
@@ -81,40 +85,47 @@ const Step7 = ({
         <strong>Tags:</strong> {guideData.tags.join(', ')}
       </p>
 
-      {/* Gear Layout */}
-      <GearLayout>
-        {[
-          'head','chest','gloves','amulet','ring1','ring2','cape','legs','feet',
-          'perk1','perk2','perk3','perk4','skill1','skill2',
-          'Weapon11','Weapon12','Weapon21','Weapon22'
-        ].map((slot) => {
-          const gear = guideData.gearSelections[slot];
-          const imageSrc = gear ? getGearImage(gear.Name, slot) : null;
-          return (
-            <div key={slot} className={`gear-slot ${slot}`} style={{ textAlign:'center' }}>
-              {gear ? (
-                <img
-                  src={imageSrc}
-                  onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
-                  alt={gear.Name}
-                  style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-                />
-              ) : (
-                slot
-              )}
-            </div>
-          );
-        })}
-      </GearLayout>
+      {/* Container for Gear Layout and Stats Table overlay */}
+      <div style={{ position: 'relative', marginBottom: '2rem' }}>
+        {/* Gear Layout */}
+        <GearLayout>
+          {[
+            'head','chest','gloves','amulet','ring1','ring2','cape','legs','feet',
+            'perk1','perk2','perk3','perk4','skill1','skill2',
+            'Weapon11','Weapon12','Weapon21','Weapon22'
+          ].map((slot) => {
+            const gear = guideData.gearSelections[slot];
+            const imageSrc = gear ? getGearImage(gear.Name, slot) : null;
+            return (
+              <div key={slot} className={`gear-slot ${slot}`} style={{ textAlign:'center' }}>
+                {gear ? (
+                  <img
+                    src={imageSrc}
+                    onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
+                    alt={gear.Name}
+                    style={{ width: '80%', height: '80%', objectFit: 'contain' }}
+                  />
+                ) : (
+                  slot
+                )}
+              </div>
+            );
+          })}
+        </GearLayout>
 
-      {/* Class Stats */}
-      <h3 style={{ marginTop: '2rem', textAlign: 'center' }}>Class Stats</h3>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <ClassGearStatsTable
-          selectedClass={guideData.class}
-          equippedGear={guideData.gearSelections}
-          onStatsUpdate={() => {}}
-        />
+        {/* Stats Table Overlaid on the Right of the Gear Layout */}
+        <div style={{
+          position: 'absolute',
+          top: 80,
+          left: `${statsLeft}px`
+        }}>
+          <h3 style={{ margin: 0, textAlign: 'right' }}></h3>
+          <ClassGearStatsTable
+            selectedClass={guideData.class}
+            equippedGear={guideData.gearSelections}
+            onStatsUpdate={() => {}}
+          />
+        </div>
       </div>
 
       {/* Synergies */}
@@ -203,8 +214,6 @@ const Step7 = ({
         <p style={{ color:'gray', textAlign:'center' }}>No threats added yet.</p>
       )}
 
-      <h3 style={{ textAlign:'center', marginTop:'1.5rem' }}>Gear Selections</h3>
-
       {/* Spells - reuse Step6 in readOnly mode */}
       <h3 style={{ marginTop:'2rem', textAlign:'center' }}>Spells</h3>
       <Step6
@@ -225,19 +234,16 @@ const Step7 = ({
           <div
             style={{
               fontSize: '1.2rem',
-              whiteSpace: 'pre-wrap',
-              wordWrap: 'break-word',
               maxWidth: '80%',
               margin: '0 auto'
             }}
-          >
-            {guideData.strategyDescription}
-          </div>
+            dangerouslySetInnerHTML={{ __html: guideData.strategyDescription }}
+          />
         </div>
       )}
 
-      {/* Publish / Go Back Buttons */}
-      <div style={{ marginTop:'2rem', display:'flex', gap:'1rem', justifyContent:'center' }}>
+      {/* Bottom Buttons */}
+      <div style={{ marginTop:'2rem', display:'flex', justifyContent:'center', gap:'1rem' }}>
         <button
           onClick={onPrevious}
           style={{

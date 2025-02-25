@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from '../Styles/GlobalStyle';
+import { useNavigate } from 'react-router-dom';
 import { 
   FaRegComment, 
   FaShareAlt, 
@@ -46,16 +47,12 @@ const guideTags = [
 ];
 
 // Parameter to control the banner width
-const bannerWidth = '1160px'; // You can adjust this value as needed
+const bannerWidth = '1160px';
 
 const Guides = () => {
   const [guides, setGuides] = useState([]);
   // Track votes: { [guideId]: 'like' | 'dislike' }
   const [votedGuides, setVotedGuides] = useState({});
-  // For toggling comment input (this is now removed from the final view)
-  const [activeCommentGuide, setActiveCommentGuide] = useState(null);
-  // For comment text per guide
-  const [commentText, setCommentText] = useState({});
   
   // Filtering and Sorting States
   const [selectedClass, setSelectedClass] = useState('');
@@ -65,7 +62,8 @@ const Guides = () => {
   
   // Check current user
   const currentUser = auth.currentUser;
-  
+  const navigate = useNavigate();
+
   // Fetch guides from Firestore
   useEffect(() => {
     const q = query(collection(db, 'guides'));
@@ -111,7 +109,6 @@ const Guides = () => {
       return;
     }
     
-    // Determine if a vote exists and how to update counts
     const previousVote = votedGuides[guideId];
     const guide = guides.find((g) => g.id === guideId);
     const guideRef = doc(db, 'guides', guideId);
@@ -120,7 +117,6 @@ const Guides = () => {
     let newDownVotes = guide.downVotes || 0;
     
     if (previousVote === voteType) {
-      // User is removing their vote
       if (voteType === 'like') {
         newUpVotes = newUpVotes - 1;
       } else {
@@ -132,7 +128,6 @@ const Guides = () => {
         return newVotes;
       });
     } else if (previousVote && previousVote !== voteType) {
-      // Changing vote: subtract from the previous vote and add to the new vote.
       if (previousVote === 'like') {
         newUpVotes = newUpVotes - 1;
         newDownVotes = newDownVotes + 1;
@@ -142,7 +137,6 @@ const Guides = () => {
       }
       setVotedGuides((prev) => ({ ...prev, [guideId]: voteType }));
     } else {
-      // No previous vote, add vote.
       if (voteType === 'like') {
         newUpVotes = newUpVotes + 1;
       } else {
@@ -160,31 +154,6 @@ const Guides = () => {
       console.error('Error updating vote:', error);
       alert('Error processing vote. Please try again.');
     }
-  };
-  
-  // Open/close comment input; require sign in.
-  const toggleCommentInput = (guideId) => {
-    if (!currentUser) {
-      alert('Please sign in to comment.');
-      return;
-    }
-    setActiveCommentGuide((prev) => (prev === guideId ? null : guideId));
-  };
-
-  // Submit comment (dummy function; remove this from the guides page – comments are added on the view page)
-  const submitComment = (guideId) => {
-    if (!currentUser) {
-      alert('Please sign in to comment.');
-      return;
-    }
-    const comment = commentText[guideId];
-    if (!comment) {
-      alert('Please write a comment before submitting.');
-      return;
-    }
-    alert(`Comment submitted for guide ${guideId}: ${comment}`);
-    setCommentText((prev) => ({ ...prev, [guideId]: '' }));
-    setActiveCommentGuide(null);
   };
 
   // Inline styles matching your GuideCreationPage
@@ -213,6 +182,7 @@ const Guides = () => {
     marginBottom: '1rem',
     transition: 'background 0.3s',
     width: bannerWidth,
+    cursor: 'pointer'
   };
   const guideInfoStyle = {
     display: 'flex',
@@ -325,7 +295,12 @@ const Guides = () => {
             <p style={{ textAlign: 'center' }}>No guides available yet.</p>
           ) : (
             displayedGuides.map((guide) => (
-              <div key={guide.id} style={guideItemStyle}>
+              // Make the entire banner a clickable element
+              <div
+                key={guide.id}
+                style={guideItemStyle}
+                onClick={() => navigate(`/guides/${guide.id}`)}
+              >
                 <div style={guideInfoStyle}>
                   <h3 style={guideTitleStyle}>{guide.title}</h3>
                   <p style={guideMetaStyle}>{guide.shortDescription}</p>
@@ -334,7 +309,7 @@ const Guides = () => {
                     {guide.tags && guide.tags.length > 0 ? guide.tags.join(', ') : 'None'}
                   </p>
                 </div>
-                <div style={statsStyle}>
+                <div style={statsStyle} onClick={(e) => e.stopPropagation()}>
                   <button
                     style={iconButtonStyle}
                     onClick={() => handleVote(guide.id, 'like')}
@@ -347,10 +322,7 @@ const Guides = () => {
                   >
                     <FaThumbsDown /> {guide.downVotes || 0}
                   </button>
-                  <button
-                    style={iconButtonStyle}
-                    onClick={() => toggleCommentInput(guide.id)}
-                  >
+                  <button style={iconButtonStyle}>
                     <FaRegComment /> {guide.commentCount || 0}
                   </button>
                   <button style={iconButtonStyle}>
@@ -363,40 +335,6 @@ const Guides = () => {
                     <FaFlag />
                   </button>
                 </div>
-                {/* Comment input area is preserved here if needed; however, for this design we want to move comment input to the view page */}
-                {activeCommentGuide === guide.id && (
-                  <div style={{ marginTop: '1rem' }}>
-                    <input
-                      style={{
-                        width: '80%',
-                        padding: '0.5rem',
-                        borderRadius: '4px',
-                        border: '1px solid #333',
-                        marginRight: '0.5rem',
-                        background: '#222',
-                        color: '#FFD700'
-                      }}
-                      type="text"
-                      placeholder="Write a comment..."
-                      value={commentText[guide.id] || ''}
-                      onChange={(e) =>
-                        setCommentText((prev) => ({ ...prev, [guide.id]: e.target.value }))
-                      }
-                    />
-                    <button
-                      style={{
-                        padding: '0.5rem 1rem',
-                        borderRadius: '4px',
-                        background: '#4CAF50',
-                        color: '#FFF',
-                        border: 'none'
-                      }}
-                      onClick={() => submitComment(guide.id)}
-                    >
-                      Submit
-                    </button>
-                  </div>
-                )}
               </div>
             ))
           )}

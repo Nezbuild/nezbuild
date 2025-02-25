@@ -98,7 +98,7 @@ const ClassGearStatsTable = ({ selectedClass, equippedGear, onStatsUpdate }) => 
           <tr>
             <TableHeader>Stat</TableHeader>
             <TableHeader>Base</TableHeader>
-            <TableHeader>Bonus</TableHeader>
+            <TableHeader>Gear</TableHeader>
             <TableHeader>Total</TableHeader>
           </tr>
         </thead>

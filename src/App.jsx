@@ -6,7 +6,7 @@ import GuideCreationPage from './Pages/GuideCreationPage'; // Guide Creation Pag
 import AboutPage from './Pages/AboutPage'; // About Page
 import TierListPage from './Pages/TierListPage'; // Tier List Page
 import LatestPatchNotes from './Pages/LatestPatchNotes'; // Latest Patch Notes Page
-
+import GuideViewPage from './Pages/GuideViewPage';
 // Authentication Components
 import AuthPage from './Pages/AuthPage'; // Combined Sign-In/Sign-Up Page
 
@@ -57,6 +57,7 @@ function App() {
         <Route path="/tier-lists" element={<TierListPage />} /> {/* Tier List Page */}
         <Route path="/latest-patch" element={<LatestPatchNotes />} /> {/* Latest Patch Notes Page */}
         <Route path="/Guides" element={<Guides />} /> {/* Guides */}
+        <Route path="/guides/:guideId" element={<GuideViewPage />} />
 
         {/* Authentication Route */}
         <Route path="/auth" element={<AuthPage />} /> {/* Combined Auth Page */}

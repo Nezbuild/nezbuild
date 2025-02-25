@@ -244,14 +244,14 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
       >
         Step 4: Gear Layout
       </h2>
-
-      <GearLayout>
-        {[
-          'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
-          'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
-          'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
-        ].map((slot) => {
-          const gear = selectedGear[slot];
+      <div style={{ position: 'relative' }}>
+        <GearLayout>
+          {[
+            'head', 'chest', 'gloves', 'amulet', 'ring1', 'ring2', 'cape', 'legs', 'feet',
+            'perk1', 'perk2', 'perk3', 'perk4', 'skill1', 'skill2',
+            'Weapon11', 'Weapon12', 'Weapon21', 'Weapon22'
+          ].map((slot) => {
+            const gear = selectedGear[slot];
           const gearImage = gear ? getGearImage(gear.Name, slot) : null;
           const isLocked = lockedSlots.includes(slot);
           return (
@@ -324,8 +324,21 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
             </div>
           );
         })}
-      </GearLayout>
+        </GearLayout>
 
+        {/* Absolutely position the stats table overlay */}
+        <div style={{
+          position: 'absolute',
+          top: 80,
+          left: '850px'  // Adjust this value (or use a variable) to control where the table appears horizontally
+        }}>
+          <ClassGearStatsTable
+            selectedClass={data.class}
+            equippedGear={selectedGear}
+            onStatsUpdate={handleStatsUpdateInternal}
+          />
+        </div>
+      </div>
       <GearPopup
         visible={popupVisible}
         selectedSlot={selectedSlot}
@@ -341,25 +354,6 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
         onSelect={handleSelectRarity}
         onClose={() => setRarityPromptVisible(false)}
       />
-
-      <div
-        style={{
-          flex: '0.5',
-          maxWidth: '300px',
-          padding: '10px',
-          backgroundColor: '#222',
-          border: '1px solid #FFD700',
-          borderRadius: '10px',
-          color: '#fff',
-          marginTop: '1.5rem'
-        }}
-      >
-        <ClassGearStatsTable
-          selectedClass={data.class}
-          equippedGear={selectedGear}
-          onStatsUpdate={handleStatsUpdateInternal}
-        />
-      </div>
     </div>
   );
 };

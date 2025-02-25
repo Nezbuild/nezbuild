@@ -13,10 +13,8 @@ const GuideViewPage = () => {
   const [loading, setLoading] = useState(true);
   const [characterStats, setCharacterStats] = useState({});
   const [newComment, setNewComment] = useState('');
-  const [comments, setComments] = useState([]);
   const currentUser = auth.currentUser;
 
-  // Fetch the guide data
   useEffect(() => {
     const fetchGuide = async () => {
       try {
@@ -35,7 +33,6 @@ const GuideViewPage = () => {
     fetchGuide();
   }, [guideId]);
 
-  // Subscribe to comments from the guide's subcollection
   useEffect(() => {
     if (!guideId) return;
     const commentsRef = collection(db, 'guides', guideId, 'comments');
@@ -45,7 +42,7 @@ const GuideViewPage = () => {
       snapshot.forEach((doc) => {
         commentsArray.push({ id: doc.id, ...doc.data() });
       });
-      setComments(commentsArray);
+      // Comments are rendered within Step7
     });
     return () => unsubscribe();
   }, [guideId]);
@@ -90,7 +87,6 @@ const GuideViewPage = () => {
             minHeight: '100vh'
           }}
         >
-          {/* Back Button */}
           <button
             onClick={() => navigate(-1)}
             style={{
@@ -106,10 +102,8 @@ const GuideViewPage = () => {
             ← Back to Guides
           </button>
 
-          {/* Render the guide preview (Step7) in read-only mode */}
           <Step7 guideData={guideData} characterStats={characterStats} readOnly={true} />
 
-          {/* Comment Form */}
           <div style={{ marginTop: '2rem' }}>
             <h3 style={{ textAlign: 'center' }}>Add a Comment</h3>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
@@ -142,7 +136,6 @@ const GuideViewPage = () => {
                 Submit
               </button>
             </div>
-            {/* Optionally, you can render comments here, but if Step7 already displays comments, this may be redundant. */}
           </div>
         </div>
       </div>

@@ -2,6 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"; // Import getAuth for authentication
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,4 +24,5 @@ const analytics = getAnalytics(app);
 
 // Initialize Firebase Authentication and export it
 export const auth = getAuth(app); // Use this in your SignUp, SignIn, etc.
+export const db = getFirestore(app);
 export default app;

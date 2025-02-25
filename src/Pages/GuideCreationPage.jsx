@@ -10,21 +10,36 @@ import Step5 from '../Steps/Step5';   // Possibly synergy/threat step, or anothe
 import Step6 from '../Steps/Step6';   // Spells
 import Step7 from '../Steps/Step7';   // Final page with "Publish"
 import { truncateName } from '../Steps/Utils/gearHelpers';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
+import { v4 as uuidv4 } from 'uuid';
+
 
 // Publish handler – ensures votes, awards, comments, and date are set
-const handlePublish = (guideData) => {
-  const finalGuideData = {
-    ...guideData,
-    upVotes: 0,
-    downVotes: 0,
-    commentCount: 0,
-    comments: '',
-    awards: [],
-    datePublished: new Date().toISOString(),
-    // username will be filled from user auth later
-  };
-  console.log('✅ Publish clicked. Final data:', finalGuideData);
-  alert('Guide published successfully!');
+// Publish handler – now writes the guide data to Firestore
+const handlePublish = async (guideData) => {
+  try {
+    // Prepare final guide data with additional metadata
+    const finalGuideData = {
+      ...guideData,
+      upVotes: 0,
+      downVotes: 0,
+      commentCount: 0,
+      comments: '',
+      awards: [],
+      datePublished: serverTimestamp(), // server-generated timestamp
+      // username: (fill this from Firebase Auth if available)
+    };
+
+    // Save the guide document to Firestore under the 'guides' collection
+    const docRef = await addDoc(collection(db, 'guides'), finalGuideData);
+
+    console.log('✅ Guide published successfully with ID:', docRef.id);
+    alert('Guide published successfully!');
+  } catch (error) {
+    console.error('❌ Error publishing guide:', error);
+    alert('Error publishing guide. Please try again.');
+  }
 };
 
 const GuideCreationPage = () => {

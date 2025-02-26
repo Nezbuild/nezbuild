@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from '../Styles/GlobalStyle';
 import { useNavigate } from 'react-router-dom';
+
 import { 
   FaRegComment, 
   FaShareAlt, 
@@ -321,18 +322,6 @@ const Guides = () => {
                     onClick={() => handleVote(guide.id, 'dislike')}
                   >
                     <FaThumbsDown /> {guide.downVotes || 0}
-                  </button>
-                  <button style={iconButtonStyle}>
-                    <FaRegComment /> {guide.commentCount || 0}
-                  </button>
-                  <button style={iconButtonStyle}>
-                    <FaRegStar /> {guide.awards?.length || 0}
-                  </button>
-                  <button style={iconButtonStyle}>
-                    <FaShareAlt />
-                  </button>
-                  <button style={iconButtonStyle}>
-                    <FaFlag />
                   </button>
                 </div>
               </div>

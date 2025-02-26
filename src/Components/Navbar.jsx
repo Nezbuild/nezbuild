@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { auth } from '../firebase';
 import { signOut } from "firebase/auth";
+import AuthPanel from './AuthPanel'; // Import the AuthPanel from its file
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  const [showAuthDropdown, setShowAuthDropdown] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
@@ -26,35 +29,56 @@ const Navbar = () => {
     }
   };
 
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setShowAuthDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <NavBarContainer>
-      <Logo to="/">
-        <LogoHighlight>N</LogoHighlight>ezbuild
-      </Logo>
-      <NavLinks>
-        <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
-        <NavLink to="/Guides" $active={location.pathname === '/Guides'}>Guides</NavLink>
-        <NavLink to="/create-guide" $active={location.pathname === '/create-guide'}>Create Guide</NavLink>
-        <NavLink to="/tier-lists" $active={location.pathname === '/tier-lists'}>Tier Lists</NavLink>
-        <NavLink to="/latest-patch" $active={location.pathname === '/latest-patch'}>Latest Patch Notes</NavLink>
-      </NavLinks>
-      <AuthLinks>
-        {user ? (
-          <>
-            <UserDisplay>Welcome, {user?.email || 'Guest'}</UserDisplay>
-            <AuthButton onClick={handleSignOut}>Sign Out</AuthButton>
-          </>
-        ) : (
-          <AuthButton onClick={() => navigate('/auth')}>Sign Up / Sign In</AuthButton>
-        )}
-      </AuthLinks>
-    </NavBarContainer>
+    <>
+      <NavBarContainer>
+        <Logo to="/">
+          <LogoHighlight>N</LogoHighlight>ezbuild
+        </Logo>
+        <NavLinks>
+          <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
+          <NavLink to="/Guides" $active={location.pathname === '/Guides'}>Guides</NavLink>
+          <NavLink to="/create-guide" $active={location.pathname === '/create-guide'}>Create Guide</NavLink>
+          <NavLink to="/tier-lists" $active={location.pathname === '/tier-lists'}>Tier Lists</NavLink>
+          <NavLink to="/latest-patch" $active={location.pathname === '/latest-patch'}>Latest Patch Notes</NavLink>
+        </NavLinks>
+        <AuthLinks>
+          {user ? (
+            <>
+              <UserDisplay>Welcome, {user?.displayName || user?.email || 'Guest'}</UserDisplay>
+              <AuthButton onClick={handleSignOut}>Sign Out</AuthButton>
+            </>
+          ) : (
+            <AuthButton onClick={() => setShowAuthDropdown((prev) => !prev)}>
+              Sign Up / Sign In
+            </AuthButton>
+          )}
+        </AuthLinks>
+      </NavBarContainer>
+      {showAuthDropdown && (
+        <AuthDropdown ref={dropdownRef}>
+          <AuthPanel />
+        </AuthDropdown>
+      )}
+    </>
   );
 };
 
 export default Navbar;
 
-// Styled Components
+// Styled Components for Navbar
+
 const NavBarContainer = styled.nav`
   position: fixed;
   top: 0;
@@ -142,4 +166,16 @@ const AuthButton = styled.button`
 const UserDisplay = styled.div`
   font-size: 1.1rem;
   color: #FFD700;
+`;
+
+const AuthDropdown = styled.div`
+  position: fixed;
+  top: 70px; /* Below the navbar */
+  right: 30px; /* Adjust as needed */
+  z-index: 999;
+  width: 400px;
+  background-color: #2F2F2F;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
 `;

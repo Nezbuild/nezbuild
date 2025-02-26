@@ -1,5 +1,4 @@
 import React from 'react';
-import Tooltip from '../Components/Tooltip';
 
 const Step3 = ({ data, updateData }) => {
   const classes = [
@@ -71,12 +70,10 @@ const Step3 = ({ data, updateData }) => {
         }}
       >
         Step 2: Class, Category, and Style Selection
-        <Tooltip text="Select your class, category, and up to 5 tags that describe your guide." />
       </h2>
 
       <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Class Selection
-        <Tooltip text="Choose a class for your guide. This step must be completed before selecting a category or tags." />
       </h3>
       <div
         style={{
@@ -129,7 +126,6 @@ const Step3 = ({ data, updateData }) => {
 
       <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Category Selection
-        <Tooltip text="Select the game mode category for your guide." />
       </h3>
       <div
         style={{
@@ -170,7 +166,6 @@ const Step3 = ({ data, updateData }) => {
 
       <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
         Guide Style Tags
-        <Tooltip text="Select up to 5 tags to describe the style of your guide." />
       </h3>
       <div
         style={{

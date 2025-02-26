@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { auth } from '../firebase';
 import styled from 'styled-components';
 
 const SignUp = () => {
+  const [username, setUsername] = useState(''); // New state for username
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [retypePassword, setRetypePassword] = useState(''); // New state for retyping password
-  const [error, setError] = useState(''); // For validation errors
+  const [retypePassword, setRetypePassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSignUp = async () => {
-    setError(''); // Reset error state
+    setError('');
+
+    // Validate that a username was entered
+    if (!username) {
+      setError('Please enter a username.');
+      return;
+    }
 
     // Check if passwords match
     if (password !== retypePassword) {
@@ -19,13 +26,18 @@ const SignUp = () => {
     }
 
     try {
+      // Create user with email and password
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-
+      
+      // Update the user's displayName with the entered username
+      await updateProfile(userCredential.user, { displayName: username });
+      
       // Send verification email
       await sendEmailVerification(userCredential.user);
+      
       alert('Sign-up successful! A verification email has been sent to your email address. Please verify your email before signing in.');
     } catch (error) {
-      setError(error.message); // Display Firebase error messages
+      setError(error.message);
     }
   };
 
@@ -33,7 +45,13 @@ const SignUp = () => {
     <SignUpContainer>
       <Form>
         <h2>Sign Up</h2>
-        {error && <ErrorMessage>{error}</ErrorMessage>} {/* Display validation errors */}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+        <Input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <Input
           type="email"
           placeholder="Email"

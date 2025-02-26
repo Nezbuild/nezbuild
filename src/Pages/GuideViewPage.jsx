@@ -13,6 +13,7 @@ const GuideViewPage = () => {
   const [loading, setLoading] = useState(true);
   const [characterStats, setCharacterStats] = useState({});
   const [newComment, setNewComment] = useState('');
+  const [comments, setComments] = useState([]); // New state for comments
   const currentUser = auth.currentUser;
 
   useEffect(() => {
@@ -33,6 +34,7 @@ const GuideViewPage = () => {
     fetchGuide();
   }, [guideId]);
 
+  // Subscribe to comments and store them in state
   useEffect(() => {
     if (!guideId) return;
     const commentsRef = collection(db, 'guides', guideId, 'comments');
@@ -42,7 +44,7 @@ const GuideViewPage = () => {
       snapshot.forEach((doc) => {
         commentsArray.push({ id: doc.id, ...doc.data() });
       });
-      // Comments are rendered within Step7
+      setComments(commentsArray);
     });
     return () => unsubscribe();
   }, [guideId]);
@@ -135,6 +137,33 @@ const GuideViewPage = () => {
               >
                 Submit
               </button>
+            </div>
+
+            {/* Display comments */}
+            <div style={{ marginTop: '2rem' }}>
+              <h3 style={{ textAlign: 'center' }}>Comments ({comments.length})</h3>
+              {comments.length > 0 ? (
+                comments.map((comment) => (
+                  <div
+                    key={comment.id}
+                    style={{
+                      borderTop: '1px solid #FFD700',
+                      padding: '0.5rem 0',
+                      marginTop: '0.5rem'
+                    }}
+                  >
+                    <p style={{ margin: '0.25rem 0', fontWeight: 'bold' }}>
+                      {comment.username || 'Anonymous'}
+                      <span style={{ fontSize: '0.8rem', marginLeft: '0.5rem', color: '#ccc' }}>
+                        {comment.timestamp ? new Date(comment.timestamp.seconds * 1000).toLocaleString() : ''}
+                      </span>
+                    </p>
+                    <p style={{ margin: '0.25rem 0' }}>{comment.text}</p>
+                  </div>
+                ))
+              ) : (
+                <p style={{ textAlign: 'center', color: 'gray' }}>No comments yet.</p>
+              )}
             </div>
           </div>
         </div>

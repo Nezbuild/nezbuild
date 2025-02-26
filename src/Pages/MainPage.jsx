@@ -41,10 +41,10 @@ const guideTags = [
 ];
 
 // Constants for carousel dimensions and animation
-const GUIDE_CARD_WIDTH_PX = 500; // width of each guide card in pixels
-const GUIDE_CARD_HEIGHT_PX = 200; // height of each guide card in pixels
+const GUIDE_CARD_WIDTH_PX = 225; // width of each guide card in pixels
+const GUIDE_CARD_HEIGHT_PX = 250; // height of each guide card in pixels
 const CARD_GAP = 20; // gap between cards in pixels
-const SCROLL_DURATION = 30; // seconds for one full loop of the duplicated content
+const SCROLL_DURATION = 10; // seconds for one full loop of the duplicated content
 const SCROLL_EASING = 'linear'; // continuous smooth motion
 
 // Create a keyframes animation for continuous scrolling

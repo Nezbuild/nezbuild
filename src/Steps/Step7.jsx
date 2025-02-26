@@ -41,20 +41,20 @@ const Step7 = ({
       color: '#FFD700',
       position: 'relative' // Container relative for absolute positioning below
     }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '1rem', textAlign: 'center' }}>
+      <h2 style={{ fontSize: '4rem', marginBottom: '1rem', textAlign: 'left' }}>
         {guideData.title || 'Untitled Guide'}
       </h2>
 
       {/* Short Description */}
       <div
         style={{
-          fontSize: '1.2rem',
+          fontSize: '2rem',
           marginBottom: '1rem',
-          textAlign: 'center',
+          textAlign: 'left',
           whiteSpace: 'pre-wrap',
           wordWrap: 'break-word',
           maxWidth: '80%',
-          margin: '0 auto'
+          margin: '0 0'
         }}
       >
         {guideData.shortDescription}
@@ -65,8 +65,8 @@ const Step7 = ({
         display: 'flex',
         gap: '1rem',
         alignItems: 'center',
-        marginBottom: '1rem',
-        justifyContent: 'center'
+        marginBottom: '2rem',
+        justifyContent: 'left'
       }}>
         <img
           src={`../src/assets/images/${guideData.class}.png`}
@@ -74,21 +74,21 @@ const Step7 = ({
           alt={guideData.class}
           style={{ width: '100px', height: '100px', borderRadius: '5px' }}
         />
-        <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+        <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>
           {guideData.class}
         </span>
       </div>
 
       {/* Category & Tags */}
-      <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-        <strong>Category:</strong> {guideData.category}
+      <p style={{ textAlign: 'left', marginBottom: '0.5rem', fontSize: '2rem' }}>
+        <strong></strong> {guideData.category}
       </p>
-      <p style={{ textAlign: 'center', marginBottom: '1rem' }}>
-        <strong>Tags:</strong> {guideData.tags.join(', ')}
+      <p style={{ textAlign: 'left', marginBottom: '1rem', fontSize: '2rem' }}>
+        <strong></strong> {guideData.tags.join(', ')}
       </p>
 
       {/* Container for Gear Layout and Stats Table overlay */}
-      <div style={{ position: 'relative', marginBottom: '2rem' }}>
+      <div style={{ position: 'relative', marginBottom: '0rem' }}>
         {/* Gear Layout */}
         <GearLayout>
           {[
@@ -132,14 +132,14 @@ const Step7 = ({
       {/* Synergies */}
       {guideData.synergies.length > 0 ? (
         <>
-          <h3 style={{ color:'green', textAlign:'center' }}>Synergies</h3>
+          <h3 style={{ color:'green', textAlign:'left', fontSize: '3rem' }}>Synergies</h3>
           <div
             style={{
               marginBottom:'1rem',
               display:'flex',
               gap:'1rem',
               flexWrap:'wrap',
-              justifyContent:'center'
+              justifyContent:'left'
             }}
           >
             {guideData.synergies.map((synergy, index) => (
@@ -148,40 +148,41 @@ const Step7 = ({
                   src={`../src/assets/images/${synergy}.png`}
                   onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
                   alt={synergy}
-                  style={{ width:'75px', height:'75px', marginBottom:'0.5rem' }}
+                  style={{ width:'90px', height:'90px', marginBottom:'0.5rem' }}
                 />
-                <span style={{ fontSize:'1rem' }}>{synergy}</span>
+                <span style={{ fontSize:'1.5rem' }}>{synergy}</span>
               </div>
             ))}
           </div>
 
           <div
             style={{
-              textAlign: 'center',
+              textAlign: 'left',
               whiteSpace: 'pre-wrap',
               wordWrap: 'break-word',
               maxWidth: '80%',
-              margin: '0 auto'
+              margin: '0 0',
+              fontSize: '1.75rem'
             }}
           >
             {guideData.synergyText}
           </div>
         </>
       ) : (
-        <p style={{ color:'gray', textAlign:'center' }}>No synergies added yet.</p>
+        <p style={{ color:'gray', textAlign:'left' }}>No synergies added yet.</p>
       )}
 
       {/* Threats */}
       {guideData.threats.length > 0 ? (
         <>
-          <h3 style={{ color:'red', textAlign:'center' }}>Threats</h3>
+          <h3 style={{ color:'red', textAlign:'left', fontSize: '3rem' }}>Threats</h3>
           <div
             style={{
               marginBottom:'1rem',
               display:'flex',
               gap:'1rem',
               flexWrap:'wrap',
-              justifyContent:'center'
+              justifyContent:'left'
             }}
           >
             {guideData.threats.map((threat, index) => (
@@ -190,31 +191,32 @@ const Step7 = ({
                   src={`../src/assets/images/${threat}.png`}
                   onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
                   alt={threat}
-                  style={{ width:'75px', height:'75px', marginBottom:'0.5rem' }}
+                  style={{ width:'90px', height:'90px', marginBottom:'0.5rem' }}
                 />
-                <span style={{ fontSize:'1rem' }}>{threat}</span>
+                <span style={{ fontSize:'1.5rem' }}>{threat}</span>
               </div>
             ))}
           </div>
 
           <div
             style={{
-              textAlign: 'center',
+              textAlign: 'left',
               whiteSpace: 'pre-wrap',
               wordWrap: 'break-word',
               maxWidth: '80%',
-              margin: '0 auto'
+              margin: '0 0',
+              fontSize: '1.75rem'
             }}
           >
             {guideData.threatText}
           </div>
         </>
       ) : (
-        <p style={{ color:'gray', textAlign:'center' }}>No threats added yet.</p>
+        <p style={{ color:'gray', textAlign:'left' }}>No threats added yet.</p>
       )}
 
       {/* Spells - reuse Step6 in readOnly mode */}
-      <h3 style={{ marginTop:'2rem', textAlign:'center' }}>Spells</h3>
+      <h3 style={{ marginTop:'2rem', textAlign:'center', fontSize: '3rem' }}>Spells</h3>
       <Step6
         selectedSpells={guideData.spells}
         setSelectedSpells={() => {}}
@@ -228,13 +230,14 @@ const Step7 = ({
 
       {/* Strategy Description */}
       {guideData.strategyDescription && (
-        <div style={{ marginTop:'2rem', textAlign:'center' }}>
-          <h3 style={{ fontSize:'1.75rem' }}>Strategy Description</h3>
+        <div style={{ marginTop:'2rem', textAlign:'left' }}>
+          <h3 style={{ fontSize:'3rem' }}>Strategy Description</h3>
           <div
             style={{
-              fontSize: '1.2rem',
+              justify:'left',
+              fontSize: '1.5rem',
               maxWidth: '80%',
-              margin: '0 auto'
+              margin: '0 0'
             }}
             dangerouslySetInnerHTML={{ __html: guideData.strategyDescription }}
           />

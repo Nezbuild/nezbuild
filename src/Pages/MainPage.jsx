@@ -188,7 +188,7 @@ const MainContainer = styled.div`
 
 const HeroSection = styled.section`
   background: url('/src/assets/images/hero-background.jpg') no-repeat center center/cover;
-  padding: 60px 20px;
+  padding: 0px 20px;
   border-radius: 8px;
   text-align: center;
   color: #FFBF00;
@@ -231,10 +231,10 @@ const ClassOption = styled.div`
 `;
 
 const ClassIcon = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const ClassName = styled.span`

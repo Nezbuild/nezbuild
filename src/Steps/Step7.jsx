@@ -1,5 +1,6 @@
 // src/Steps/Step7.jsx
-import React from 'react';
+import React, { useState, useCallback } from 'react';
+import styled from 'styled-components';
 import GearLayout from '../Styles/GearLayout';
 import { truncateName } from './Utils/gearHelpers';
 import ClassGearStatsTable from '../Components/ClassGearStatsTable';
@@ -16,19 +17,44 @@ const getGearImage = (name, slot) => {
   return matchedImage ? matchedImage[1].default : '';
 };
 
-/**
- * Final Step7: shows a complete read-only preview.
- * Accepts a new boolean prop `hideBottomButtons` to conditionally hide the bottom buttons.
- */
+const rarityColors = {
+  Poor: '#A9A9A9',
+  Common: '#FFFFFF',
+  Uncommon: 'green',
+  Rare: 'blue',
+  Epic: 'purple',
+  Legendary: 'orange',
+  Unique: '#f0e6d2'
+};
+
 const Step7 = ({
   guideData,
   characterStats,
   onPrevious,    // callback to go back
   onPublish,     // callback to finalize/publish
-  hideBottomButtons // if true, the bottom buttons will not be rendered
+  hideBottomButtons // if true, bottom buttons will not render
 }) => {
-  // This variable dictates where (horizontally) the stats table appears
   const statsLeft = 850; // in pixels
+  const [hoveredSlot, setHoveredSlot] = useState(null);
+
+  const rarityColorsMap = useCallback((gear) => {
+    if (!gear || !gear.Rarity) return '#FFD700';
+    return rarityColors[gear.Rarity] || '#FFD700';
+  }, []);
+
+  // Render an overlay with gear details and dynamic text color based on rarity.
+  const renderHoverOverlay = useCallback((slot) => {
+    const gear = guideData.gearSelections[slot];
+    if (!gear || hoveredSlot !== slot) return null;
+    const textColor = rarityColorsMap(gear);
+    return (
+      <OverlayDiv style={{ color: textColor }}>
+        {gear.Rarity && <p style={{ margin: 0 }}><strong>Rarity:</strong> {gear.Rarity}</p>}
+        {gear.Attributes && <p style={{ margin: 0 }}><strong>Attributes:</strong> {gear.Attributes}</p>}
+        {gear.Other && <p style={{ margin: 0 }}><strong>Other:</strong> {gear.Other}</p>}
+      </OverlayDiv>
+    );
+  }, [guideData.gearSelections, hoveredSlot, rarityColorsMap]);
 
   return (
     <div style={{
@@ -39,24 +65,22 @@ const Step7 = ({
       borderRadius: '10px',
       boxShadow: '0 4px 15px rgba(0, 0, 0, 0.7)',
       color: '#FFD700',
-      position: 'relative' // Container relative for absolute positioning below
+      position: 'relative'
     }}>
       <h2 style={{ fontSize: '4rem', marginBottom: '1rem', textAlign: 'left' }}>
         {guideData.title || 'Untitled Guide'}
       </h2>
 
       {/* Short Description */}
-      <div
-        style={{
-          fontSize: '2rem',
-          marginBottom: '1rem',
-          textAlign: 'left',
-          whiteSpace: 'pre-wrap',
-          wordWrap: 'break-word',
-          maxWidth: '80%',
-          margin: '0 0'
-        }}
-      >
+      <div style={{
+        fontSize: '2rem',
+        marginBottom: '1rem',
+        textAlign: 'left',
+        whiteSpace: 'pre-wrap',
+        wordWrap: 'break-word',
+        maxWidth: '80%',
+        margin: '0'
+      }}>
         {guideData.shortDescription}
       </div>
 
@@ -81,15 +105,14 @@ const Step7 = ({
 
       {/* Category & Tags */}
       <p style={{ textAlign: 'left', marginBottom: '0.5rem', fontSize: '2rem' }}>
-        <strong></strong> {guideData.category}
+        <strong>Category:</strong> {guideData.category}
       </p>
       <p style={{ textAlign: 'left', marginBottom: '1rem', fontSize: '2rem' }}>
-        <strong></strong> {guideData.tags.join(', ')}
+        <strong>Tags:</strong> {guideData.tags.join(', ')}
       </p>
 
       {/* Container for Gear Layout and Stats Table overlay */}
       <div style={{ position: 'relative', marginBottom: '0rem' }}>
-        {/* Gear Layout */}
         <GearLayout>
           {[
             'head','chest','gloves','amulet','ring1','ring2','cape','legs','feet',
@@ -99,7 +122,13 @@ const Step7 = ({
             const gear = guideData.gearSelections[slot];
             const imageSrc = gear ? getGearImage(gear.Name, slot) : null;
             return (
-              <div key={slot} className={`gear-slot ${slot}`} style={{ textAlign:'center' }}>
+              <div
+                key={slot}
+                className={`gear-slot ${slot}`}
+                style={{ textAlign:'center', position: 'relative' }}
+                onMouseEnter={() => setHoveredSlot(slot)}
+                onMouseLeave={() => setHoveredSlot(null)}
+              >
                 {gear ? (
                   <img
                     src={imageSrc}
@@ -110,12 +139,13 @@ const Step7 = ({
                 ) : (
                   slot
                 )}
+                {renderHoverOverlay(slot)}
               </div>
             );
           })}
         </GearLayout>
 
-        {/* Stats Table Overlaid on the Right of the Gear Layout */}
+        {/* Stats Table Overlaid on the Right */}
         <div style={{
           position: 'absolute',
           top: 80,
@@ -132,91 +162,81 @@ const Step7 = ({
       {/* Synergies */}
       {guideData.synergies.length > 0 ? (
         <>
-          <h3 style={{ color:'green', textAlign:'left', fontSize: '3rem' }}>Synergies</h3>
-          <div
-            style={{
-              marginBottom:'1rem',
-              display:'flex',
-              gap:'1rem',
-              flexWrap:'wrap',
-              justifyContent:'left'
-            }}
-          >
+          <h3 style={{ color: 'green', textAlign: 'left', fontSize: '3rem' }}>Synergies</h3>
+          <div style={{
+            marginBottom: '1rem',
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            justifyContent: 'left'
+          }}>
             {guideData.synergies.map((synergy, index) => (
-              <div key={index} style={{ textAlign:'center' }}>
+              <div key={index} style={{ textAlign: 'center' }}>
                 <img
                   src={`../src/assets/images/${synergy}.png`}
                   onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
                   alt={synergy}
-                  style={{ width:'90px', height:'90px', marginBottom:'0.5rem' }}
+                  style={{ width: '90px', height: '90px', marginBottom: '0.5rem' }}
                 />
-                <span style={{ fontSize:'1.5rem' }}>{synergy}</span>
+                <span style={{ fontSize: '1.5rem' }}>{synergy}</span>
               </div>
             ))}
           </div>
-
-          <div
-            style={{
-              textAlign: 'left',
-              whiteSpace: 'pre-wrap',
-              wordWrap: 'break-word',
-              maxWidth: '80%',
-              margin: '0 0',
-              fontSize: '1.75rem'
-            }}
-          >
+          <div style={{
+            textAlign: 'left',
+            whiteSpace: 'pre-wrap',
+            wordWrap: 'break-word',
+            maxWidth: '80%',
+            margin: '0',
+            fontSize: '1.75rem'
+          }}>
             {guideData.synergyText}
           </div>
         </>
       ) : (
-        <p style={{ color:'gray', textAlign:'left' }}>No synergies added yet.</p>
+        <p style={{ color: 'gray', textAlign: 'left' }}>No synergies added yet.</p>
       )}
 
       {/* Threats */}
       {guideData.threats.length > 0 ? (
         <>
-          <h3 style={{ color:'red', textAlign:'left', fontSize: '3rem' }}>Threats</h3>
-          <div
-            style={{
-              marginBottom:'1rem',
-              display:'flex',
-              gap:'1rem',
-              flexWrap:'wrap',
-              justifyContent:'left'
-            }}
-          >
+          <h3 style={{ color: 'red', textAlign: 'left', fontSize: '3rem' }}>Threats</h3>
+          <div style={{
+            marginBottom: '1rem',
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            justifyContent: 'left'
+          }}>
             {guideData.threats.map((threat, index) => (
-              <div key={index} style={{ textAlign:'center' }}>
+              <div key={index} style={{ textAlign: 'center' }}>
                 <img
                   src={`../src/assets/images/${threat}.png`}
                   onError={(e) => (e.target.src = '../src/assets/images/fallback.png')}
                   alt={threat}
-                  style={{ width:'90px', height:'90px', marginBottom:'0.5rem' }}
+                  style={{ width: '90px', height: '90px', marginBottom: '0.5rem' }}
                 />
-                <span style={{ fontSize:'1.5rem' }}>{threat}</span>
+                <span style={{ fontSize: '1.5rem' }}>{threat}</span>
               </div>
             ))}
           </div>
-
-          <div
-            style={{
-              textAlign: 'left',
-              whiteSpace: 'pre-wrap',
-              wordWrap: 'break-word',
-              maxWidth: '80%',
-              margin: '0 0',
-              fontSize: '1.75rem'
-            }}
-          >
+          <div style={{
+            textAlign: 'left',
+            whiteSpace: 'pre-wrap',
+            wordWrap: 'break-word',
+            maxWidth: '80%',
+            margin: '0',
+            fontSize: '1.75rem'
+          }}>
             {guideData.threatText}
           </div>
         </>
       ) : (
-        <p style={{ color:'gray', textAlign:'left' }}>No threats added yet.</p>
+        <p style={{ color: 'gray', textAlign: 'left' }}>No threats added yet.</p>
       )}
 
-      {/* Spells - reuse Step6 in readOnly mode */}
-      <h3 style={{ marginTop:'2rem', textAlign:'center', fontSize: '3rem' }}>Spells</h3>
+      {/* Spells */}
+      <h3 style={{ marginTop: '2rem', textAlign: 'center', fontSize: '3rem' }}>Spells</h3>
       <Step6
         selectedSpells={guideData.spells}
         setSelectedSpells={() => {}}
@@ -230,32 +250,31 @@ const Step7 = ({
 
       {/* Strategy Description */}
       {guideData.strategyDescription && (
-        <div style={{ marginTop:'2rem', textAlign:'left' }}>
-          <h3 style={{ fontSize:'3rem' }}>Strategy Description</h3>
+        <div style={{ marginTop: '2rem', textAlign: 'left' }}>
+          <h3 style={{ fontSize: '3rem' }}>Strategy Description</h3>
           <div
             style={{
-              justify:'left',
               fontSize: '1.5rem',
               maxWidth: '80%',
-              margin: '0 0'
+              margin: '0'
             }}
             dangerouslySetInnerHTML={{ __html: guideData.strategyDescription }}
           />
         </div>
       )}
 
-      {/* Bottom Buttons: Render only if hideBottomButtons is not true */}
+      {/* Bottom Button */}
       {!hideBottomButtons && (
-        <div style={{ marginTop:'2rem', display:'flex', justifyContent:'center', gap:'1rem' }}>
+        <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
           <button
             onClick={onPublish}
             style={{
-              padding:'0.75rem 1.5rem',
-              background:'#4CAF50',
-              color:'#FFF',
-              border:'none',
-              borderRadius:'0.5rem',
-              cursor:'pointer'
+              padding: '0.75rem 1.5rem',
+              background: '#4CAF50',
+              color: '#FFF',
+              border: 'none',
+              borderRadius: '0.5rem',
+              cursor: 'pointer'
             }}
           >
             Publish
@@ -267,3 +286,19 @@ const Step7 = ({
 };
 
 export default Step7;
+
+const OverlayDiv = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+`;

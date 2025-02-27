@@ -2,9 +2,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import GlobalStyle from '../Styles/GlobalStyle';
-import { doc, getDoc, collection, addDoc, serverTimestamp, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { 
+  doc, 
+  getDoc, 
+  collection, 
+  addDoc, 
+  serverTimestamp, 
+  onSnapshot, 
+  orderBy, 
+  query,
+  updateDoc 
+} from 'firebase/firestore';
 import { db, auth } from '../firebase';
 import Step7 from '../Steps/Step7';
+import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 
 const GuideViewPage = () => {
   const { guideId } = useParams();
@@ -13,9 +24,11 @@ const GuideViewPage = () => {
   const [loading, setLoading] = useState(true);
   const [characterStats, setCharacterStats] = useState({});
   const [newComment, setNewComment] = useState('');
-  const [comments, setComments] = useState([]); // New state for comments
+  const [comments, setComments] = useState([]);
+  const [userVote, setUserVote] = useState(null); // 'like', 'dislike', or null
   const currentUser = auth.currentUser;
 
+  // Fetch guide data once
   useEffect(() => {
     const fetchGuide = async () => {
       try {
@@ -72,8 +85,74 @@ const GuideViewPage = () => {
     }
   };
 
+  // Handle like/dislike functionality
+  const handleVote = async (voteType) => {
+    if (!currentUser) {
+      alert('Please sign in to vote.');
+      return;
+    }
+    const guideRef = doc(db, 'guides', guideId);
+    let newUpVotes = guideData.upVotes || 0;
+    let newDownVotes = guideData.downVotes || 0;
+
+    if (userVote === voteType) {
+      // Remove vote
+      if (voteType === 'like') {
+        newUpVotes--;
+      } else {
+        newDownVotes--;
+      }
+      setUserVote(null);
+    } else if (userVote && userVote !== voteType) {
+      // Change vote
+      if (userVote === 'like') {
+        newUpVotes--;
+        newDownVotes++;
+      } else {
+        newDownVotes--;
+        newUpVotes++;
+      }
+      setUserVote(voteType);
+    } else {
+      // No previous vote
+      if (voteType === 'like') {
+        newUpVotes++;
+      } else {
+        newDownVotes++;
+      }
+      setUserVote(voteType);
+    }
+    try {
+      await updateDoc(guideRef, {
+        upVotes: newUpVotes,
+        downVotes: newDownVotes,
+      });
+      // Optionally update local guideData state to reflect changes immediately:
+      setGuideData((prev) => ({
+        ...prev,
+        upVotes: newUpVotes,
+        downVotes: newDownVotes,
+      }));
+    } catch (error) {
+      console.error('Error updating vote:', error);
+      alert('Error processing vote. Please try again.');
+    }
+  };
+
   if (loading) return <p>Loading...</p>;
   if (!guideData) return <p>Guide not found.</p>;
+
+  // Inline style for like/dislike buttons
+  const iconButtonStyle = {
+    background: '#2f2f2f',
+    border: 'none',
+    color: '#FFD700',
+    cursor: 'pointer',
+    fontSize: '1.2rem',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem'
+  };
 
   return (
     <>
@@ -104,7 +183,21 @@ const GuideViewPage = () => {
             ← Back to Guides
           </button>
 
-          <Step7 guideData={guideData} characterStats={characterStats} hideBottomButtons={true} />
+          {/* Like/Dislike Buttons */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
+            <button style={iconButtonStyle} onClick={() => handleVote('like')}>
+              <FaThumbsUp /> {guideData.upVotes || 0}
+            </button>
+            <button style={iconButtonStyle} onClick={() => handleVote('dislike')}>
+              <FaThumbsDown /> {guideData.downVotes || 0}
+            </button>
+          </div>
+
+          <Step7 
+            guideData={guideData} 
+            characterStats={characterStats} 
+            hideBottomButtons={true} 
+          />
 
           <div style={{ marginTop: '2rem' }}>
             <h3 style={{ textAlign: 'center' }}>Add a Comment</h3>

@@ -1,13 +1,16 @@
+// src/Components/Navbar.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { auth } from '../firebase';
-import { signOut } from "firebase/auth";
-import AuthPanel from './AuthPanel'; // Import the AuthPanel from its file
+import { signOut } from 'firebase/auth';
+import AuthPanel from './AuthPanel'; // Your custom auth panel component
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
   const [showAuthDropdown, setShowAuthDropdown] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const dropdownRef = useRef(null);
@@ -29,7 +32,7 @@ const Navbar = () => {
     }
   };
 
-  // Close dropdown if clicked outside
+  // Close auth dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -46,26 +49,82 @@ const Navbar = () => {
         <Logo to="/">
           <LogoHighlight>N</LogoHighlight>ezbuild
         </Logo>
-        <NavLinks>
-          <NavLink to="/" $active={location.pathname === '/'}>Home</NavLink>
-          <NavLink to="/Guides" $active={location.pathname === '/Guides'}>Guides</NavLink>
-          <NavLink to="/create-guide" $active={location.pathname === '/create-guide'}>Create Guide</NavLink>
-          <NavLink to="/tier-lists" $active={location.pathname === '/tier-lists'}>Tier Lists</NavLink>
-          <NavLink to="/latest-patch" $active={location.pathname === '/latest-patch'}>Latest Patch Notes</NavLink>
-        </NavLinks>
+        <CenteredNav>
+          <NavLinks>
+            <NavLink to="/" $active={location.pathname === '/'} aria-label="Home">
+              Home
+            </NavLink>
+            <NavLink to="/Guides" $active={location.pathname === '/Guides'} aria-label="Guides">
+              Guides
+            </NavLink>
+            <NavLink to="/create-guide" $active={location.pathname === '/create-guide'} aria-label="Create Guide">
+              Create Guide
+            </NavLink>
+            <NavLink to="/tier-lists" $active={location.pathname === '/tier-lists'} aria-label="Tier Lists">
+              Tier Lists
+            </NavLink>
+            <NavLink to="/latest-patch" $active={location.pathname === '/latest-patch'} aria-label="Latest Patch Notes">
+              Latest Patch Notes
+            </NavLink>
+          </NavLinks>
+        </CenteredNav>
         <AuthLinks>
           {user ? (
             <>
-              <UserDisplay>Welcome, {user?.displayName || user?.email || 'Guest'}</UserDisplay>
-              <AuthButton onClick={handleSignOut}>Sign Out</AuthButton>
+              <UserDisplay>
+                Welcome, {user?.displayName || user?.email || 'Guest'}
+              </UserDisplay>
+              <AuthButton onClick={handleSignOut} aria-label="Sign Out">
+                Sign Out
+              </AuthButton>
             </>
           ) : (
-            <AuthButton onClick={() => setShowAuthDropdown((prev) => !prev)}>
+            <AuthButton onClick={() => setShowAuthDropdown((prev) => !prev)} aria-label="Sign Up / Sign In">
               Sign Up / Sign In
             </AuthButton>
           )}
         </AuthLinks>
+        <MobileMenuToggle onClick={() => setMobileMenuOpen((prev) => !prev)}>
+          {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </MobileMenuToggle>
       </NavBarContainer>
+      {mobileMenuOpen && (
+        <MobileNav>
+          <NavLinksMobile>
+            <NavLinkMobile to="/" onClick={() => setMobileMenuOpen(false)}>
+              Home
+            </NavLinkMobile>
+            <NavLinkMobile to="/Guides" onClick={() => setMobileMenuOpen(false)}>
+              Guides
+            </NavLinkMobile>
+            <NavLinkMobile to="/create-guide" onClick={() => setMobileMenuOpen(false)}>
+              Create Guide
+            </NavLinkMobile>
+            <NavLinkMobile to="/tier-lists" onClick={() => setMobileMenuOpen(false)}>
+              Tier Lists
+            </NavLinkMobile>
+            <NavLinkMobile to="/latest-patch" onClick={() => setMobileMenuOpen(false)}>
+              Latest Patch Notes
+            </NavLinkMobile>
+          </NavLinksMobile>
+          <MobileAuthLinks>
+            {user ? (
+              <>
+                <UserDisplay>
+                  Welcome, {user?.displayName || user?.email || 'Guest'}
+                </UserDisplay>
+                <AuthButton onClick={() => { setMobileMenuOpen(false); handleSignOut(); }}>
+                  Sign Out
+                </AuthButton>
+              </>
+            ) : (
+              <AuthButton onClick={() => { setMobileMenuOpen(false); navigate('/auth'); }}>
+                Sign Up / Sign In
+              </AuthButton>
+            )}
+          </MobileAuthLinks>
+        </MobileNav>
+      )}
       {showAuthDropdown && (
         <AuthDropdown ref={dropdownRef}>
           <AuthPanel />
@@ -76,8 +135,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// Styled Components for Navbar
 
 const NavBarContainer = styled.nav`
   position: fixed;
@@ -90,11 +147,11 @@ const NavBarContainer = styled.nav`
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 30px;
   color: #FFD700;
 `;
 
+/* Logo remains on the left */
 const Logo = styled(Link)`
   font-size: 2.2rem;
   font-family: 'Playfair Display', serif;
@@ -112,6 +169,13 @@ const LogoHighlight = styled.span`
   font-size: 2.8rem;
 `;
 
+/* Center the navigation links container absolutely */
+const CenteredNav = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 const NavLinks = styled.div`
   display: flex;
   gap: 25px;
@@ -123,9 +187,10 @@ const NavLink = styled(Link)`
   font-size: 1.2rem;
   font-weight: bold;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
   &:hover {
     color: #FFFFFF;
+    transform: scale(1.05);
   }
   &:after {
     content: "";
@@ -146,6 +211,7 @@ const AuthLinks = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-left: auto;
 `;
 
 const AuthButton = styled.button`
@@ -157,9 +223,10 @@ const AuthButton = styled.button`
   border-radius: 5px;
   padding: 8px 15px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
   &:hover {
     background-color: #FFFFFF;
+    transform: scale(1.05);
   }
 `;
 
@@ -168,10 +235,58 @@ const UserDisplay = styled.div`
   color: #FFD700;
 `;
 
+const MobileMenuToggle = styled.button`
+  background: none;
+  border: none;
+  color: #FFD700;
+  cursor: pointer;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileNav = styled.div`
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #1A1A1A;
+  padding: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const NavLinksMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+const NavLinkMobile = styled(Link)`
+  text-decoration: none;
+  color: #FFD700;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+  &:hover {
+    color: #FFFFFF;
+    transform: scale(1.05);
+  }
+`;
+
+const MobileAuthLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 const AuthDropdown = styled.div`
   position: fixed;
-  top: 70px; /* Below the navbar */
-  right: 30px; /* Adjust as needed */
+  top: 70px;
+  right: 30px;
   z-index: 999;
   width: 400px;
   background-color: #2F2F2F;

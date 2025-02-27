@@ -44,7 +44,7 @@ const guideTags = [
 const GUIDE_CARD_WIDTH_PX = 225; // width of each guide card in pixels
 const GUIDE_CARD_HEIGHT_PX = 250; // height of each guide card in pixels
 const CARD_GAP = 20; // gap between cards in pixels
-const SCROLL_DURATION = 10; // seconds for one full loop of the duplicated content
+const SCROLL_DURATION = 30; // seconds for one full loop of the duplicated content
 const SCROLL_EASING = 'linear'; // continuous smooth motion
 
 // Create a keyframes animation for continuous scrolling
@@ -244,7 +244,7 @@ const ClassName = styled.span`
 
 const CarouselSection = styled.section`
   padding: 20px;
-  background-color: #2F2F2F;
+  background-color: #2222;
   border-radius: 8px;
   overflow: hidden;
 `;
@@ -279,7 +279,7 @@ const CarouselItem = styled.div`
 const GuideCard = styled.div`
   padding: 10px;
   color: #FFD700;
-  background-color: #333333;
+  background-color: #111222;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   width: 100%;

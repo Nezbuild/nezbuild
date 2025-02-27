@@ -1,14 +1,27 @@
-import Tooltip from '../Components/Tooltip';
+import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 const Step5 = ({ data, updateData }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const editorStyle = {
+    fontSize: '1.25rem',
+    backgroundColor: '#333',
+    color: '#FFD700',
+    border: '1px solid #FFD700',
+    borderRadius: '0.375rem',
+    minHeight: '20px',
+    transition: 'box-shadow 0.3s, border 0.3s',
+    boxShadow: isFocused ? '0 0 6px 2px #FFD700' : 'none'
+  };
+
   return (
     <div
       style={{
         margin: '2rem 0',
         padding: '2rem',
-        backgroundColor: '#222', // Dark gray box
+        backgroundColor: '#222',
         border: '1px solid #444',
         borderRadius: '0.5rem',
         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
@@ -32,21 +45,9 @@ const Step5 = ({ data, updateData }) => {
         value={data.strategyDescription}
         onChange={(value) => updateData('strategyDescription', value)}
         placeholder="Write your strategy here..."
-        style={{
-          fontSize: '1.25rem',
-          backgroundColor: '#333',
-          color: '#FFD700',
-          border: '1px solid #FFD700',
-          borderRadius: '0.375rem',
-          minHeight: '20px',
-          transition: 'box-shadow 0.3s, border 0.3s',
-        }}
-        onFocus={(e) => {
-          e.target.style.boxShadow = '0 0 6px 2px #FFD700';
-        }}
-        onBlur={(e) => {
-          e.target.style.boxShadow = 'none';
-        }}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        style={editorStyle}
       />
     </div>
   );

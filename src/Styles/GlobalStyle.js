@@ -1,6 +1,12 @@
+// src/Styles/GlobalStyle.jsx
 import { createGlobalStyle } from 'styled-components';
-// FFBF00
+
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --background-fade: 0.8; /* Adjust fade amount here (0 to 1) */
+    --background-image: url('/src/assets/images/WebsiteBackground.png');
+  }
+
   img {
     pointer-events: none; /* Prevent interaction */
     user-drag: none; /* Disable dragging */
@@ -15,8 +21,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 50px;
-    background-color: #000000;  /* Black background */
-    color: #FFBF00;  /* Gold text */ 
+    background: 
+      linear-gradient(rgba(0, 0, 0, var(--background-fade)), rgba(0, 0, 0, var(--background-fade))),
+      var(--background-image) no-repeat center center/cover;
+    color: #FFBF00;  /* Gold text */
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -35,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Apply directly to the content area */
   .content-container {
-    background-color: #2F2F2F;  /* Dark Silver / Dark Gray */
+    background-color: #111;  /* Dark Silver / Dark Gray */
     border-radius: 8px;
     padding: 40px;
     width: 100%;

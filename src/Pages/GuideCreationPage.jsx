@@ -199,6 +199,11 @@ const GuideCreationPage = () => {
     });
   }, []);
 
+  const handlePublishAndClear = async (guideData) => {
+    await handlePublish(guideData);
+    clearSavedGuide();
+  };
+
   return (
     <>
       <GlobalStyle />
@@ -266,7 +271,7 @@ const GuideCreationPage = () => {
               guideData={guideData}
               characterStats={characterStats}
               onPrevious={() => setCurrentStep(hasSpellMemoryPerk ? 4 : 3)}
-              onPublish={() => handlePublish(guideData)}
+              onPublish={() => handlePublishAndClear(guideData)}
               hideBottomButtons={false}
             />
           )}

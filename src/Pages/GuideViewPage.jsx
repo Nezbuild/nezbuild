@@ -16,6 +16,7 @@ import {
 import { db, auth } from '../firebase';
 import Step7 from '../Steps/Step7';
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
+import { runTransaction } from 'firebase/firestore';
 
 const GuideViewPage = () => {
   const { guideId } = useParams();
@@ -86,58 +87,77 @@ const GuideViewPage = () => {
   };
 
   // Handle like/dislike functionality
-  const handleVote = async (voteType) => {
-    if (!currentUser) {
-      alert('Please sign in to vote.');
-      return;
-    }
-    const guideRef = doc(db, 'guides', guideId);
-    let newUpVotes = guideData.upVotes || 0;
-    let newDownVotes = guideData.downVotes || 0;
+  const [voteCooldown, setVoteCooldown] = useState(false);
 
-    if (userVote === voteType) {
-      // Remove vote
-      if (voteType === 'like') {
-        newUpVotes--;
+// inside your GuideViewPage component:
+const handleVote = async (voteType) => {
+  if (!currentUser) {
+    alert('Please sign in to vote.');
+    return;
+  }
+  if (voteCooldown) return; // assuming you have implemented the cooldown as before
+  setVoteCooldown(true);
+  setTimeout(() => setVoteCooldown(false), 500);
+
+  const guideRef = doc(db, 'guides', guideId);
+  const voteRef = doc(db, 'guides', guideId, 'votes', currentUser.uid);
+
+  try {
+    await runTransaction(db, async (transaction) => {
+      const guideDoc = await transaction.get(guideRef);
+      const voteDoc = await transaction.get(voteRef);
+
+      let newUpVotes = guideDoc.data().upVotes || 0;
+      let newDownVotes = guideDoc.data().downVotes || 0;
+      const existingVote = voteDoc.exists() ? voteDoc.data().vote : null;
+
+      if (existingVote === voteType) {
+        // Remove vote
+        if (voteType === 'like') {
+          newUpVotes--;
+        } else {
+          newDownVotes--;
+        }
+        transaction.delete(voteRef);
+      } else if (existingVote && existingVote !== voteType) {
+        // Changing vote from like to dislike or vice versa.
+        if (existingVote === 'like') {
+          newUpVotes--;
+          newDownVotes++;
+        } else {
+          newDownVotes--;
+          newUpVotes++;
+        }
+        transaction.update(voteRef, { vote: voteType, timestamp: serverTimestamp() });
       } else {
-        newDownVotes--;
+        // New vote
+        if (voteType === 'like') {
+          newUpVotes++;
+        } else {
+          newDownVotes++;
+        }
+        transaction.set(voteRef, { vote: voteType, timestamp: serverTimestamp() });
       }
-      setUserVote(null);
-    } else if (userVote && userVote !== voteType) {
-      // Change vote
-      if (userVote === 'like') {
-        newUpVotes--;
-        newDownVotes++;
-      } else {
-        newDownVotes--;
-        newUpVotes++;
-      }
-      setUserVote(voteType);
-    } else {
-      // No previous vote
-      if (voteType === 'like') {
-        newUpVotes++;
-      } else {
-        newDownVotes++;
-      }
-      setUserVote(voteType);
-    }
-    try {
-      await updateDoc(guideRef, {
+      transaction.update(guideRef, {
         upVotes: newUpVotes,
         downVotes: newDownVotes,
       });
-      // Optionally update local guideData state to reflect changes immediately:
-      setGuideData((prev) => ({
-        ...prev,
-        upVotes: newUpVotes,
-        downVotes: newDownVotes,
-      }));
-    } catch (error) {
-      console.error('Error updating vote:', error);
-      alert('Error processing vote. Please try again.');
-    }
-  };
+      // Return the new counts (optional, if you want to update local state)
+      return { newUpVotes, newDownVotes };
+    });
+    // Optionally, update local state after the transaction completes:
+    // (You might re-read the guide document or use the returned values from the transaction.)
+    // For example, if you had stored the transaction result:
+    // const { newUpVotes, newDownVotes } = result;
+    // setGuideData(prev => ({ ...prev, upVotes: newUpVotes, downVotes: newDownVotes }));
+    // Also update the local userVote state:
+    setUserVote(existingVote === voteType ? null : voteType);
+  } catch (error) {
+    console.error('Error updating vote:', error);
+    alert('Error processing vote. Please try again.');
+  }
+};
+  
 
   if (loading) return <p>Loading...</p>;
   if (!guideData) return <p>Guide not found.</p>;

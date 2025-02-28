@@ -114,7 +114,7 @@ export default function PentagonLayout({
                       }}
                     />
                     {/* Red overlay if over capacity and not readOnly */}
-                    {!readOnly && isOver && (
+                    {isOver && (
                       <div
                         style={{
                           position: 'absolute',

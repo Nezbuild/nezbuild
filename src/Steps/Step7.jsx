@@ -29,13 +29,15 @@ const rarityColors = {
 
 const Step7 = ({
   guideData,
-  characterStats,
+  characterStats, // no longer used for memory in this updated approach
   onPrevious,    // callback to go back
   onPublish,     // callback to finalize/publish
   hideBottomButtons // if true, bottom buttons will not render
 }) => {
   const statsLeft = 850; // in pixels
   const [hoveredSlot, setHoveredSlot] = useState(null);
+  // New state to hold memory (knowledge-6) calculated by the stats table.
+  const [memory, setMemory] = useState(0);
 
   const rarityColorsMap = useCallback((gear) => {
     if (!gear || !gear.Rarity) return '#FFD700';
@@ -154,7 +156,11 @@ const Step7 = ({
           <ClassGearStatsTable
             selectedClass={guideData.class}
             equippedGear={guideData.gearSelections}
-            onStatsUpdate={() => {}}
+            // When the stats table calculates stats, update our memory state.
+            onStatsUpdate={(stats) => {
+              // For example, if stats.Memory contains the "knowledge-6" value:
+              setMemory(stats.Memory);
+            }}
           />
         </div>
       </div>
@@ -242,7 +248,7 @@ const Step7 = ({
         setSelectedSpells={() => {}}
         selectedPerks={guideData.gearSelections}
         currentClass={guideData.class}
-        memory={characterStats.Memory || 0}
+        memory={memory}  // Pass the updated memory here
         onNext={() => {}}
         onPrevious={() => {}}
         readOnly={true}

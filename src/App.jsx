@@ -10,7 +10,7 @@ import GuideViewPage from './Pages/GuideViewPage';
 // Authentication Components
 import AuthPage from './Pages/AuthPage'; // Combined Sign-In/Sign-Up Page
 import AlertProvider from './Components/AlertProvider'; // Custom Alert Provider
-
+import CreditsPage from './Pages/CreditsPage'; // Import your credits page
 // Private Route for Authentication
 import PrivateRoute from './Components/PrivateRoute'; // Private Route Component
 import Guides from './Pages/Guides';
@@ -60,6 +60,7 @@ function App() {
           <Route path="/latest-patch" element={<LatestPatchNotes />} /> {/* Latest Patch Notes Page */}
           <Route path="/Guides" element={<Guides />} /> {/* Guides */}
           <Route path="/guides/:guideId" element={<GuideViewPage />} />
+          <Route path="/credits" element={<CreditsPage />} />  {/* New route */}
 
           {/* Authentication Route */}
           <Route path="/auth" element={<AuthPage />} /> {/* Combined Auth Page */}

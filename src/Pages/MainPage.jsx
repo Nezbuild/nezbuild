@@ -285,6 +285,7 @@ const MainPage = () => {
           <FooterLink href="/create-guide">Create Guide</FooterLink>
           <FooterLink href="/tier-lists">Tier Lists</FooterLink>
           <FooterLink href="/latest-patch">Latest Patch Notes</FooterLink>
+          <FooterLink href="/credits">Credits & Appreciation</FooterLink> {/* New link */}
         </Footer>
       </MainContainer>
     </>

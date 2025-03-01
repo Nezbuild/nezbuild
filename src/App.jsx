@@ -1,3 +1,4 @@
+// src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './Components/Navbar'; // Navbar Component
@@ -7,13 +8,12 @@ import AboutPage from './Pages/AboutPage'; // About Page
 import TierListPage from './Pages/TierListPage'; // Tier List Page
 import LatestPatchNotes from './Pages/LatestPatchNotes'; // Latest Patch Notes Page
 import GuideViewPage from './Pages/GuideViewPage';
-// Authentication Components
 import AuthPage from './Pages/AuthPage'; // Combined Sign-In/Sign-Up Page
-import AlertProvider from './Components/AlertProvider'; // Custom Alert Provider
-import CreditsPage from './Pages/CreditsPage'; // Import your credits page
-// Private Route for Authentication
-import PrivateRoute from './Components/PrivateRoute'; // Private Route Component
+import CreditsPage from './Pages/CreditsPage'; // Credits Page
 import Guides from './Pages/Guides';
+import PrivateRoute from './Components/PrivateRoute'; // Private Route Component
+import AlertProvider from './Components/AlertProvider'; // Custom Alert Provider
+import Footer from './Components/Footer'; // Footer Component
 
 function App() {
   useEffect(() => {
@@ -24,7 +24,6 @@ function App() {
     document.addEventListener('keydown', (event) => {
       if (
         event.key === 'F12' ||
-        // (event.ctrlKey && event.shiftKey && event.key === 'I') ||
         (event.ctrlKey && event.shiftKey && event.key === 'J') ||
         (event.ctrlKey && event.key === 'U')
       ) {
@@ -36,7 +35,6 @@ function App() {
     const detectDevTools = () => {
       const threshold = 160;
       const start = performance.now();
-      // debugger;
       const end = performance.now();
       if (end - start > threshold) {
         alert('DevTools is open!');
@@ -48,36 +46,33 @@ function App() {
   return (
     <AlertProvider>
       <Router>
-        {/* Navbar is displayed on all pages */}
-        <Navbar />
-
-        {/* Define Routes for all pages */}
-        <Routes>
-          {/* Public Routes */}
-          <Route path="/" element={<MainPage />} /> {/* Home Page */}
-          <Route path="/about" element={<AboutPage />} /> {/* About Page */}
-          <Route path="/tier-lists" element={<TierListPage />} /> {/* Tier List Page */}
-          <Route path="/latest-patch" element={<LatestPatchNotes />} /> {/* Latest Patch Notes Page */}
-          <Route path="/Guides" element={<Guides />} /> {/* Guides */}
-          <Route path="/guides/:guideId" element={<GuideViewPage />} />
-          <Route path="/credits" element={<CreditsPage />} />  {/* New route */}
-
-          {/* Authentication Route */}
-          <Route path="/auth" element={<AuthPage />} /> {/* Combined Auth Page */}
-
-          {/* Private Routes */}
-          <Route
-            path="/create-guide"
-            element={
-              <PrivateRoute>
-                <GuideCreationPage />
-              </PrivateRoute>
-            }
-          />
-
-          {/* 404 Route */}
-          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
-        </Routes>
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <Navbar />
+          {/* This container will grow to fill the available space, pushing the footer down */}
+          <div style={{ flexGrow: 1 }}>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/tier-lists" element={<TierListPage />} />
+              <Route path="/latest-patch" element={<LatestPatchNotes />} />
+              <Route path="/Guides" element={<Guides />} />
+              <Route path="/guides/:guideId" element={<GuideViewPage />} />
+              <Route path="/credits" element={<CreditsPage />} />
+              <Route path="/auth" element={<AuthPage />} />
+              <Route
+                path="/create-guide"
+                element={
+                  <PrivateRoute>
+                    <GuideCreationPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+            </Routes>
+          </div>
+          {/* Footer placed outside the growing content so it always stays at the bottom */}
+          <Footer />
+        </div>
       </Router>
     </AlertProvider>
   );

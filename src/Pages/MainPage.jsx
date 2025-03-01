@@ -279,14 +279,6 @@ const MainPage = () => {
         </CarouselSection>
 
         {/* Footer */}
-        <Footer>
-          <FooterLink href="/">Home</FooterLink>
-          <FooterLink href="/guides">Guides</FooterLink>
-          <FooterLink href="/create-guide">Create Guide</FooterLink>
-          <FooterLink href="/tier-lists">Tier Lists</FooterLink>
-          <FooterLink href="/latest-patch">Latest Patch Notes</FooterLink>
-          <FooterLink href="/credits">Credits & Appreciation</FooterLink> {/* New link */}
-        </Footer>
       </MainContainer>
     </>
   );
@@ -485,20 +477,3 @@ const GuideDescription = styled.p`
   line-height: 1.4;
 `;
 
-const Footer = styled.footer`
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px 0;
-  border-top: 1px solid #444;
-  font-size: 1rem;
-`;
-
-const FooterLink = styled.a`
-  color: #FFBF00;
-  text-decoration: none;
-  transition: color 0.3s;
-  &:hover {
-    color: #FFFFFF;
-  }
-`;

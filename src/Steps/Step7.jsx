@@ -29,14 +29,15 @@ const rarityColors = {
 
 const Step7 = ({
   guideData,
-  characterStats, // no longer used for memory in this updated approach
-  onPrevious,    // callback to go back
-  onPublish,     // callback to finalize/publish
-  hideBottomButtons // if true, bottom buttons will not render
+  characterStats,
+  onPrevious,
+  onPublish,
+  hideBottomButtons
 }) => {
   const statsLeft = 850; // in pixels
-  const [hoveredSlot, setHoveredSlot] = useState(null);
-  // New state to hold memory (knowledge-6) calculated by the stats table.
+  // hoverOverlay stores data for the floating overlay window
+  const [hoverOverlay, setHoverOverlay] = useState(null);
+  // Memory (knowledge-6) from the stats table
   const [memory, setMemory] = useState(0);
 
   const rarityColorsMap = useCallback((gear) => {
@@ -44,19 +45,29 @@ const Step7 = ({
     return rarityColors[gear.Rarity] || '#FFD700';
   }, []);
 
-  // Render an overlay with gear details and dynamic text color based on rarity.
-  const renderHoverOverlay = useCallback((slot) => {
+  // When mouse enters a gear slot with gear, set the overlay with data and mouse position.
+  const handleGearHover = (slot, event) => {
     const gear = guideData.gearSelections[slot];
-    if (!gear || hoveredSlot !== slot) return null;
-    const textColor = rarityColorsMap(gear);
-    return (
-      <OverlayDiv style={{ color: textColor }}>
-        {gear.Rarity && <p style={{ margin: 0 }}><strong>Rarity:</strong> {gear.Rarity}</p>}
-        {gear.Attributes && <p style={{ margin: 0 }}><strong>Attributes:</strong> {gear.Attributes}</p>}
-        {gear.Other && <p style={{ margin: 0 }}><strong>Other:</strong> {gear.Other}</p>}
-      </OverlayDiv>
-    );
-  }, [guideData.gearSelections, hoveredSlot, rarityColorsMap]);
+    if (!gear) return;
+    setHoverOverlay({
+      gear,
+      slot,
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
+
+  // Update overlay position on mouse move.
+  const updateOverlayPosition = (event) => {
+    if (hoverOverlay) {
+      setHoverOverlay((prev) => ({ ...prev, x: event.clientX, y: event.clientY }));
+    }
+  };
+
+  // Clear overlay when mouse leaves.
+  const handleGearLeave = () => {
+    setHoverOverlay(null);
+  };
 
   return (
     <div style={{
@@ -128,8 +139,9 @@ const Step7 = ({
                 key={slot}
                 className={`gear-slot ${slot}`}
                 style={{ textAlign:'center', position: 'relative' }}
-                onMouseEnter={() => setHoveredSlot(slot)}
-                onMouseLeave={() => setHoveredSlot(null)}
+                onMouseEnter={(e) => gear && handleGearHover(slot, e)}
+                onMouseMove={gear ? updateOverlayPosition : undefined}
+                onMouseLeave={gear ? handleGearLeave : undefined}
               >
                 {gear ? (
                   <img
@@ -139,9 +151,8 @@ const Step7 = ({
                     style={{ width: '80%', height: '80%', objectFit: 'contain' }}
                   />
                 ) : (
-                  slot
+                  <EmptySlot>{}</EmptySlot>
                 )}
-                {renderHoverOverlay(slot)}
               </div>
             );
           })}
@@ -156,14 +167,41 @@ const Step7 = ({
           <ClassGearStatsTable
             selectedClass={guideData.class}
             equippedGear={guideData.gearSelections}
-            // When the stats table calculates stats, update our memory state.
             onStatsUpdate={(stats) => {
-              // For example, if stats.Memory contains the "knowledge-6" value:
               setMemory(stats.Memory);
             }}
           />
         </div>
       </div>
+
+      {/* Floating Hover Overlay Window */}
+      {hoverOverlay && (
+        <HoverOverlayWindow 
+          style={{
+            top: hoverOverlay.y + 10,
+            left: hoverOverlay.x + 10,
+            color: rarityColorsMap(hoverOverlay.gear)
+          }}
+        >
+          {hoverOverlay.gear.Name && <p><strong>Name:</strong> {hoverOverlay.gear.Name}</p>}
+          {hoverOverlay.gear["Damage on Hit"] && hoverOverlay.gear["Damage on Hit"] !== 'None' && (
+            <p><strong>Damage:</strong> {hoverOverlay.gear["Damage on Hit"]}</p>
+          )}
+          {hoverOverlay.gear.Rarity && <p><strong>Rarity:</strong> {hoverOverlay.gear.Rarity}</p>}
+          {hoverOverlay.gear.Description && hoverOverlay.gear.Description !== 'None' && (
+            <p><strong>Description:</strong> {hoverOverlay.gear.Description}</p>
+          )}
+          {hoverOverlay.gear.Attributes && hoverOverlay.gear.Attributes !== 'None' && (
+            <p><strong>Attributes:</strong> {hoverOverlay.gear.Attributes}</p>
+          )}
+          {hoverOverlay.gear.Other && hoverOverlay.gear.Other !== 'None' && (
+            <p><strong>Other:</strong> {hoverOverlay.gear.Other}</p>
+          )}
+          {hoverOverlay.gear.MS && hoverOverlay.gear.MS !== 'None' && (
+            <p><strong>Movement speed:</strong> {hoverOverlay.gear.MS}</p>
+          )}
+        </HoverOverlayWindow>
+      )}
 
       {/* Synergies */}
       {guideData.synergies.length > 0 ? (
@@ -248,7 +286,7 @@ const Step7 = ({
         setSelectedSpells={() => {}}
         selectedPerks={guideData.gearSelections}
         currentClass={guideData.class}
-        memory={memory}  // Pass the updated memory here
+        memory={memory}  // Pass updated memory here
         onNext={() => {}}
         onPrevious={() => {}}
         readOnly={true}
@@ -293,18 +331,26 @@ const Step7 = ({
 
 export default Step7;
 
-const OverlayDiv = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+const HoverOverlayWindow = styled.div`
+  position: fixed;
+  z-index: 999;
+  background: rgba(128, 128, 128, 0.5);
   padding: 0.5rem;
-  box-sizing: border-box;
+  border-radius: 5px;
+  pointer-events: none;
+  color: inherit;
+  font-size: 1.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+`;
+
+const EmptySlot = styled.div`
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #ccc;
+  font-size: 1.5rem;
+  border-radius: 5px;
 `;

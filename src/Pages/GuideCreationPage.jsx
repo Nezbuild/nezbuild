@@ -14,9 +14,11 @@ import { db } from '../firebase';
 
 // Publish handler – ensures votes, awards, comments, and date are set
 // Publish handler – now writes the guide data to Firestore
+import { auth } from '../firebase'; // Ensure you import auth from your Firebase config
+
 const handlePublish = async (guideData) => {
   try {
-    // Prepare final guide data with additional metadata
+    const currentUser = auth.currentUser;
     const finalGuideData = {
       ...guideData,
       upVotes: 0,
@@ -25,12 +27,20 @@ const handlePublish = async (guideData) => {
       comments: '',
       awards: [],
       datePublished: serverTimestamp(), // server-generated timestamp
-      // username: (fill this from Firebase Auth if available)
+      username: currentUser ? (currentUser.displayName || currentUser.email || 'Anonymous') : 'Anonymous',
     };
+    // Log the entire object
+    console.log("Final Guide Data:", finalGuideData);
 
-    // Save the guide document to Firestore under the 'guides' collection
+    // Log any field that is undefined
+    Object.entries(finalGuideData).forEach(([key, value]) => {
+      if (value === undefined) {
+        console.error(`Field "${key}" is undefined.`);
+      }
+    });
+
+    // Now attempt to publish the guide
     const docRef = await addDoc(collection(db, 'guides'), finalGuideData);
-
     console.log('✅ Guide published successfully with ID:', docRef.id);
     alert('Guide published successfully!');
   } catch (error) {
@@ -39,7 +49,10 @@ const handlePublish = async (guideData) => {
   }
 };
 
+
+
 const GuideCreationPage = () => {
+  
   const [characterStats, setCharacterStats] = useState({});
   const [currentStep, setCurrentStep] = useState(1);
 

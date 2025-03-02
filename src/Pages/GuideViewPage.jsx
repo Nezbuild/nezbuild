@@ -95,7 +95,7 @@ const handleVote = async (voteType) => {
     alert('Please sign in to vote.');
     return;
   }
-  if (voteCooldown) return; // assuming you have implemented the cooldown as before
+  if (voteCooldown) return; // Cooldown prevents spamming
   setVoteCooldown(true);
   setTimeout(() => setVoteCooldown(false), 500);
 
@@ -103,13 +103,14 @@ const handleVote = async (voteType) => {
   const voteRef = doc(db, 'guides', guideId, 'votes', currentUser.uid);
 
   try {
-    await runTransaction(db, async (transaction) => {
+    const result = await runTransaction(db, async (transaction) => {
       const guideDoc = await transaction.get(guideRef);
       const voteDoc = await transaction.get(voteRef);
 
       let newUpVotes = guideDoc.data().upVotes || 0;
       let newDownVotes = guideDoc.data().downVotes || 0;
       const existingVote = voteDoc.exists() ? voteDoc.data().vote : null;
+      let newUserVote = null;
 
       if (existingVote === voteType) {
         // Remove vote
@@ -119,8 +120,9 @@ const handleVote = async (voteType) => {
           newDownVotes--;
         }
         transaction.delete(voteRef);
+        newUserVote = null;
       } else if (existingVote && existingVote !== voteType) {
-        // Changing vote from like to dislike or vice versa.
+        // Changing vote
         if (existingVote === 'like') {
           newUpVotes--;
           newDownVotes++;
@@ -129,6 +131,7 @@ const handleVote = async (voteType) => {
           newUpVotes++;
         }
         transaction.update(voteRef, { vote: voteType, timestamp: serverTimestamp() });
+        newUserVote = voteType;
       } else {
         // New vote
         if (voteType === 'like') {
@@ -137,26 +140,28 @@ const handleVote = async (voteType) => {
           newDownVotes++;
         }
         transaction.set(voteRef, { vote: voteType, timestamp: serverTimestamp() });
+        newUserVote = voteType;
       }
       transaction.update(guideRef, {
         upVotes: newUpVotes,
         downVotes: newDownVotes,
       });
-      // Return the new counts (optional, if you want to update local state)
-      return { newUpVotes, newDownVotes };
+      return { newUpVotes, newDownVotes, newUserVote };
     });
-    // Optionally, update local state after the transaction completes:
-    // (You might re-read the guide document or use the returned values from the transaction.)
-    // For example, if you had stored the transaction result:
-    // const { newUpVotes, newDownVotes } = result;
-    // setGuideData(prev => ({ ...prev, upVotes: newUpVotes, downVotes: newDownVotes }));
-    // Also update the local userVote state:
-    setUserVote(existingVote === voteType ? null : voteType);
+    // Update local state using the returned value.
+    setUserVote(result.newUserVote);
+    // Optionally update the local guideData state:
+    setGuideData(prev => ({
+      ...prev,
+      upVotes: result.newUpVotes,
+      downVotes: result.newDownVotes,
+    }));
   } catch (error) {
     console.error('Error updating vote:', error);
     alert('Error processing vote. Please try again.');
   }
 };
+
   
 
   if (loading) return <p>Loading...</p>;
@@ -202,6 +207,9 @@ const handleVote = async (voteType) => {
           >
             ← Back to Guides
           </button>
+          <p style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>
+            <strong>Created by:</strong> {guideData.username || 'Anonymous'}
+          </p>
 
           {/* Like/Dislike Buttons */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>

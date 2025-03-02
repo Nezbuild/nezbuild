@@ -143,7 +143,20 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
     const secondarySlot = primarySlot === 'Weapon11' ? 'Weapon12' : 'Weapon22';
     const isWeapon = selectedGearItem['Type']?.includes('Weapon');
     const isPWeapon = selectedGearItem['Slot']?.includes('Primary Weapon');
+    console.log(
+      "Weapon Debug Info:",
+      "\n  selectedSlot:", selectedSlot,
+      "\n  selectedGearItem.Name:", selectedGearItem?.Name,
+      "\n  selectedGearItem.Slot:", selectedGearItem?.Slot,
+      "\n  isTwoHanded:", isTwoHanded,
+      "\n  isPrimarySlot:", isPrimarySlot,
+      "\n  isPWeapon:", isPWeapon,
+      "\n  primarySlot:", primarySlot,
+      "\n  secondarySlot:", secondarySlot
+    );
 
+    
+    
     setSelectedGear((prev) => {
       const updatedGear = { ...prev };
       if (isWeapon) {
@@ -170,8 +183,11 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
 
     updateData('gearSelections', {
       ...data.gearSelections,
-      ...(isWeapon ? { [primarySlot]: selectedGearItem } : { [selectedSlot]: selectedGearItem })
+      ...(isWeapon
+        ? (isPWeapon ? { [primarySlot]: selectedGearItem } : { [secondarySlot]: selectedGearItem })
+        : { [selectedSlot]: selectedGearItem })
     });
+    
     setRarityPromptVisible(false);
     setSelectedSlot(null);
   }, [selectedSlot, selectedGearName, updateData, data.gearSelections, lockAndRemoveSlots, unlockSlots, handleRemoveGear, handleGearSelection]);
@@ -222,7 +238,7 @@ const Step4 = ({ data, updateData, handleGearSelection, gearSelections, onStatsU
       </div>
     );
   }, [selectedGear, hoveredSlot, rarityColorsMap]);
-
+  console.log("Updated Gear Object:", gearSelections);
   return (
     <div
       style={{
